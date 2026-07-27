@@ -34,12 +34,10 @@ body {
 }
 
 footer a {
-  color: #fff;
+  color: #00f;
   text-decoration: underline;
 }
 
 footer a:hover {
   opacity: 0.8;
 }
-
-
