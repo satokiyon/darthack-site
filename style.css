@@ -153,8 +153,25 @@ body {
 
 .manual-desc {
   color: #4a5568;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-size: 1rem;
+}
+
+.manual-list {
+  color: #4a5568;
+  margin: 0 0 20px 0;
+  padding-left: 24px;
+  font-size: 1rem;
+}
+
+.manual-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.manual-list li::marker {
+  color: #3182ce;
+  font-weight: bold;
 }
 
 /* 画像ギャラリー・グリッド */

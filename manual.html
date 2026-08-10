@@ -9,7 +9,7 @@
 <body>
   <header class="hero">
     <h1>DartHack 操作マニュアル</h1>
-    <p class="subtitle">ゲームの基本的な操作方法と便利な設定ガイド</p>
+    <p class="subtitle">ゲームの基本的な操作方法</p>
     <nav class="nav-links">
       <a href="index.html" class="btn btn-secondary">トップページへ戻る</a>
       <a href="privacy.html" class="btn btn-secondary">プライバシーポリシー</a>
@@ -29,18 +29,22 @@
         <li><a href="#section-6">6. コマンドパネルボタンの変更</a></li>
         <li><a href="#section-7">7. 階層の全体マップ</a></li>
         <li><a href="#section-8">8. DartHackメニュー</a></li>
-        <li><a href="#section-9">9. 設定画面</a></li>
+        <li><a href="#section-9">9. DartHack設定画面</a></li>
         <li><a href="#section-10">10. コマンドパネルの追加</a></li>
         <li><a href="#section-11">11. コントローラ配置パターン変更</a></li>
+        <li><a href="#section-12">12. 呼び名を決める時のメッセージ履歴確認</a></li>
       </ul>
     </nav>
 
     <!-- 1. タイトル画面 -->
     <section id="section-1" class="manual-item">
       <h2><span class="manual-item-num">1</span> タイトル画面</h2>
-      <p class="manual-desc">
-        アプリを起動すると表示されるタイトル画面です。「Start Game」ボタンを押して冒険を開始します。
-      </p>
+      <p class="manual-desc">アプリを起動すると表示されるタイトル画面です。</p>
+      <ul class="manual-list">
+        <li>左上の本アイコンをタップすると、ガイドブックを読むことができます。</li>
+        <li>右上の歯車アイコンをタップすると、DartHackの設定画面を開くことができます。</li>
+        <li>「冒険を始める」ボタンを押してゲームを開始します。</li>
+      </ul>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/title.png" alt="タイトル画面">
@@ -52,9 +56,18 @@
     <!-- 2. 主人公の名前入力 -->
     <section id="section-2" class="manual-item">
       <h2><span class="manual-item-num">2</span> 主人公の名前入力</h2>
-      <p class="manual-desc">
-        冒険へと旅立つキャラクターの名前を入力します。入力後、確定してゲームを開始します。
-      </p>
+      <p class="manual-desc">主人公の名前を入力します。最大31バイトまで入力できます。(半角文字:1バイト、全角文字:3バイト)</p>
+      <ul class="manual-list">
+        <li>セーブデータが存在する場合は、その一覧が表示されます。セーブデータを選択すると名前が自動入力され、前回の続きから再開することができます。</li>
+        <li>セーブせずにアプリを終了した場合、セーブデータは表示されませんが、前回と同じ名前を入力することでセーブデータをバックアップから復元して、前回の続きから再開できる場合があります。</li>
+      </ul>
+      <p class="manual-desc">プレイモードを選択します。</p>
+      <ul class="manual-list">
+        <li><strong>通常モード</strong>: 標準的な難易度でプレイします。</li>
+        <li><strong>探索モード</strong>: 探索に集中できるモードです。倒されても復活できますが、スコアは記録されません。</li>
+        <li><strong>ウィザードモード</strong>: 探索モードに加えて、チートコマンドが使用できます。デバッグや実験に便利です。</li>
+      </ul>
+      <p class="manual-desc">名前とプレイモードを入力し、確定して「ゲーム開始」ボタンを押してゲームを開始します。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/whats_your_name.png" alt="主人公の名前入力画面">
@@ -69,18 +82,31 @@
       <p class="manual-desc">
         プレイ中の基本画面です。ダンジョンマップ、ステータス、アクションコマンドパネル、メッセージログが表示されます。状況に応じてフルキーボード入力や拡張コマンド一覧、メッセージ履歴を呼び出すことができます。
       </p>
+      <ul class="manual-list">
+        <li>ダンジョンマップをタップすると、その位置に自動的に移動します。</li>
+        <li>主人公をタップすると、その場で実行可能なアクションメニューを表示します。</li>
+        <li>主人公に隣接するマスに何かがある場合、それをタップすると、そのオブジェクトに対して実行可能なメニューを表示します。</li>
+        <li>画面最上部にある主人公の筋力や体力などのステータス情報をタップすると、より詳細なステータス情報を表示するダイアログが表示されます。</li>
+        <li>その下にあるメッセージログをタップすると、過去のメッセージ履歴一覧を確認できます。</li>
+        <li>画面左下にある8方向の移動キー(yuhjklbn)をタップすると、主人公をその方向に移動させることができます。長押しすると何かを発見するまで自動移動します。</li>
+        <li>画面左下にある移動キーの真ん中にあるボタンを押すと、移動モードを切り替えることができます。長押しすると使用する移動モードを変更することができます。</li>
+        <li>画面右下にあるショートカットパネルのボタンを押すと、各種アクションコマンドを実行できます。長押しすると使用するコマンドを変更することができます。</li>
+        <li>画面最下部にあるコマンドパネルのボタンを押すと、各種コマンドを実行できます。左右にスワイプして画面外のボタンを表示することができます。長押しすると使用するコマンドの変更やボタンの追加・削除ができます。</li>
+        <li>[kbd]ボタンを押すと、フルキーボード入力モードに切り替えることができます。[pad]ボタンを押すとパネル入力モードに戻すことができます。</li>
+        <li>#ボタンを押すと、拡張コマンド一覧が表示され、選択するとそのコマンドを実行できます。</li>
+      </ul>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/main_screen1.png" alt="基本ゲーム画面">
           <div class="image-caption">基本ゲーム画面</div>
         </div>
         <div class="image-card">
-          <img src="images/manual/full_keybord.png" alt="フルキーボード表示">
-          <div class="image-caption">フルキーボード入力モード</div>
-        </div>
-        <div class="image-card">
           <img src="images/manual/message_history.png" alt="メッセージ履歴画面">
           <div class="image-caption">メッセージ履歴一覧</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/full_keybord.png" alt="フルキーボード表示">
+          <div class="image-caption">フルキーボード入力モード</div>
         </div>
         <div class="image-card">
           <img src="images/manual/ext_command.png" alt="拡張コマンド一覧画面">
@@ -93,7 +119,7 @@
     <section id="section-4" class="manual-item">
       <h2><span class="manual-item-num">4</span> 移動モード</h2>
       <p class="manual-desc">
-        ダンジョン内のキャラクター移動操作を行います。方向キーや操作パネルを使用して8方向へスムーズに移動可能です。
+        移動キーの中央にあるボタンを長押しすると、移動キーをタップした際にどのように振舞うかを「移動モード」として指定できます。チェックを入れた移動モードは、移動パッドの中央ボタンを押すたびに切り替わり、8方向の移動ボタンの表記も変化します。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -107,7 +133,7 @@
     <section id="section-5" class="manual-item">
       <h2><span class="manual-item-num">5</span> ショートカットボタンの変更</h2>
       <p class="manual-desc">
-        画面上に配置されたショートカットボタンによく使うコマンドを自由に割り当てることができます。ボタンをカスタマイズして自分好みの操作感に調整しましょう。
+        画面右下に配置されたショートカットボタンによく使うコマンドを自由に割り当てることができます。ボタンを長押しするとカスタマイズするメニューが表示されます。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -121,7 +147,7 @@
     <section id="section-6" class="manual-item">
       <h2><span class="manual-item-num">6</span> コマンドパネルボタンの変更</h2>
       <p class="manual-desc">
-        コマンドパネルに配置するボタンの種類や登録コマンドを入れ替えることができます。
+        画面最下部に配置されたコマンドパネルのボタンを長押しすることで、登録コマンドや表記文字を変更することができます。ボタンの追加・削除もできます。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -135,7 +161,7 @@
     <section id="section-7" class="manual-item">
       <h2><span class="manual-item-num">7</span> 階層の全体マップ</h2>
       <p class="manual-desc">
-        現在攻略中のダンジョン階層全体のマップを確認できます。探索済みの部屋や通路の配置を一目で確認するのに役立ちます。
+        全体マップボタンをタップすると、現在の階層全体のマップを確認できます。探索済みの部屋や通路の配置を一目で確認するのに役立ちます。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -149,8 +175,18 @@
     <section id="section-8" class="manual-item">
       <h2><span class="manual-item-num">8</span> DartHackメニュー</h2>
       <p class="manual-desc">
-        ゲームプレイ中に呼び出せるDartHack固有のメインメニューです。セーブや各種機能設定へのアクセスが可能です。
+        メニューボタンをタップすると、DartHackの様々な機能を呼び出せるメニューを表示することができます。画面の端をスワイプすることでメニューを表示することもできます。
       </p>
+      <ul class="manual-list">
+        <li><strong>セーブして終了</strong> : セーブしてゲームを終了します。次回起動時はセーブデータを選択することで続きから再開することができます。Sキーを押した場合と同様です。</li>
+        <li><strong>セーブせずに終了(放棄)</strong> : セーブせずにゲームを終了し、今回の主人公による冒険をあきらめます。#quitコマンドを実行した場合と同様です。</li>
+        <li><strong>スコアボード</strong> : これまでに保存されたスコアの一覧を確認できます。</li>
+        <li><strong>ガイドブックを読む</strong> : NetHackのガイドブックを読むことができます。</li>
+        <li><strong>ヘルプを表示</strong> : NetHackのヘルプを表示します。?コマンドを実行した場合と同様です。</li>
+        <li><strong>データベース検索</strong> : NetHackのデータベース(百科事典)を検索できます。モンスターやアイテムに関して、シンボルを示す1文字(英語/記号)、または単語(ひらがな/漢字混じり/英語)を入力して検索できます。/→?コマンドを実行した場合と同様です。</li>
+        <li><strong>オプション設定</strong> : ゲームのオプション設定を確認・変更できます。Oコマンドを実行した場合と同様です。</li>
+        <li><strong>ゲーム設定を開く</strong> : DartHackの設定画面を表示します。</li>
+      </ul>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/darthack_menu.png" alt="DartHackメニュー画面">
@@ -161,9 +197,9 @@
 
     <!-- 9. 設定画面 -->
     <section id="section-9" class="manual-item">
-      <h2><span class="manual-item-num">9</span> 設定画面</h2>
+      <h2><span class="manual-item-num">9</span> DartHack設定画面</h2>
       <p class="manual-desc">
-        ゲームの表示設定や操作オプションを調整するための設定画面です。
+        ゲームの表示設定や操作オプションを調整するための設定画面です。様々な設定を試して自分に合ったプレイ環境を整えてください。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -177,7 +213,7 @@
     <section id="section-10" class="manual-item">
       <h2><span class="manual-item-num">10</span> コマンドパネルの追加</h2>
       <p class="manual-desc">
-        用途に合わせて新しいコマンドパネルを追加・設定します。設定画面で追加・カスタマイズを行った後、ゲーム画面上に新しいコマンドパネルが反映されます。
+        DartHack設定画面の「コマンドパネル編集」では、用途に合わせて新しいコマンドパネルを追加・設定することができます。設定画面で追加・カスタマイズを行った後、ゲーム画面でコマンドパネルを縦にスワイプすることで、新しいコマンドパネルが表示されます。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -195,7 +231,7 @@
     <section id="section-11" class="manual-item">
       <h2><span class="manual-item-num">11</span> コントローラ配置パターン変更</h2>
       <p class="manual-desc">
-        画面上のコントローラーやキーボタンの配置パターンを変更できます。利き手やプレイ端末の画面サイズに合わせて最適なレイアウトを選択できます。
+        DartHack設定画面の「UI配置カスタマイズ」では、画面上のコントローラーやキーボタンの配置パターンを変更できます。利き手やプレイ端末の画面サイズに合わせて最適なレイアウトを選択できます。
       </p>
       <div class="image-group">
         <div class="image-card">
@@ -204,6 +240,26 @@
         </div>
       </div>
     </section>
+
+    <!-- 12. 呼び名を決める時のメッセージ履歴確認 -->
+    <section id="section-12" class="manual-item">
+      <h2><span class="manual-item-num">12</span> 呼び名を決める時のメッセージ履歴確認</h2>
+      <p class="manual-desc">
+        未識別のアイテムを使用した直後に「xxxxを何と呼びますか?」というダイアログが表示される場合があります。呼び名を決める際、どのような効果が現れたかを確認するために「履歴」ボタンを押すことで、直前のメッセージを確認することができます。
+      </p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/what_call_this.png" alt="呼び名を決めるダイアログ">
+          <div class="image-caption">呼び名を決めるダイアログ</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/message_of_drinking_potion.png" alt="メッセージ履歴">
+          <div class="image-caption">薬の効果を含むメッセージ履歴</div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
