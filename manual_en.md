@@ -18,12 +18,13 @@ When you launch DartHack, you start on the title screen where you can choose the
 
 1. **Guidebook / How to Play**: Opens the built-in NetHack Guidebook inside the app. Available before starting a run so beginners can check core rules at any time.
 2. **Spoilers (Strategy Guide)**: Opens the built-in NetHack Spoilers collection for reference on mechanics, items, and monsters.
-3. **Game Settings**: Opens the detailed settings screen covering tilesets, fonts, layout patterns, sound, and `defaults.nh`.
-4. **Language Switcher (日本語 / English)**: Toggles between **English (upstream NetHack core)** and **日本語 (NetHackJP core)** for both the Flutter UI and the underlying game engine.
-5. **Start Adventure**: Opens the character name & saved game selection dialog to begin or resume a game.
+3. **DartHack Manual**: Opens this DartHack User Manual offline inside the app.
+4. **Game Settings**: Opens the detailed settings screen covering tilesets, fonts, layout patterns, sound, and `defaults.nh`.
+5. **Language Switcher (日本語 / English)**: Toggles between **English (upstream NetHack core)** and **日本語 (NetHackJP core)** for both the Flutter UI and the underlying game engine.
+6. **Start Adventure**: Opens the character name & saved game selection dialog to begin or resume a game.
 
 > [!NOTE]
-> Save files are managed per language core. Select your preferred language (`English` or `日本語`) on the title screen before tapping **Start Adventure**.
+> Select your preferred language (`English` or `日本語`) on the title screen before tapping **Start Adventure**.
 
 ---
 
@@ -235,7 +236,7 @@ Tap the floating left menu button (or swipe from the left edge, or press `Ctrl+M
 
 1. **Menu Header**: Displays the **DartHack Menu** banner.
 2. **Save & Exit Controls**: Provides **Save & Exit** (saves your current run cleanly) and **Quit without Saving** (abandons the current run with confirmation).
-3. **Records & Documentation**: Quick access to **Scoreboard** (Chapter 9), **Read Guidebook**, and **Read Spoilers**.
+3. **Records & Documentation**: Quick access to **Scoreboard** (Chapter 9), **Read Guidebook**, **Read Spoilers**, and **Read Manual** (offline user manual).
 4. **Game Commands & Overlays**: Directly opens **Show Help (`?`)**, **Database Search (`/?`)**, **Game Options (`O`)**, and **Show Full Map (`M-z`)**.
 5. **UI & App Settings**: Toggle **Hide Controls** to temporarily maximize map visibility, or tap **Open Game Settings** for Flutter app preferences (Chapters 10–16).
 

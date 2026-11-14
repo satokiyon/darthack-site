@@ -1,11 +1,12 @@
 {
   "01_title.png": {
     "annotations": [
-      { "id": 1, "box": [40, 185, 160, 300], "badge_pos": "outside-bottom-left" },
-      { "id": 2, "box": [175, 185, 295, 300], "badge_pos": "outside-bottom-right" },
-      { "id": 3, "box": [895, 185, 1015, 300], "badge_pos": "outside-bottom-left" },
-      { "id": 4, "box": [250, 1945, 830, 2065], "badge_pos": "outside-top-left" },
-      { "id": 5, "box": [45, 2105, 1035, 2275], "badge_pos": "corner-top-left" }
+      { "id": 1, "box": [65, 185, 185, 300], "badge_pos": "outside-bottom-left" },
+      { "id": 2, "box": [215, 185, 335, 300], "badge_pos": "outside-bottom-right" },
+      { "id": 3, "box": [365, 185, 485, 300], "badge_pos": "outside-bottom-right" },
+      { "id": 4, "box": [895, 185, 1015, 300], "badge_pos": "outside-bottom-left" },
+      { "id": 5, "box": [250, 1945, 830, 2065], "badge_pos": "outside-top-left" },
+      { "id": 6, "box": [45, 2105, 1035, 2275], "badge_pos": "corner-top-left" }
     ]
   },
   "02_ask_name.png": {
@@ -121,9 +122,9 @@
     "annotations": [
       { "id": 1, "box": [0, 90, 825, 585], "badge_pos": "bottom-right" },
       { "id": 2, "box": [0, 595, 825, 920], "badge_pos": "center-right" },
-      { "id": 3, "box": [0, 925, 825, 1380], "badge_pos": "center-right" },
-      { "id": 4, "box": [0, 1385, 825, 1980], "badge_pos": "center-right" },
-      { "id": 5, "box": [0, 1985, 825, 2345], "badge_pos": "center-right" }
+      { "id": 3, "box": [0, 925, 825, 1525], "badge_pos": "center-right" },
+      { "id": 4, "box": [0, 1530, 825, 2135], "badge_pos": "center-right" },
+      { "id": 5, "box": [0, 2140, 825, 2415], "badge_pos": "center-right" }
     ]
   },
   "14_scoreboard.png": {
@@ -193,7 +194,7 @@
     "annotations": [
       { "id": 1, "box": [0, 35, 1920, 260], "badge_pos": "bottom-right" },
       { "id": 2, "box": [0, 270, 1920, 700], "badge_pos": "top-right" },
-      { "id": 3, "box": [5, 725, 210, 995], "badge_pos": "outside-top-right" },
+      { "id": 3, "box": [5, 725, 315, 995], "badge_pos": "outside-top-right" },
       { "id": 4, "box": [1600, 720, 1910, 995], "badge_pos": "outside-top-left" },
       { "id": 5, "box": [0, 1015, 1920, 1145], "badge_pos": "corner-top-right" }
     ]
