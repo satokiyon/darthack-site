@@ -9,266 +9,661 @@
 <body>
   <header class="hero">
     <h1>DartHack 操作マニュアル</h1>
-    <p class="subtitle">ゲームの基本的な操作方法</p>
+    <p class="subtitle">基本操作からカスタマイズ・最新機能まで網羅した公式ユーザーガイド</p>
     <nav class="nav-links">
       <a href="index.html" class="btn btn-secondary">トップページへ戻る</a>
+      <a href="manual_en.html" class="btn">English Manual</a>
+      <a href="manual.md" class="btn btn-secondary">Markdown版 (manual.md)</a>
       <a href="privacy.html" class="btn btn-secondary">プライバシーポリシー</a>
     </nav>
   </header>
 
   <main class="section">
+    <div class="manual-intro">
+      <p class="manual-desc">DartHack は、名作ローグライクゲーム <strong>NetHack 5.0</strong>（日本語版 <strong>NetHackJP</strong> および英語版 <strong>NetHack</strong> 本家コア）をスマートフォンやタブレットで快適にプレイできるよう Flutter/Dart で構築したアプリです。 このマニュアルでは、タイトル画面の起動から基本の冒険操作、画面上のタップ・キーボード・物理キー操作、さらにタイルセット・フォント・UI配置・サウンド・縛りプレイ・<code>defaults.nh</code> 編集などの詳細設定までを、実際のゲーム画面（番号付き枠線付き）とあわせて解説します。</p>
+      <div class="manual-note">画面はタップ・ドラッグ・ピンチ操作に対応しています。また、ハードウェア（物理）キーボードを接続した状態でのキーボード操作もサポートしています。</div>
+    </div>
+    <p class="zoom-tip">画像をクリックすると拡大表示できます</p>
+
     <!-- 目次 (Table of Contents) -->
     <nav class="toc-container">
       <h2>目次</h2>
       <ul class="toc-list">
-        <li><a href="#section-1">1. タイトル画面</a></li>
-        <li><a href="#section-2">2. 主人公の名前入力</a></li>
-        <li><a href="#section-3">3. ゲーム画面</a></li>
-        <li><a href="#section-4">4. 移動モード</a></li>
-        <li><a href="#section-5">5. ショートカットボタンの変更</a></li>
-        <li><a href="#section-6">6. コマンドパネルボタンの変更</a></li>
-        <li><a href="#section-7">7. 階層の全体マップ</a></li>
-        <li><a href="#section-8">8. DartHackメニュー</a></li>
-        <li><a href="#section-9">9. DartHack設定画面</a></li>
-        <li><a href="#section-10">10. コマンドパネルの追加</a></li>
-        <li><a href="#section-11">11. コントローラ配置パターン変更</a></li>
-        <li><a href="#section-12">12. 呼び名を決める時のメッセージ履歴確認</a></li>
+        <li><a href="#section-1">1. アプリ起動とタイトル画面</a></li>
+        <li><a href="#section-2">2. キャラクター作成と冒険の開始</a></li>
+        <li><a href="#section-3">3. メインゲーム画面の全体構成</a></li>
+        <li><a href="#section-4">4. 移動操作・マップタップ・全体マップ</a></li>
+        <li><a href="#section-5">5. ソフトキーボード・文字入力・拡張コマンド</a></li>
+        <li><a href="#section-6">6. アイテム操作メニューと名付け・文字入力プロンプト</a></li>
+        <li><a href="#section-7">7. メッセージ履歴とスポイラー（攻略情報）</a></li>
+        <li><a href="#section-8">8. DartHack メニュー（ドロワーメニュー）</a></li>
+        <li><a href="#section-9">9. スコアボード・記録詳細・墓石表示</a></li>
+        <li><a href="#section-10">10. 画面表示・ステータス・フォント設定</a></li>
+        <li><a href="#section-11">11. タイルセットの選択とカスタムタイルセット</a></li>
+        <li><a href="#section-12">12. UI配置カスタマイズとタブレット対応</a></li>
+        <li><a href="#section-13">13. コマンドパネル・クイックボタンの編集</a></li>
+        <li><a href="#section-14">14. 物理キーボード操作ガイドと物理キー割り当て</a></li>
+        <li><a href="#section-15">15. サウンド設定とハードモード・縛りプレイ</a></li>
+        <li><a href="#section-16">16. 高度な設定（defaults.nh 編集と設定のバックアップ）</a></li>
       </ul>
     </nav>
 
-    <!-- 1. タイトル画面 -->
+    <!-- 1. アプリ起動とタイトル画面 -->
     <section id="section-1" class="manual-item">
-      <h2><span class="manual-item-num">1</span> タイトル画面</h2>
-      <p class="manual-desc">アプリを起動すると表示されるタイトル画面です。</p>
-      <ul class="manual-list">
-        <li>左上の本アイコンをタップすると、ガイドブックを読むことができます。</li>
-        <li>右上の歯車アイコンをタップすると、DartHackの設定画面を開くことができます。</li>
-        <li>「冒険を始める」ボタンを押してゲームを開始します。</li>
-      </ul>
+      <h2><span class="manual-item-num">1</span> アプリ起動とタイトル画面</h2>
+      <p class="manual-desc">アプリを起動すると、最初にタイトル画面が表示されます。冒険を始める前の言語切替やゲーム設定、説明書・攻略情報の閲覧をここから行えます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/title.png" alt="タイトル画面">
-          <div class="image-caption">タイトル画面</div>
+          <img src="images/manual/ja/01_title.png" alt="DartHack タイトル画面" loading="lazy">
+          <div class="image-caption">図 1-1: タイトル画面の各ボタン構成</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>遊び方・ガイドブック</strong>: NetHack の公式ガイドブック（遊び方や基本ルール）をアプリ内で開きます。ゲーム開始前でも読めるため、初めてプレイする際の確認に便利です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>スポイラー（攻略情報）</strong>: ゲームの仕様やアイテム効果・モンスター情報などの攻略資料（NetHack スポイラー）を閲覧できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>詳細ゲーム設定</strong>: タイルセット・フォント・画面レイアウト・サウンド・<code>defaults.nh</code> などの詳細設定画面を開きます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>表示言語の切替（日本語 / English）</strong>: ボタンをタップして <strong>日本語（NetHackJP コア）</strong> と <strong>English（NetHack オリジナルコア）</strong> を切り替えます。タイトル画面およびゲーム全体のUI・エンジン言語が切り替わります。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>冒険を始める</strong>: キャラクター作成（名前の入力）および既存セーブデータの再開ダイアログへ進みます。</span></li>
+      </ol>
+      <div class="manual-note">セーブデータと言語コアは別々に扱われます。遊びたい言語（日本語または英語）をタイトル画面で選んでから「冒険を始める」を押してください。</div>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 2. 主人公の名前入力 -->
+    <!-- 2. キャラクター作成と冒険の開始 -->
     <section id="section-2" class="manual-item">
-      <h2><span class="manual-item-num">2</span> 主人公の名前入力</h2>
-      <p class="manual-desc">主人公の名前を入力します。最大31バイトまで入力できます。(半角文字:1バイト、全角文字:3バイト)</p>
-      <ul class="manual-list">
-        <li>セーブデータが存在する場合は、その一覧が表示されます。セーブデータを選択すると名前が自動入力され、前回の続きから再開することができます。</li>
-        <li>セーブせずにアプリを終了した場合、セーブデータは表示されませんが、前回と同じ名前を入力することでセーブデータをバックアップから復元して、前回の続きから再開できる場合があります。</li>
-      </ul>
-      <p class="manual-desc">プレイモードを選択します。</p>
-      <ul class="manual-list">
-        <li><strong>通常モード</strong>: 標準的な難易度でプレイします。</li>
-        <li><strong>探索モード</strong>: 探索に集中できるモードです。倒されても復活できますが、スコアは記録されません。</li>
-        <li><strong>ウィザードモード</strong>: 探索モードに加えて、チートコマンドが使用できます。デバッグや実験に便利です。</li>
-      </ul>
-      <p class="manual-desc">名前とプレイモードを入力し、確定して「ゲーム開始」ボタンを押してゲームを開始します。</p>
+      <h2><span class="manual-item-num">2</span> キャラクター作成と冒険の開始</h2>
+      <p class="manual-desc">「冒険を始める」をタップすると、プレイヤー名とプレイモードを指定する「お名前は？」ダイアログが表示されます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/whats_your_name.png" alt="主人公の名前入力画面">
-          <div class="image-caption">名前入力ダイアログ</div>
+          <img src="images/manual/ja/02_ask_name.png" alt="お名前は？ダイアログ" loading="lazy">
+          <div class="image-caption">図 2-1: 名前入力・セーブデータ選択・プレイモード選択ダイアログ</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>キャラクター名の入力</strong>: 冒険者の名前を入力します（UTF-8 で最大 31 バイトまで）。入力した名前で新規作成またはセーブデータの検索が行われます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>既存のセーブデータ</strong>: すでに途中で中断セーブしているキャラクターがいる場合、リストに表示されます。タップして選ぶと、入力欄に名前が自動セットされ続きから再開できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>プレイモード切替（通常 / 探索 / ウィザード）</strong>: ゲームの遊び方（3種類のモード）を選択します。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>選択中モードの説明欄</strong>: 現在選んでいるプレイモードのルールと注意点が表示されます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>ゲーム開始 / キャンセル</strong>: 「ゲーム開始」をタップするとプロンプト入力を確定して冒険へ進みます（新規作成時はチュートリアル選択や職業・種族選択、またはランダム生成が続きます）。</span></li>
+      </ol>
+      <h3>3種類のプレイモードの違い</h3>
+      <div class="table-wrap">
+        <table class="manual-table">
+          <thead><tr>
+            <th>モード名</th>
+            <th>ルールと特徴</th>
+            <th>ハイスコア記録</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>通常 (Normal)</strong></td>
+              <td>本来のローグライク（パーマデス）。死亡すると冒険が終了し、記録がスコアボードに残ります。</td>
+              <td>記録される</td>
+            </tr>
+            <tr>
+              <td><strong>探索 (Explore)</strong></td>
+              <td>死亡しても「死ぬのを思いとどまる（復活）」や物品生成などの補助機能を使いながらダンジョン探索・練習ができます。</td>
+              <td>記録されない（探索モード終了扱い）</td>
+            </tr>
+            <tr>
+              <td><strong>ウィザード (Wizard)</strong></td>
+              <td>デバッグ・実験用の管理者モードです。無敵化・任意のアイテム作成・階層移動などすべてのデバッグコマンドが利用できます。</td>
+              <td>記録されない</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 3. ゲーム画面 -->
+    <!-- 3. メインゲーム画面の全体構成 -->
     <section id="section-3" class="manual-item">
-      <h2><span class="manual-item-num">3</span> ゲーム画面</h2>
-      <p class="manual-desc">
-        プレイ中の基本画面です。ダンジョンマップ、ステータス、アクションコマンドパネル、メッセージログが表示されます。状況に応じてフルキーボード入力や拡張コマンド一覧、メッセージ履歴を呼び出すことができます。
-      </p>
-      <ul class="manual-list">
-        <li>ダンジョンマップをタップすると、その位置に自動的に移動します。</li>
-        <li>主人公をタップすると、その場で実行可能なアクションメニューを表示します。</li>
-        <li>主人公に隣接するマスに何かがある場合、それをタップすると、そのオブジェクトに対して実行可能なメニューを表示します。</li>
-        <li>画面最上部にある主人公の筋力や体力などのステータス情報をタップすると、より詳細なステータス情報を表示するダイアログが表示されます。</li>
-        <li>その下にあるメッセージログをタップすると、過去のメッセージ履歴一覧を確認できます。</li>
-        <li>画面左下にある8方向の移動キー(yuhjklbn)をタップすると、主人公をその方向に移動させることができます。長押しすると何かを発見するまで自動移動します。</li>
-        <li>画面左下にある移動キーの真ん中にあるボタンを押すと、移動モードを切り替えることができます。長押しすると使用する移動モードを変更することができます。</li>
-        <li>画面右下にあるショートカットパネルのボタンを押すと、各種アクションコマンドを実行できます。長押しすると使用するコマンドを変更することができます。</li>
-        <li>画面最下部にあるコマンドパネルのボタンを押すと、各種コマンドを実行できます。左右にスワイプして画面外のボタンを表示することができます。長押しすると使用するコマンドの変更やボタンの追加・削除ができます。</li>
-        <li>[kbd]ボタンを押すと、フルキーボード入力モードに切り替えることができます。[pad]ボタンを押すとパネル入力モードに戻すことができます。</li>
-        <li>#ボタンを押すと、拡張コマンド一覧が表示され、選択するとそのコマンドを実行できます。</li>
-      </ul>
+      <h2><span class="manual-item-num">3</span> メインゲーム画面の全体構成</h2>
+      <p class="manual-desc">冒険が始まると、上下または全体を使ったメインプレイ画面が表示されます。初期配置（レイアウトパターン1）では上から <strong>ステータス → メッセージ → マップ → 操作パッド → コマンドパネル</strong> の順に並びます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/main_screen1.png" alt="基本ゲーム画面">
-          <div class="image-caption">基本ゲーム画面</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/message_history.png" alt="メッセージ履歴画面">
-          <div class="image-caption">メッセージ履歴一覧</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/full_keybord.png" alt="フルキーボード表示">
-          <div class="image-caption">フルキーボード入力モード</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/ext_command.png" alt="拡張コマンド一覧画面">
-          <div class="image-caption">拡張コマンド一覧</div>
+          <img src="images/manual/ja/03_main_screen.png" alt="メインゲーム画面" loading="lazy">
+          <div class="image-caption">図 3-1: メインゲーム画面（レイアウトパターン1・パネル折りたたみ時）</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス表示エリア</strong>: キャラクター名・称号、能力値（筋力/器用/耐久/知力/賢明/魅力）、属性（秩序/中立/混沌）、現在階層・所持金 <code>$</code>・HP・魔力・防御力(AC)・経験レベル・経過ターン数などを表示します。<code>hitpointbar</code> 有効時は背景にHPゲージも表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>メッセージ表示エリア</strong>: ゲーム内の行動結果やモンスターの攻撃・発見メッセージが表示されます。タップすると「メッセージ履歴」シートを開いて過去のログをさかのぼれます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ダンジョンマップ表示エリア</strong>: 現在探索中のダンジョンを表示します。ドラッグで視点を動かし、ピンチイン／ピンチアウトで自由に拡大・縮小できます。マスをタップすると位置に応じた行動メニューが開きます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>半透明メニューボタン（左）</strong>: タップすると「DartHack メニュー」（第8章）を開きます。画面右端や左端など、設定で配置を変更できます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>全体マップボタン（右）</strong>: タップすると現在の階層の全体を見渡せる「階層の全体地図」ダイアログ（第4章）を開きます。</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8方向移動パッド＋移動モード切替</strong>: 周囲の8つの菱形ボタン（<code>y k u / h . l / b j n</code>）で8方向へ移動・攻撃します。中央のボタン（初期状態は「標準」）をタップすると移動モード選択（ダッシュ等）を開きます。</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 クイックショートカット</strong>: 使用頻度の高い9個のコマンド（初期設定では「持ち物」「調べる」「拾う」「そこ」「ここ」「会話」「食べる」「再実行」「Esc」）を1タップで実行できるグリッドです。</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>コマンドパネル＆展開ハンドル</strong>: よく使う行動ボタンをカテゴリ別リストにまとめた下部バーです。現在選択中のパネル内容が1行で表示され、上部のハンドルをタップまたは上スワイプすると全パネルを展開できます。</span></li>
+      </ol>
+      <h3>コマンドパネルの全展開表示</h3>
+      <p class="manual-desc">コマンドパネルのハンドル（1）を上方向へスワイプまたはタップすると、登録されているすべてのパネルが縦に展開されます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/03b_cmd_panels_expanded.png" alt="展開されたコマンドパネル一覧" loading="lazy">
+          <div class="image-caption">図 3-2: 下部コマンドパネルを全展開した状態</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>折りたたみ・展開ハンドル</strong>: タップまたは下方向へスワイプすると、再び1行のコンパクト表示へ戻ります。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>標準パネル</strong>: 左端の <code>[kbd]</code>（または <code>[pad]</code>）ボタンでソフトキーボード表示と移動パッド表示を切り替えます。<code>#</code>（拡張コマンド）、<code>20探索</code>、待機、足元、遠見、置く、飲む、投げるなど基本行動が並びます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>戦闘パネル</strong>: 投げる、射撃、矢筒、読む、杖、詠唱、呪文、蹴る、持ち替など戦闘寄りのコマンドを集めたパネルです。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>道具パネル</strong>: 持ち物、使用、拾う、置く、複数置、あさる、飲む、読む、浸すなどアイテム操作に特化したパネルです。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>情報パネル</strong>: ヘルプ、コマンド、調べる、遠見、足元、属性、呪文、発見品、実績など情報確認用コマンドをまとめています。</span></li>
+      </ol>
+      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル構成は「詳細ゲーム設定 → カスタムコマンドパネル編集」（第13章）から自由に追加・変更できます。</div>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 4. 移動モード -->
+    <!-- 4. 移動操作・マップタップ・全体マップ -->
     <section id="section-4" class="manual-item">
-      <h2><span class="manual-item-num">4</span> 移動モード</h2>
-      <p class="manual-desc">
-        移動キーの中央にあるボタンを長押しすると、移動キーをタップした際にどのように振舞うかを「移動モード」として指定できます。チェックを入れた移動モードは、移動パッドの中央ボタンを押すたびに切り替わり、8方向の移動ボタンの表記も変化します。
-      </p>
+      <h2><span class="manual-item-num">4</span> 移動操作・マップタップ・全体マップ</h2>
+      <h3>移動モードの切り替え</h3>
+      <p class="manual-desc">8方向移動パッド中央のボタン（「標準」など）をタップすると、「使用する移動モードの選択」ダイアログが開きます。ここで一時的な移動モードや常時オプション（<code>F</code>）を切り替えられます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/move_mode.png" alt="移動モード画面">
-          <div class="image-caption">移動モードの操作UI</div>
+          <img src="images/manual/ja/04_move_mode.png" alt="移動モード選択ダイアログ" loading="lazy">
+          <div class="image-caption">図 4-1: 使用する移動モードの選択ダイアログ</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ダイアログ見出し</strong>: 使用する移動モードを選択する画面です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>標準（1マス移動）</strong>: <code>yuhjklbn</code> による通常の1歩移動に戻します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>長距離移動系（大文字 / <code>g</code> / <code>G</code> / <code>^(Ctrl)</code>）</strong>: 壁や扉にぶつかるまで走る <strong>大文字 (<code>YUHJKLBN</code>)</strong>、興味深いものが見つかるまで進む <strong><code>g&lt;dir&gt;</code></strong>（分岐で停止）、分岐を無視して進み続ける <strong><code>G&lt;dir&gt;</code> / <code>^&lt;dir&gt;</code></strong> の4種から選べます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong><code>m</code> モード（<code>m&lt;dir&gt;</code>）</strong>: 足元のアイテムを拾わずに移動したり、トラップや水・溶岩などの危険地形（自己責任）へ踏み込んだりしたいときに選びます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong><code>F</code> モード（<code>F&lt;dir&gt;</code>）</strong>: 見えていない・感知していないモンスターがいると思われる方向へ強制的に攻撃します（透明な敵や暗闇での戦闘に有効）。チェックを入れると設定が維持されます。</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>キャンセル / OK</strong>: 変更を確定して画面へ戻ります。</span></li>
+      </ol>
+      <h3>マップの直接タップ操作（コンテキストメニュー）</h3>
+      <p class="manual-desc">ダンジョンマップ上のマスをタップすると、タップした場所（自分の足元・隣接8マス・離れた場所）に応じた行動メニューが自動で開きます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/05_tap_context_menu.png" alt="マップタップ時のコンテキストメニュー" loading="lazy">
+          <div class="image-caption">図 4-2: 足元・周辺マスをタップしたときの行動メニュー例</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>メニュー見出し</strong>: 選んだ位置に対して実行する行動の選択プロンプト（「何をしますか？」など）です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>文脈に応じたアクション一覧</strong>: 足元をタップ時は「階段を上る」「持ち物を見る」「周囲を探す」「ここで祈る」等、隣接マスをタップ時は「ここに移動する」や扉の開閉・攻撃・会話、離れたマスでは遠見やその方向への移動候補が提示されます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>キャンセルボタン</strong>: メニューを閉じてマップへ戻ります。</span></li>
+      </ol>
+      <h3>全体マップ表示</h3>
+      <p class="manual-desc">画面右側の半透明マップボタン（または <code>F9</code> / <code>Alt-z</code> キー）を押すと、現在の階層全体を見渡す「階層の全体地図」ダイアログが開きます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/06_full_map.png" alt="階層の全体地図ダイアログ" loading="lazy">
+          <div class="image-caption">図 4-3: 現在の階層全体を確認できる全体地図ダイアログ</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ヘッダーと閉じるボタン (<code>×</code>)</strong>: 右上の <code>×</code> をタップするか、下のマップ領域外・Esc キーで閉じます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>階層全体ビュー</strong>: これまで探索して記憶している部屋・通路・階段・祭壇などの全体像が描画されます。ドラッグでスクロールできます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ピンチズーム案内</strong>: 2本指でのピンチイン／ピンチアウトで全体図の拡大率を細かく調整できます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 5. ショートカットボタンの変更 -->
+    <!-- 5. ソフトキーボード・文字入力・拡張コマンド -->
     <section id="section-5" class="manual-item">
-      <h2><span class="manual-item-num">5</span> ショートカットボタンの変更</h2>
-      <p class="manual-desc">
-        画面右下に配置されたショートカットボタンによく使うコマンドを自由に割り当てることができます。ボタンを長押しするとカスタマイズするメニューが表示されます。
-      </p>
+      <h2><span class="manual-item-num">5</span> ソフトキーボード・文字入力・拡張コマンド</h2>
+      <h3>ソフトキーボード（フルキーボード）</h3>
+      <p class="manual-desc">コマンドパネル左側の <code>[kbd]</code> ボタンをタップすると、移動パッド＋ショートカットの代わりに英字フルキーボードが表示されます。アルファベットのコマンド（例：<code>q</code> 飲む、<code>r</code> 読む、<code>t</code> 投げるなど）を直接打ちたいときや、<code>Ctrl</code> 修飾が必要な操作に最適です。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/custom_shortcut_button.png" alt="ショートカットボタン変更画面">
-          <div class="image-caption">ショートカットカスタマイズ設定</div>
+          <img src="images/manual/ja/07_full_keyboard.png" alt="フルキーボード表示" loading="lazy">
+          <div class="image-caption">図 5-1: ソフトキーボード表示（フルキーボード）</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>QWERTY キー配列部</strong>: <code>q</code>〜<code>p</code> / <code>a</code>〜<code>l</code> / <code>z</code>〜<code>m</code> と <code>Shift</code>（大文字切替）、<code>Del</code> キーを配置しています。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>修飾・特殊記号バー</strong>: <code>?123</code>（数字・記号パネル切替）、<code>Meta</code>（Alt/Meta 修飾：階段探索や全体マップ等）、<code>&lt;</code>、<code>&gt;</code>（上り階段・下り階段）、<code>:</code>（足元を見る）、<code>,</code>（拾う）、<code>Ctrl</code>（コントロール修飾：<code>Ctrl+x</code> 等）、<code>Enter</code> を素早く入力できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong><code>[Pad]</code> 切替ボタン</strong>: タップするとソフトキーボードを閉じて、元の「8方向移動パッド＋3×3ショートカット」表示へ戻ります。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>コマンドパネル一覧</strong>: キーボード展開中でも、標準・戦闘・道具・情報パネルの各コマンドを組み合わせて利用できます。</span></li>
+      </ol>
+      <h3>拡張コマンド（<code>#</code> コマンド一覧）</h3>
+      <p class="manual-desc">コマンドパネルの <code>#</code> をタップ（またはキーボードで <code>#</code> を入力）すると、すべての拡張コマンド一覧ダイアログが開きます。NetHack 特有の複雑なコマンドをうろ覚えのまま探せる強力な機能です。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/08_ext_commands.png" alt="拡張コマンド一覧ダイアログ" loading="lazy">
+          <div class="image-caption">図 5-2: 日本語説明・絞り込み検索付きの拡張コマンドダイアログ</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>絞り込み検索欄</strong>: コマンド名の一部（<code>adjust</code>, <code>pray</code>, <code>loot</code> 等）や説明キーワードを入力すると、候補をリアルタイムで絞り込めます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>拡張コマンドリスト</strong>: アルファベット記号（<code>a</code>, <code>b</code>, <code>c</code>...）と <code>#command</code> 名、および動作解説が表示されます。行をタップするだけで直接実行できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>キャンセルボタン</strong>: 拡張コマンドを実行せずに閉じます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 6. コマンドパネルボタンの変更 -->
+    <!-- 6. アイテム操作メニューと名付け・文字入力プロンプト -->
     <section id="section-6" class="manual-item">
-      <h2><span class="manual-item-num">6</span> コマンドパネルボタンの変更</h2>
-      <p class="manual-desc">
-        画面最下部に配置されたコマンドパネルのボタンを長押しすることで、登録コマンドや表記文字を変更することができます。ボタンの追加・削除もできます。
-      </p>
+      <h2><span class="manual-item-num">6</span> アイテム操作メニューと名付け・文字入力プロンプト</h2>
+      <h3>アイテム選択メニュー</h3>
+      <p class="manual-desc">持ち物一覧（<code>i</code>）や装備（<code>W</code>/<code>w</code>）、飲む（<code>q</code>）、読む（<code>r</code>）などのアイテム選択時には、タイル画像付きの分かりやすいカテゴリ分けメニューが表示されます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/custom_cmd_button.png" alt="コマンドパネルボタン変更画面">
-          <div class="image-caption">コマンドボタンの編集画面</div>
+          <img src="images/manual/ja/09_item_menu.png" alt="アイテムメニュー表示" loading="lazy">
+          <div class="image-caption">図 6-1: 武器・防具・食べ物などカテゴリ分けされたアイテム選択メニュー</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>カテゴリ見出し</strong>: 「武器」「防具」「食べ物」などのカテゴリ見出しが黄色い枠で区分けされ、目的のアイテムをすぐに見つけられます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>アイテム行（アイコン＆状態カラー）</strong>: 各行に割り当て文字（<code>a</code>, <code>b</code>, <code>c</code>...）とタイルアイコン、アイテム名、数量や装備状態（<code>右手に装備中</code> / <code>装備中</code> / <code>予備武器</code> など）が表示されます。祝福・無祝福・呪い状態が文字色で視認しやすくなっています。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>キャンセルボタン</strong>: 選択を取り消してゲーム画面に戻ります。</span></li>
+      </ol>
+      <h3>テキスト入力・名付けプロンプト</h3>
+      <p class="manual-desc">アイテムに名前を付ける（<code>#name</code> / <code>C</code>）ときや、願い事・階層の注釈・金額入力などでは専用のテキスト入力ダイアログが開きます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/10_what_call_this.png" alt="テキスト入力プロンプト（この六尺棒を何と名付けますか？）" loading="lazy">
+          <div class="image-caption">図 6-2: 直前メッセージ参照・入力履歴・バイト数表示付きの入力プロンプト</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>プロンプト質問見出し</strong>: 何の入力を求められているか（例：「この六尺棒を何と名付けますか？」）が上部に大きく表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>直前の状況カード（タップで全履歴）</strong>: 直前にゲーム画面へ出た関連ログを確認できるため、「何を識別して名付ける場面か」を見失いません。右上の「タップで全履歴 &gt;」から過去ログ全体も確認できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>テキスト入力欄とバイト数カウンター</strong>: OS の日本語入力（IME）を使ってそのまま入力できます。NetHack C コア側の制限に合わせた残バイト数（例：<code>0 / 62 バイト</code>）が表示され、全角英数字・記号は C コア側で自動正規化されます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>履歴ボタン</strong>: 過去に入力した文字列を呼び出して再入力できます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>キャンセル / 決定ボタン</strong>: 入力を確定して C コアへ送信するか、キャンセルします。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 7. 階層の全体マップ -->
+    <!-- 7. メッセージ履歴とスポイラー（攻略情報） -->
     <section id="section-7" class="manual-item">
-      <h2><span class="manual-item-num">7</span> 階層の全体マップ</h2>
-      <p class="manual-desc">
-        全体マップボタンをタップすると、現在の階層全体のマップを確認できます。探索済みの部屋や通路の配置を一目で確認するのに役立ちます。
-      </p>
+      <h2><span class="manual-item-num">7</span> メッセージ履歴とスポイラー（攻略情報）</h2>
+      <h3>メッセージ履歴の表示</h3>
+      <p class="manual-desc">画面上部のメッセージ領域をタップすると、これまでの冒険メッセージ履歴をさかのぼって確認できるボトムシートが開きます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/floor_overview.png" alt="階層全体マップ画面">
-          <div class="image-caption">ダンジョン階層オーバービュー</div>
+          <img src="images/manual/ja/11_msg_history.png" alt="メッセージ履歴ボトムシート" loading="lazy">
+          <div class="image-caption">図 7-1: 過去の冒険メッセージ一覧を表示するメッセージ履歴画面</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>履歴シートヘッダー</strong>: 「メッセージ履歴」の見出しと操作ヒント（「タップまたは下スワイプで閉じる」）が表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>色分け済みメッセージログ</strong>: 新しい・重要な警告（飢えやダメージ等）は強調色で表示され、スクロールして何ターンも前の状況を確認できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>閉じるボタン</strong>: 下部の「閉じる」ボタンをタップするか、シートを下にスワイプするとメイン画面へ戻ります。</span></li>
+      </ol>
+      <h3>スポイラー（攻略情報）ビューア</h3>
+      <p class="manual-desc">タイトル画面の本アイコン、またはゲーム中の「DartHack メニュー → スポイラーを読む」から攻略データベースを開けます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/12_spoilers.png" alt="スポイラー（NetHack 攻略情報）ビューア" loading="lazy">
+          <div class="image-caption">図 7-2: 検索・目次・画面一時確認に対応したスポイラービューア</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ゲーム画面を一時確認（「覗き見」ボタン）</strong>: タップで維持・長押しで一時透過することで、スポイラーを閉じずに背後のゲーム画面（マップやメッセージ）をそのまま覗き見ることができます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>目次を開く</strong>: 章ごとの目次モーダルを開き、読みたい攻略セクションへ一発でジャンプできます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>スポイラー内を検索</strong>: キーワード検索欄に調べたいアイテム名や用語を入力して、該当箇所をすぐ探せます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>攻略本文エリア</strong>: 読みやすく整形されたテキストやシンボル付きで攻略情報が表示されます。<code>ガイドブックを読む</code> でも同様のビューアが利用可能です。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 8. DartHackメニュー -->
+    <!-- 8. DartHack メニュー（ドロワーメニュー） -->
     <section id="section-8" class="manual-item">
-      <h2><span class="manual-item-num">8</span> DartHackメニュー</h2>
-      <p class="manual-desc">
-        メニューボタンをタップすると、DartHackの様々な機能を呼び出せるメニューを表示することができます。画面の端をスワイプすることでメニューを表示することもできます。
-      </p>
-      <ul class="manual-list">
-        <li><strong>セーブして終了</strong> : セーブしてゲームを終了します。次回起動時はセーブデータを選択することで続きから再開することができます。Sキーを押した場合と同様です。</li>
-        <li><strong>セーブせずに終了(放棄)</strong> : セーブせずにゲームを終了し、今回の主人公による冒険をあきらめます。#quitコマンドを実行した場合と同様です。</li>
-        <li><strong>スコアボード</strong> : これまでに保存されたスコアの一覧を確認できます。</li>
-        <li><strong>ガイドブックを読む</strong> : NetHackのガイドブックを読むことができます。</li>
-        <li><strong>ヘルプを表示</strong> : NetHackのヘルプを表示します。?コマンドを実行した場合と同様です。</li>
-        <li><strong>データベース検索</strong> : NetHackのデータベース(百科事典)を検索できます。モンスターやアイテムに関して、シンボルを示す1文字(英語/記号)、または単語(ひらがな/漢字混じり/英語)を入力して検索できます。/→?コマンドを実行した場合と同様です。</li>
-        <li><strong>オプション設定</strong> : ゲームのオプション設定を確認・変更できます。Oコマンドを実行した場合と同様です。</li>
-        <li><strong>ゲーム設定を開く</strong> : DartHackの設定画面を表示します。</li>
-      </ul>
+      <h2><span class="manual-item-num">8</span> DartHack メニュー（ドロワーメニュー）</h2>
+      <p class="manual-desc">左側の半透明メニューボタンをタップ（または画面左端から右スワイプ、キーボードの <code>Ctrl+M</code> / <code>F10</code>）すると、各種機能へアクセスできる「DartHack メニュー」が開きます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/darthack_menu.png" alt="DartHackメニュー画面">
-          <div class="image-caption">DartHack メニューダイアログ</div>
+          <img src="images/manual/ja/13_darthack_menu.png" alt="DartHack メニュー" loading="lazy">
+          <div class="image-caption">図 8-1: アプリ機能・ゲームコマンドへ素早くアクセスできるドロワーメニュー</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>メニューヘッダー</strong>: 「DartHack メニュー」のタイトル領域です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>セーブと終了操作</strong>: <strong>セーブして終了</strong>（進行状況を保存して安全終了）と <strong>セーブせず終了（放棄）</strong>（セーブを残さず現在の冒険を破棄・確認ダイアログあり）が並びます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>記録・ドキュメント閲覧</strong>: <strong>スコアボード</strong>（第9章）、<strong>ガイドブックを読む</strong>（公式ルール解説）、<strong>スポイラーを読む</strong>（攻略データベース）を開きます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>ゲーム補助コマンド・検索・画面切替</strong>: <strong>ヘルプを表示 (<code>?</code>)</strong>、<strong>データベース検索 (<code>/?</code>)</strong>、<strong>オプション設定 (<code>O</code>)</strong>、<strong>全体地図を表示 (<code>M-z</code>)</strong> を直接呼び出せます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>UI・アプリ設定</strong>: <strong>操作ボタンを非表示</strong>（マップを広く見たいときにパッド等を一時非表示）と <strong>ゲーム設定を開く</strong>（詳細ゲーム設定画面へ移動）を実行します。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 9. 設定画面 -->
+    <!-- 9. スコアボード・記録詳細・墓石表示 -->
     <section id="section-9" class="manual-item">
-      <h2><span class="manual-item-num">9</span> DartHack設定画面</h2>
-      <p class="manual-desc">
-        ゲームの表示設定や操作オプションを調整するための設定画面です。様々な設定を試して自分に合ったプレイ環境を整えてください。
-      </p>
+      <h2><span class="manual-item-num">9</span> スコアボード・記録詳細・墓石表示</h2>
+      <h3>スコアボードと今回の記録</h3>
+      <p class="manual-desc">冒険を終了（死去・昇天・脱出等）したとき、またはメニューから「スコアボード」を開いたときに、歴代ランキングが表示されます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/setting_menu.png" alt="設定画面">
-          <div class="image-caption">環境設定メニュー</div>
+          <img src="images/manual/ja/14_scoreboard.png" alt="スコアボード画面" loading="lazy">
+          <div class="image-caption">図 9-1: カード形式で分かりやすく整形されたスコアボード画面</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>スコアボード見出し</strong>: ランキング一覧画面のヘッダーです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ハイスコアカード（「今回の記録」ハイライト）</strong>: 順位バッジ・合計点数・キャラクタープロフィール（名前/職種/種族/性別/信仰・守護神）・死因・到達階層・HP/最大HPがカードで表示されます。プレイ直後の自身の結果には黄色枠と「今回の記録 / Current Game」バッジが付きます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>「詳細 &gt;」ボタン</strong>: 各カード右上の「詳細 &gt;」をタップすると、そのプレイの詳細な統計情報（<code>xlogfile</code> 由来データ）を確認できます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>履歴 / OK ボタン</strong>: 「履歴」から終了直前ログを振り返ったり、「OK」でスコアボードを閉じて次へ進んだりできます。</span></li>
+      </ol>
+      <h3>プレイ詳細と統計（xlogfile）</h3>
+      <p class="manual-desc">スコアボードの「詳細 &gt;」をタップすると、冒険の記録と詳細統計が一覧表示されます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/15_score_detail.png" alt="プレイ詳細・統計画面" loading="lazy">
+          <div class="image-caption">図 9-2: 死因・到達状況・プレイ統計（xlogfile）・達成項目を確認できる詳細画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>選択エントリーサマリー</strong>: 順位・スコア点数とキャラクターの基本情報です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>冒険の結果・到達状況</strong>: 結末（死因）・場所と最大到達階層・HP / 最大HP・所持金 (<code>Zm</code>)・これまでの死亡回数などを確認できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>プレイ統計 (<code>xlogfile</code>)</strong>: 開始日時・終了日時・実プレイ時間・経過ターン数・願い回数（うちアーティファクト数）・骸骨ファイル（<code>bones</code>）およびリロール回数・NetHack バージョンを記録・表示します。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>達成項目</strong>: ゲーム中に達成した各種実績・特別功績（Conduct 等）が表示されます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>閉じるボタン</strong>: スコアボード一覧へ戻ります。</span></li>
+      </ol>
+      <h3>死亡時の墓石画面</h3>
+      <p class="manual-desc">キャラクターが死亡すると、アスキー／ピクセルアートで描かれた墓石画面と追悼メッセージが表示されます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/16_tombstone.png" alt="死亡時の墓石表示画面" loading="lazy">
+          <div class="image-caption">図 9-3: R.I.P. ピクセルアートと追悼文が表示される墓石画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>墓石ピクセルアート（R.I.P. 碑文）</strong>: キャラクター名・死因・亡くなった年が刻まれた墓石ビジュアルが表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>追悼サマリー文</strong>: どこで何を残しどのように生涯を終えたかの要約メッセージです。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>確認ボタン（履歴 / OK）</strong>: 「履歴」で最後のメッセージログを確認するか、「OK」をタップしてスコアボード表示へ進みます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 10. コマンドパネルの追加 -->
+    <!-- 10. 画面表示・ステータス・フォント設定 -->
     <section id="section-10" class="manual-item">
-      <h2><span class="manual-item-num">10</span> コマンドパネルの追加</h2>
-      <p class="manual-desc">
-        DartHack設定画面の「コマンドパネル編集」では、用途に合わせて新しいコマンドパネルを追加・設定することができます。設定画面で追加・カスタマイズを行った後、ゲーム画面でコマンドパネルを縦にスワイプすることで、新しいコマンドパネルが表示されます。
-      </p>
+      <h2><span class="manual-item-num">10</span> 画面表示・ステータス・フォント設定</h2>
+      <p class="manual-desc">タイトル画面の歯車アイコン、または「DartHack メニュー → ゲーム設定を開く」から <strong>「詳細ゲーム設定」</strong> 画面を開けます。ここでは表示・操作のあらゆる項目を好みに合わせて細かく調整できます。</p>
+      <h3>ステータス領域設定</h3>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/setting_cmd_panel3.png" alt="コマンドパネル追加設定">
-          <div class="image-caption">設定画面でのパネル追加設定</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/cmd_panel3.png" alt="追加されたコマンドパネル画面">
-          <div class="image-caption">ゲーム画面でのパネル表示</div>
+          <img src="images/manual/ja/17_settings_screen_status.png" alt="詳細ゲーム設定：ステータス領域設定" loading="lazy">
+          <div class="image-caption">図 10-1: ステータス表示エリアのフィット・行数・フォントサイズ・HPバー設定</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス領域設定ヘッダー</strong>: タップでセクションを展開／折りたたみできます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ステータス領域表示モード</strong>: 画面幅に合わせて文字を自動縮小する「自動縮小フィット」などの表示方法を選択します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ステータス行数・構成</strong>: 1行〜3行（超コンパクトは最小項目のみ）など、画面の縦スペースに応じてステータス行の構成を切り替えます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>フォントサイズスライダー</strong>: ステータス欄の文字サイズ（例：<code>13 pt</code>）をスライダーで微調整します。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>HPバー表示 (<code>hitpointbar</code>)</strong>: ON にするとキャラクター名と職業の背景に現在のHP残量ゲージを重ねて表示します（下部には状態に応じた色分けを行う「ステータス強調」設定も続きます）。</span></li>
+      </ol>
+      <h3>画面表示設定（画面モード・物理キーヘルプ・カメラ追従）</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/17b_settings_screen_display.png" alt="詳細ゲーム設定：画面表示設定" loading="lazy">
+          <div class="image-caption">図 10-2: 画面モード・物理キーボード用ヘルプ・カメラ追従モード設定</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>画面表示設定ヘッダー</strong>: 画面モードとカメラ追従方法を設定するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>画面モード選択</strong>: 通常表示や全画面表示などの画面モードを選びます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>物理キーボード用ヘルプを有効化</strong>: ON にするとボタン上にショートカット文字（<code>y:</code>, <code>n:</code>, <code>Esc:</code> 等）が表示され、<code>F1</code> または <code>M-h (Alt-h)</code> で操作ヘルプダイアログを開けるようになります。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>カメラ追従モード</strong>: 移動ごとに主人公を画面見やすい位置に保つ <strong>常時センタリング（主人公追従）</strong> と、PC 版のように画面端へ近づいたときだけスクロールする <strong>マップ固定モード（端スクロール）</strong> を切り替えます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>スクロールマージン＆スクロール量</strong>: 「マップ固定モード」を選択している場合に有効になり、端から何マス手前でスクロールを開始するか（スクロールマージン）と、1回のスクロールで何マス移動させるか（スクロール量）を調整できます。</span></li>
+      </ol>
+      <h3>フォント設定</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/18b_settings_font.png" alt="詳細ゲーム設定：フォント設定" loading="lazy">
+          <div class="image-caption">図 10-3: マップ用・メッセージ用など5系統のフォント設定</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>フォント設定ヘッダー</strong>: アプリ全体のUIやアスキーマップに使うフォントを調整するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>一括フォント変更</strong>: マップ・メッセージ・ステータス・メニュー・UIの全5系統に同じフォントを一度に適用します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>マップフォント</strong>: タイル表示を OFF にした「ASCII マップ」描画時に使う専用フォントを選択します（デフォルトは <code>Terminus TTF (アスキー定番)</code>。罫線・位置ズレを防ぐため全角フォールバックを無効化した等幅フォントを採用しています）。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>個別フォント設定</strong>: メッセージフォント・ステータスフォント・メニュー＆テキストフォント・UI＆コントローラフォントを用途ごとに個別に変更できます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 11. コントローラ配置パターン変更 -->
+    <!-- 11. タイルセットの選択とカスタムタイルセット -->
     <section id="section-11" class="manual-item">
-      <h2><span class="manual-item-num">11</span> コントローラ配置パターン変更</h2>
-      <p class="manual-desc">
-        DartHack設定画面の「UI配置カスタマイズ」では、画面上のコントローラーやキーボタンの配置パターンを変更できます。利き手やプレイ端末の画面サイズに合わせて最適なレイアウトを選択できます。
-      </p>
+      <h2><span class="manual-item-num">11</span> タイルセットの選択とカスタムタイルセット</h2>
+      <p class="manual-desc">詳細ゲーム設定の先頭にある「タイル／シンボル設定」からタイル表示の ON/OFF と「タイルセットの選択」画面を開けます（ASCII 文字での古典的なプレイに切り替えたい場合はタイル表示を OFF にします）。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/leyout_pattern2.png" alt="コントローラ配置パターン変更画面">
-          <div class="image-caption">コントローラーレイアウトパターン設定</div>
+          <img src="images/manual/ja/18_tileset_selection.png" alt="タイルセットの選択画面" loading="lazy">
+          <div class="image-caption">図 11-1: 標準同梱タイルセットおよび外部カスタムタイルセットの管理画面</div>
         </div>
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>外部タイルセットを追加 (<code>.png</code> / <code>.webp</code> / <code>.bmp</code>)</strong>: お使いの端末に保存されている NetHack 用スプライトシート画像を選択して追加できます。NetHack 標準の <strong>横40列仕様（<code>画像横幅 ÷ 40</code>）</strong> を自動判定し、非正方形タイル（例：<code>15x25</code> 等）も正確なアスペクト比で描画します。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>タイルセット一覧と現在選択中のカード</strong>: 標準で複数の高品質タイルセットを同梱しています（デフォルトは <code>PixelHack (32x32)</code>）。各カードには解像度サイズ・作者名が明記され、現在適用中のセットには「選択中」バッジが表示されます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>配布 URL コピーアイコン</strong>: 各タイルセットの参照 URL 脇のアイコンをタップすると、配布元 URL をクリップボードへコピーできます。</span></li>
+      </ol>
+      <h3>同梱されている主なタイルセット</h3>
+      <div class="table-wrap">
+        <table class="manual-table">
+          <thead><tr>
+            <th>タイルセット名</th>
+            <th>解像度</th>
+            <th>特徴</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Default</strong></td>
+              <td><code>16x16</code></td>
+              <td>NetHack 本家標準のクラシックな小型タイル</td>
+            </tr>
+            <tr>
+              <td><strong>Nevanda</strong></td>
+              <td><code>32x32</code></td>
+              <td>見やすく親しみやすいデザインの定番タイルセット</td>
+            </tr>
+            <tr>
+              <td><strong>PixelHack</strong></td>
+              <td><code>32x32</code></td>
+              <td>視認性とドット絵の美しさを両立した初期選択タイル</td>
+            </tr>
+            <tr>
+              <td><strong>ZeldHack</strong></td>
+              <td><code>32x32</code></td>
+              <td>アクションRPG風の色彩豊かなグラフィックタイル</td>
+            </tr>
+            <tr>
+              <td><strong>KevinTam tiles</strong></td>
+              <td><code>64x64</code></td>
+              <td>高精細・透過背景対応（ダンジョンの床・地形の2層描画に対応）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="manual-desc">---</p>
     </section>
 
-    <!-- 12. 呼び名を決める時のメッセージ履歴確認 -->
+    <!-- 12. UI配置カスタマイズとタブレット対応 -->
     <section id="section-12" class="manual-item">
-      <h2><span class="manual-item-num">12</span> 呼び名を決める時のメッセージ履歴確認</h2>
-      <p class="manual-desc">
-        未識別のアイテムを使用した直後に「xxxxを何と呼びますか?」というダイアログが表示される場合があります。呼び名を決める際、どのような効果が現れたかを確認するために「履歴」ボタンを押すことで、直前のメッセージを確認することができます。
-      </p>
+      <h2><span class="manual-item-num">12</span> UI配置カスタマイズとタブレット対応</h2>
+      <h3>レイアウトパターンと左右入替設定</h3>
+      <p class="manual-desc">手の大きさや持ち方、端末の向きに合わせて、操作 UI の上下関係や左右配置を変更できます。</p>
       <div class="image-group">
         <div class="image-card">
-          <img src="images/manual/what_call_this.png" alt="呼び名を決めるダイアログ">
-          <div class="image-caption">呼び名を決めるダイアログ</div>
+          <img src="images/manual/ja/19_settings_ui_layout.png" alt="詳細ゲーム設定：UI配置カスタマイズ" loading="lazy">
+          <div class="image-caption">図 12-1: 画面レイアウトパターン1／2 の切替画面</div>
         </div>
-        <div class="image-card">
-          <img src="images/manual/message_of_drinking_potion.png" alt="メッセージ履歴">
-          <div class="image-caption">薬の効果を含むメッセージ履歴</div>
-        </div>
-
       </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>UI配置カスタマイズヘッダー</strong>: 画面レイアウトの構成を変更するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>レイアウトパターン選択</strong>: <strong>パターン1</strong>（上=ステータス・メッセージ / 中央=マップ / 下=移動パッド・ショートカット）と <strong>パターン2</strong>（上下反転）を切り替えます。さらに下には「移動パッドとショートカットの左右を入れ替える」「半透明メニューボタンの配置位置」オプションもあります。</span></li>
+      </ol>
+      <h3>横画面・タブレット端末での表示比較</h3>
+      <p class="manual-desc">タブレット端末や大画面の横向き表示では、ワイド画面を活かして広大なダンジョン領域と全表示に近いワイドコマンドパネルが自動的に最適化されます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/20_tablet_layout_compare.png" alt="タブレット横画面レイアウト" loading="lazy">
+          <div class="image-caption">図 12-2: 大画面タブレット横向き（1920x1200 等）でのプレイ画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>上部ステータス＆メッセージ領域</strong>: 横長レイアウトによりステータス項目が1〜2行にすっきり収まり、メッセージもゆったり表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>広域マップエリア＋左右ボタン</strong>: 横幅いっぱいに広いダンジョン領域が確保され、左右端に半透明メニューボタンと全体マップボタンが干渉せず配置されます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>左下 8方向移動パッド</strong>: 左手親指が届きやすい左下に配置されます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>右下 3×3 クイックショートカット</strong>: 右手親指で素早く押せる右下に配置されます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>最下部ワイドコマンドパネル</strong>: 多数のコマンドボタンがスクロール不要に近い横幅で並び、拡張操作にすぐアクセスできます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
     </section>
 
+    <!-- 13. コマンドパネル・クイックボタンの編集 -->
+    <section id="section-13" class="manual-item">
+      <h2><span class="manual-item-num">13</span> コマンドパネル・クイックボタンの編集</h2>
+      <p class="manual-desc">ゲーム画面最下部のコマンドパネル群は、プレイヤー自身のプレイスタイルに合わせて自由に追加・編集・並べ替えを行えます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/21_custom_cmd_panel.png" alt="カスタムコマンドパネル編集画面" loading="lazy">
+          <div class="image-caption">図 13-1: コマンドパネルの一覧管理・編集・新規追加・リセット画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>パネル名を表示トグル</strong>: 各コマンドパネル行の左端に「標準」「戦闘」「道具」「情報」などの名前バッジを表示するかどうかを切り替えます（非表示にすると横幅をより広く使えます）。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>登録済みパネル一覧（編集／削除アイコン）</strong>: 各パネルのタイトルと先頭コマンド一覧が表示されます。右側の <strong>鉛筆アイコン</strong> で中のボタン名・送信コマンド・順序を編集でき、<strong>ゴミ箱アイコン</strong> でカスタムパネルを削除できます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>新しいコマンドパネルを追加</strong>: オリジナルのコマンドパネルを作成します（最大 7 個まで登録可能）。魔法使い用の呪文ショートカット集や、よく使う <code>#</code> 拡張コマンドだけを並べたパネルなどを作れます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>パネル設定をデフォルトに戻す</strong>: カスタマイズ内容を初期化し、標準・戦闘・道具・情報の初期構成へ戻します。</span></li>
+      </ol>
+      <div class="manual-note">3×3 クイックショートカットについても、「詳細ゲーム設定」の <strong>「クイックショートカット設定」</strong> から9マスのボタン内容を個別に編集できます。</div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 14. 物理キーボード操作ガイドと物理キー割り当て -->
+    <section id="section-14" class="manual-item">
+      <h2><span class="manual-item-num">14</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
+      <h3>物理キーボード接続時のショートカット操作</h3>
+      <p class="manual-desc">Bluetooth キーボードや Chromebook・PC・USB キーボードを接続している場合、NetHack 標準キーに加えて DartHack UI 専用の便利ショートカットキーを使用できます。<code>F1</code> または <code>Alt-h (M-h)</code> キーを押すといつでも操作ガイドを表示できます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/22_keyboard_help.png" alt="キーボード操作ガイドダイアログ" loading="lazy">
+          <div class="image-caption">図 14-1: 物理キーボード用ショートカット操作ガイド</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>操作ガイドヘッダーと閉じるボタン (<code>×</code>)</strong>: <code>F1</code> または <code>Alt-h</code> で開くガイド画面です。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>UI 専用ショートカットキー一覧</strong>: <code>Ctrl+M</code> / <code>F10</code>（ドロワーメニュー一発起動）、<code>F9</code> / <code>Alt-z</code>（全体地図）、<code>Tab</code> / <code>Shift+Tab</code>（半透明ボタンのフォーカス移動）、<code>Enter</code> / <code>Space</code>（選択中の半透明ボタンを実行）、<code>?</code>（NetHack 標準ヘルプ）、<code>F1</code> / <code>Alt-h</code>（操作ヘルプ）が使えます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>下部の操作案内</strong>: <code>Space</code> で下へスクロール（最下部でもう一度押すと閉じる）、<code>Esc</code> または <code>Enter</code> で即座に終了します。</span></li>
+      </ol>
+      <h3>物理キー割り当て（音量ボタン・戻るボタン）</h3>
+      <p class="manual-desc">キーボードが無い端末でも、本体側面の <strong>音量ボタン</strong> や Android の <strong>戻るボタン／ジェスチャー</strong> に任意の NetHack コマンド（<code>s</code> 探索、<code>.</code> 休息、<code>Esc</code> キャンセル等）を割り当てられます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/22b_settings_phys_keys.png" alt="詳細ゲーム設定：物理キー割り当て" loading="lazy">
+          <div class="image-caption">図 14-2: 音量アップ／ダウンキー・戻るボタンのコマンド割り当て設定</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>物理キー割り当てヘッダー</strong>: 本体ハードウェアキーの挙動を設定するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>音量アップキー</strong>: 音量＋ボタンに割り当てるコマンドを選びます（初期値：<code>機能なし（通常音量変化）</code>）。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>音量ダウンキー</strong>: 音量－ボタンに割り当てるコマンドを選びます（初期値：<code>機能なし（通常音量変化）</code>）。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>戻るボタン</strong>: 戻る操作にコマンドや確認動作を割り当てます（初期値：<code>機能なし（通常通りアプリを閉じる）</code>）。誤バックによる中断を防ぎたい場合は割り当て変更が便利です。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 15. サウンド設定とハードモード・縛りプレイ -->
+    <section id="section-15" class="manual-item">
+      <h2><span class="manual-item-num">15</span> サウンド設定とハードモード・縛りプレイ</h2>
+      <h3>サウンド設定（BGM・効果音・環境音）</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/23a_settings_sound.png" alt="詳細ゲーム設定：サウンド設定" loading="lazy">
+          <div class="image-caption">図 15-1: サウンド全体・BGM・効果音(SE)・環境音の設定画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>サウンド設定ヘッダー</strong>: BGM・効果音・環境音の ON/OFF や音量を調整するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>サウンド全体・BGM スイッチ</strong>: 「サウンド全体」ですべての音声出力を一括ミュート／有効化できます。その下にある「BGM」スイッチでダンジョン層・特殊部屋に応じたBGM再生を個別に切り替えられます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>BGM音量・効果音（SE）・環境音</strong>: スライダーで BGM や各種音声バランスを細かく調整し、戦闘・扉開閉・環境音（祭壇・お店・水辺など）を好みに合わせて切り替えられます。</span></li>
+      </ol>
+      <h3>ゲームルール・プレイ設定とハードモード・縛りプレイ</h3>
+      <p class="manual-desc"><code>defaults.nh</code> に連動するゲーム本体の各種プレイ設定や、熟練者向けの制限プレイ（縛りプレイ / Challenges）をトグル操作だけで簡単に設定できます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/23b_settings_hard_mode.png" alt="詳細ゲーム設定：ハードモード・縛りプレイ設定" loading="lazy">
+          <div class="image-caption">図 15-2: ゲームルール設定とハードモード・縛りプレイトグル一覧</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ゲームルール・プレイ設定 (<code>defaults.nh</code>)</strong>: 自動拾い（<code>autopickup</code>）・時間表示・確認プロンプトなど、NetHack 本体の標準動作オプションを設定できます（※変更の反映には <strong>新規ゲームの開始</strong> が必要です）。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ハードモード・縛りプレイ設定 (<code>defaults.nh</code>) ヘッダー</strong>: 上級者向けの挑戦プレイ設定セクションです（※反映には <strong>新規ゲームの開始</strong> が必要です）。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>縛りプレイ・チャレンジ項目</strong>: <strong>全盲縛り (<code>blind</code>)</strong>、<strong>裸族縛り (<code>nudist</code>)</strong>、<strong>聾唖縛り (<code>deaf</code>)</strong>、<strong>一文無し縛り (<code>pauper</code>)</strong> など各種制限をトグルで ON/OFF できます（下にスクロールするとさらに多くのチャレンジ設定が表示されます）。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 16. 高度な設定（defaults.nh 編集と設定のバックアップ） -->
+    <section id="section-16" class="manual-item">
+      <h2><span class="manual-item-num">16</span> 高度な設定（defaults.nh 編集と設定のバックアップ）</h2>
+      <p class="manual-desc">設定画面の最下部には、NetHack 上級者向けのオプションファイル直接編集と、端末間でカスタマイズを引き継ぐエクスポート／インポート機能があります。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/23c_settings_advanced.png" alt="詳細ゲーム設定：高度な設定" loading="lazy">
+          <div class="image-caption">図 16-1: defaults.nh 直接編集および設定エクスポート／インポート</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>高度な設定ヘッダー</strong>: 上級者向けの設定管理セクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong><code>defaults.nh</code> を手動で編集</strong>: UI トグルにない細かな NetHack オプション（メニューカラー設定、ステータス強調ルール、<code>OPTIONS=...</code> のカスタム記述など）をテキストエディタで直接編集できます（※編集内容の反映には <strong>新規ゲームの開始</strong> が必要です）。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>設定をエクスポート／インポート</strong>: <strong>設定をエクスポート</strong> で現在のフォント・UI配置・カスタムコマンドパネル・ショートカット・表示設定を JSON 文字列としてクリップボードにコピーでき、その下の <strong>設定をインポート</strong> で貼り付けて別端末や再インストール後に瞬時に復元できます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+      <p class="manual-desc"><em>よりよい冒険を！ May the RNG smile upon you!</em></p>
+    </section>
   </main>
+
+  <!-- スクリーンショット拡大モーダル -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
 
   <footer>
     <div class="footer-nav">
       <a href="index.html">トップページ</a> |
-      <a href="manual.html">操作マニュアル</a> |
+      <a href="manual.html">操作マニュアル (日本語)</a> |
+      <a href="manual_en.html">English Manual</a> |
       <a href="privacy.html">プライバシーポリシー</a>
     </div>
     <p>© 2026 DartHack Project</p>
   </footer>
+
+  <script>
+    (function () {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCap = document.getElementById('lightbox-caption');
+      const closeBtn = document.getElementById('lightbox-close');
+
+      function closeLightbox() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+
+      document.querySelectorAll('.image-card img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          const cap = img.parentElement.querySelector('.image-caption');
+          lbCap.textContent = cap ? cap.textContent : img.alt;
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      lb.addEventListener('click', function (e) {
+        if (e.target === lb || e.target === closeBtn) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+# 未加工スクリーンショット（サイズが大きいためリポジトリに含めない）
+raw_screenshots/
+
+# ローカル作業用・一時ディレクトリ
+.github/context-mode/
+__pycache__/
+*.pyc

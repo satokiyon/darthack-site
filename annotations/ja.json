@@ -1,0 +1,236 @@
+{
+  "01_title.png": {
+    "annotations": [
+      { "id": 1, "box": [40, 185, 160, 300], "badge_pos": "outside-bottom-left" },
+      { "id": 2, "box": [175, 185, 295, 300], "badge_pos": "outside-bottom-right" },
+      { "id": 3, "box": [895, 185, 1015, 300], "badge_pos": "outside-bottom-left" },
+      { "id": 4, "box": [250, 1945, 830, 2065], "badge_pos": "outside-top-left" },
+      { "id": 5, "box": [45, 2105, 1035, 2275], "badge_pos": "corner-top-left" }
+    ]
+  },
+  "02_ask_name.png": {
+    "annotations": [
+      { "id": 1, "box": [105, 855, 975, 975], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [105, 1110, 975, 1275], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [105, 1320, 975, 1465], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [105, 1475, 975, 1595], "badge_pos": "corner-bottom-left" },
+      { "id": 5, "box": [645, 1620, 955, 1740], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "03_main_screen.png": {
+    "annotations": [
+      { "id": 1, "box": [0, 125, 1080, 230], "badge_pos": "corner-bottom-right" },
+      { "id": 2, "box": [0, 235, 1080, 500], "badge_pos": "bottom-right" },
+      { "id": 3, "box": [0, 860, 1080, 1400], "badge_pos": "top-right" },
+      { "id": 4, "box": [35, 1590, 130, 1690], "badge_pos": "outside-top-right" },
+      { "id": 5, "box": [950, 1590, 1045, 1690], "badge_pos": "outside-top-left" },
+      { "id": 6, "box": [15, 1785, 420, 2190], "badge_pos": "outside-top-right" },
+      { "id": 7, "box": [655, 1775, 1065, 2195], "badge_pos": "outside-top-left" },
+      { "id": 8, "box": [0, 2210, 1080, 2375], "badge_pos": "corner-top-left" }
+    ]
+  },
+  "03b_cmd_panels_expanded.png": {
+    "annotations": [
+      { "id": 1, "box": [220, 1875, 860, 1930], "badge_pos": "center-left" },
+      { "id": 2, "box": [0, 1935, 1080, 2045], "badge_pos": "center-right" },
+      { "id": 3, "box": [0, 2050, 1080, 2155], "badge_pos": "center-right" },
+      { "id": 4, "box": [0, 2160, 1080, 2265], "badge_pos": "center-right" },
+      { "id": 5, "box": [0, 2270, 1080, 2375], "badge_pos": "center-right" }
+    ]
+  },
+  "04_move_mode.png": {
+    "annotations": [
+      { "id": 1, "box": [70, 390, 995, 580], "badge_pos": "corner-bottom-right" },
+      { "id": 2, "box": [85, 600, 985, 760], "badge_pos": "top-right", "badge_xy": [790, 680] },
+      { "id": 3, "box": [85, 765, 985, 1525], "badge_pos": "top-right", "badge_xy": [790, 1140] },
+      { "id": 4, "box": [85, 1530, 985, 1715], "badge_pos": "top-right", "badge_xy": [790, 1620] },
+      { "id": 5, "box": [85, 1720, 985, 1900], "badge_pos": "top-right", "badge_xy": [790, 1810] },
+      { "id": 6, "box": [450, 1915, 945, 2065], "badge_pos": "outside-bottom-right" }
+    ]
+  },
+  "05_tap_context_menu.png": {
+    "annotations": [
+      { "id": 1, "box": [45, 195, 1035, 305], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [45, 315, 1035, 1890], "badge_pos": "top-right" },
+      { "id": 3, "box": [365, 2100, 715, 2275], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "06_full_map.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 455, 1045, 615], "badge_pos": "outside-top-left" },
+      { "id": 2, "box": [40, 620, 1040, 1875], "badge_pos": "top-right" },
+      { "id": 3, "box": [135, 1950, 945, 2025], "badge_pos": "outside-top-left" }
+    ]
+  },
+  "07_full_keyboard.png": {
+    "annotations": [
+      { "id": 1, "box": [0, 1345, 1080, 1778], "badge_pos": "outside-top-left" },
+      { "id": 2, "box": [0, 1782, 852, 1900], "badge_pos": "outside-top-right", "badge_xy": [450, 1770] },
+      { "id": 3, "box": [855, 1782, 965, 1900], "badge_pos": "outside-top-right" },
+      { "id": 4, "box": [0, 1910, 1080, 2375], "badge_pos": "bottom-right" }
+    ]
+  },
+  "08_ext_commands.png": {
+    "annotations": [
+      { "id": 1, "box": [75, 325, 1005, 455], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [75, 495, 1005, 2100], "badge_pos": "top-right" },
+      { "id": 3, "box": [365, 2100, 715, 2275], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "09_item_menu.png": {
+    "annotations": [
+      { "id": 1, "box": [85, 270, 990, 355], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [85, 755, 990, 1295], "badge_pos": "bottom-right" },
+      { "id": 3, "box": [365, 2100, 715, 2275], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "10_what_call_this.png": {
+    "annotations": [
+      { "id": 1, "box": [90, 830, 990, 985], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [90, 1010, 990, 1235], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [90, 1265, 990, 1455], "badge_pos": "corner-bottom-right" },
+      { "id": 4, "box": [125, 1495, 325, 1595], "badge_pos": "outside-bottom-left" },
+      { "id": 5, "box": [410, 1495, 945, 1595], "badge_pos": "outside-bottom-right" }
+    ]
+  },
+  "11_msg_history.png": {
+    "annotations": [
+      { "id": 1, "box": [0, 980, 1080, 1110], "badge_pos": "outside-top-right" },
+      { "id": 2, "box": [25, 1120, 1055, 2150], "badge_pos": "top-right" },
+      { "id": 3, "box": [25, 2170, 1055, 2295], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "12_spoilers.png": {
+    "annotations": [
+      { "id": 1, "box": [620, 200, 725, 300], "badge_pos": "outside-top-left" },
+      { "id": 2, "box": [750, 200, 860, 300], "badge_pos": "outside-top-left" },
+      { "id": 3, "box": [75, 365, 1005, 495], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [40, 560, 1040, 2320], "badge_pos": "top-right" }
+    ]
+  },
+  "13_darthack_menu.png": {
+    "annotations": [
+      { "id": 1, "box": [0, 90, 825, 585], "badge_pos": "bottom-right" },
+      { "id": 2, "box": [0, 595, 825, 920], "badge_pos": "center-right" },
+      { "id": 3, "box": [0, 925, 825, 1380], "badge_pos": "center-right" },
+      { "id": 4, "box": [0, 1385, 825, 1980], "badge_pos": "center-right" },
+      { "id": 5, "box": [0, 1985, 825, 2345], "badge_pos": "center-right" }
+    ]
+  },
+  "14_scoreboard.png": {
+    "annotations": [
+      { "id": 1, "box": [45, 200, 1035, 345], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [80, 415, 995, 765], "badge_pos": "bottom-right" },
+      { "id": 3, "box": [800, 420, 975, 480], "badge_pos": "outside-top-right" },
+      { "id": 4, "box": [245, 2125, 835, 2280], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "15_score_detail.png": {
+    "annotations": [
+      { "id": 1, "box": [60, 380, 1015, 555], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [65, 585, 1005, 1090], "badge_pos": "top-right" },
+      { "id": 3, "box": [65, 1100, 1005, 1705], "badge_pos": "top-right" },
+      { "id": 4, "box": [65, 1735, 1005, 1955], "badge_pos": "top-right" },
+      { "id": 5, "box": [395, 1985, 685, 2090], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "16_tombstone.png": {
+    "annotations": [
+      { "id": 1, "box": [140, 210, 940, 1465], "badge_pos": "top-right" },
+      { "id": 2, "box": [145, 1510, 935, 1885], "badge_pos": "bottom-right" },
+      { "id": 3, "box": [260, 2145, 825, 2270], "badge_pos": "outside-top-right" }
+    ]
+  },
+  "17_settings_screen_status.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 965, 1045, 1185], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1275, 1045, 1425], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 1605, 1045, 1765], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [35, 1785, 1045, 2100], "badge_pos": "corner-top-right" },
+      { "id": 5, "box": [35, 2110, 1045, 2345], "badge_pos": "top-right", "badge_xy": [770, 2225] }
+    ]
+  },
+  "17b_settings_screen_display.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 700, 1045, 945], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1020, 1045, 1175], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 1195, 1045, 1525], "badge_pos": "top-right", "badge_xy": [790, 1380] },
+      { "id": 4, "box": [35, 1640, 1045, 1790], "badge_pos": "corner-top-right" },
+      { "id": 5, "box": [35, 1805, 1045, 2345], "badge_pos": "center-right" }
+    ]
+  },
+  "18_tileset_selection.png": {
+    "annotations": [
+      { "id": 1, "box": [55, 315, 1025, 620], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [55, 1350, 1025, 1675], "badge_pos": "top-right", "badge_xy": [715, 1430] },
+      { "id": 3, "box": [905, 1195, 1000, 1290], "badge_pos": "outside-top-left" }
+    ]
+  },
+  "18b_settings_font.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 490, 1045, 680], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 700, 1045, 1030], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 1060, 1045, 1420], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [35, 1445, 1045, 2320], "badge_pos": "top-right" }
+    ]
+  },
+  "19_settings_ui_layout.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 1300, 1045, 1495], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1510, 1045, 2005], "badge_pos": "top-right" }
+    ]
+  },
+  "20_tablet_layout_compare.png": {
+    "annotations": [
+      { "id": 1, "box": [0, 35, 1920, 260], "badge_pos": "bottom-right" },
+      { "id": 2, "box": [0, 270, 1920, 700], "badge_pos": "top-right" },
+      { "id": 3, "box": [5, 725, 210, 995], "badge_pos": "outside-top-right" },
+      { "id": 4, "box": [1600, 720, 1910, 995], "badge_pos": "outside-top-left" },
+      { "id": 5, "box": [0, 1015, 1920, 1145], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "21_custom_cmd_panel.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 505, 1045, 710], "badge_pos": "outside-top-right" },
+      { "id": 2, "box": [35, 720, 1045, 1465], "badge_pos": "top-right" },
+      { "id": 3, "box": [35, 1475, 1045, 1605], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [410, 1615, 1020, 1735], "badge_pos": "center-left" }
+    ]
+  },
+  "22_keyboard_help.png": {
+    "annotations": [
+      { "id": 1, "box": [50, 740, 1030, 895], "badge_pos": "outside-top-left" },
+      { "id": 2, "box": [60, 945, 1020, 1610], "badge_pos": "top-right" },
+      { "id": 3, "box": [60, 1625, 1020, 1745], "badge_pos": "outside-bottom-right" }
+    ]
+  },
+  "22b_settings_phys_keys.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 515, 1045, 750], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 775, 1045, 1025], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 1045, 1045, 1295], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [35, 1315, 1045, 1585], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "23a_settings_sound.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 1410, 1045, 1650], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1660, 1045, 1995], "badge_pos": "top-right", "badge_xy": [800, 1710] },
+      { "id": 3, "box": [35, 2005, 1045, 2360], "badge_pos": "top-right", "badge_xy": [770, 2065] }
+    ]
+  },
+  "23b_settings_hard_mode.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 920, 1045, 1315], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1345, 1045, 1665], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 1675, 1045, 2360], "badge_pos": "top-right", "badge_xy": [800, 1735] }
+    ]
+  },
+  "23c_settings_advanced.png": {
+    "annotations": [
+      { "id": 1, "box": [35, 1690, 1045, 1835], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [35, 1845, 1045, 2125], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [35, 2135, 1045, 2360], "badge_pos": "corner-top-right" }
+    ]
+  }
+}

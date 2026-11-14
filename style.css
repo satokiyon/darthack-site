@@ -198,6 +198,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  cursor: zoom-in;
 }
 
 .image-card img:hover {
@@ -209,6 +210,180 @@ body {
   color: #718096;
   margin-top: 10px;
   font-weight: 500;
+}
+
+/* 導入文・ズームヒント・小見出し */
+.manual-intro {
+  background: #ebf8ff;
+  border-left: 4px solid #3182ce;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.manual-intro .manual-desc {
+  margin-bottom: 0;
+  color: #2c5282;
+}
+
+.zoom-tip {
+  font-size: 0.875rem;
+  color: #718096;
+  text-align: right;
+  margin: 0 0 12px 0;
+}
+
+.manual-item h3 {
+  font-size: 1.125rem;
+  color: #2d3748;
+  margin: 22px 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #cbd5e0;
+}
+
+/* 番号付き注釈リスト（画像内の枠線バッジと色同期） */
+.annotated-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.annotated-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.badge-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.badge-num-1 { background-color: #E53935; }
+.badge-num-2 { background-color: #1E88E5; }
+.badge-num-3 { background-color: #16A34A; }
+.badge-num-4 { background-color: #EA580C; }
+.badge-num-5 { background-color: #9333EA; }
+.badge-num-6 { background-color: #0891B2; }
+.badge-num-7 { background-color: #DB2777; }
+.badge-num-8 { background-color: #CA8A04; }
+
+.annotated-text {
+  flex: 1;
+}
+
+/* 補足ノート・テーブル・インラインコード */
+.manual-note {
+  background: #fffbeb;
+  border-left: 4px solid #d97706;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  color: #78350f;
+  font-size: 0.95rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0 20px;
+}
+
+.manual-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.manual-table th,
+.manual-table td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.manual-table th {
+  background: #edf2f7;
+  color: #1a202c;
+  font-weight: 600;
+}
+
+.manual-table tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+code {
+  background: #edf2f7;
+  color: #1a202c;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* 拡大モーダル (Lightbox) */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.88);
+  z-index: 1000;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95vw;
+  max-height: 82vh;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  cursor: zoom-out;
+}
+
+.lightbox-caption {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* 汎用画像スタイル */

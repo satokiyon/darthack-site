@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DartHack User Manual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>DartHack User Manual</h1>
+    <p class="subtitle">Complete guide covering basic controls, customization, and latest features</p>
+    <nav class="nav-links">
+      <a href="index.html" class="btn btn-secondary">Back to Top</a>
+      <a href="manual.html" class="btn">日本語マニュアル</a>
+      <a href="manual_en.md" class="btn btn-secondary">Markdown (manual_en.md)</a>
+      <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="manual-intro">
+      <p class="manual-desc">DartHack is a Flutter/Dart port that lets you play the classic roguelike <strong>NetHack 5.0</strong> comfortably on smartphones and tablets, supporting both <strong>English (upstream NetHack core)</strong> and <strong>Japanese (NetHackJP core)</strong>. This manual walks you through everything from the title screen and starting a character to touch controls, command panels, hardware keyboard shortcuts, tilesets, fonts, UI layouts, sound, challenge modes, and manual <code>defaults.nh</code> configuration—complete with numbered screenshot guides.</p>
+      <div class="manual-note">The map supports touch, drag scrolling, and pinch-to-zoom. Physical (hardware) keyboards are also fully supported with dedicated UI navigation shortcuts.</div>
+    </div>
+    <p class="zoom-tip">Click any screenshot to zoom in</p>
+
+    <!-- 目次 (Table of Contents) -->
+    <nav class="toc-container">
+      <h2>Table of Contents</h2>
+      <ul class="toc-list">
+        <li><a href="#section-1">1. Launching the App &amp; Title Screen</a></li>
+        <li><a href="#section-2">2. Creating a Character &amp; Resuming Saved Games</a></li>
+        <li><a href="#section-3">3. Main Game Screen Overview</a></li>
+        <li><a href="#section-4">4. Movement Modes, Map Tapping &amp; Full Level Map</a></li>
+        <li><a href="#section-5">5. Soft Keyboard &amp; Extended Commands</a></li>
+        <li><a href="#section-6">6. Item Menus &amp; Text Input Prompts</a></li>
+        <li><a href="#section-7">7. Message History &amp; Spoilers Viewer</a></li>
+        <li><a href="#section-8">8. DartHack Menu (Drawer)</a></li>
+        <li><a href="#section-9">9. Scoreboard, Run Statistics &amp; Tombstone</a></li>
+        <li><a href="#section-10">10. Display, Status Area &amp; Font Settings</a></li>
+        <li><a href="#section-11">11. Selecting &amp; Importing Tilesets</a></li>
+        <li><a href="#section-12">12. UI Layout Customization &amp; Tablet Mode</a></li>
+        <li><a href="#section-13">13. Customizing Command Panels &amp; Quick Shortcuts</a></li>
+        <li><a href="#section-14">14. Physical Keyboard Guide &amp; Hardware Key Mapping</a></li>
+        <li><a href="#section-15">15. Sound Settings &amp; Challenge / Hard Modes</a></li>
+        <li><a href="#section-16">16. Advanced Settings (Editing `defaults.nh` &amp; Backup)</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1. Launching the App &amp; Title Screen -->
+    <section id="section-1" class="manual-item">
+      <h2><span class="manual-item-num">1</span> Launching the App &amp; Title Screen</h2>
+      <p class="manual-desc">When you launch DartHack, you start on the title screen where you can choose the display language, read the guidebook or spoilers, adjust settings, or begin an adventure.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/01_title.png" alt="DartHack Title Screen" loading="lazy">
+          <div class="image-caption">Figure 1-1: Controls on the DartHack title screen</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Guidebook / How to Play</strong>: Opens the built-in NetHack Guidebook inside the app. Available before starting a run so beginners can check core rules at any time.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Spoilers (Strategy Guide)</strong>: Opens the built-in NetHack Spoilers collection for reference on mechanics, items, and monsters.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Game Settings</strong>: Opens the detailed settings screen covering tilesets, fonts, layout patterns, sound, and <code>defaults.nh</code>.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Language Switcher (日本語 / English)</strong>: Toggles between <strong>English (upstream NetHack core)</strong> and <strong>日本語 (NetHackJP core)</strong> for both the Flutter UI and the underlying game engine.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Start Adventure</strong>: Opens the character name &amp; saved game selection dialog to begin or resume a game.</span></li>
+      </ol>
+      <div class="manual-note">Save files are managed per language core. Select your preferred language (<code>English</code> or <code>日本語</code>) on the title screen before tapping <strong>Start Adventure</strong>.</div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 2. Creating a Character &amp; Resuming Saved Games -->
+    <section id="section-2" class="manual-item">
+      <h2><span class="manual-item-num">2</span> Creating a Character &amp; Resuming Saved Games</h2>
+      <p class="manual-desc">Tapping <strong>Start Adventure</strong> opens the <strong>&quot;Who are you?&quot;</strong> dialog where you enter your hero&#x27;s name and select the play mode.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/02_ask_name.png" alt="Who are you? Dialog" loading="lazy">
+          <div class="image-caption">Figure 2-1: Character name input, saved game selection, and play mode dialog</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Character Name Input</strong>: Enter a name for your adventurer (up to 31 bytes in UTF-8). Entering an existing saved character name resumes that run.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Saved Games List</strong>: If you have in-progress saved runs, they appear here. Tap any entry to auto-fill its name and resume from where you left off.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Play Mode Switcher (Normal / Explore / Wizard)</strong>: Choose between the three game modes.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Play Mode Description</strong>: Displays a summary of rules and scoring behavior for the currently selected mode.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Start Game / Cancel</strong>: Tap <strong>Start Game</strong> to launch into the dungeon (for new characters, role/race/tutorial prompts or auto-selection follow depending on options).</span></li>
+      </ol>
+      <h3>Play Mode Comparison</h3>
+      <div class="table-wrap">
+        <table class="manual-table">
+          <thead><tr>
+            <th>Mode</th>
+            <th>Rules &amp; Features</th>
+            <th>High Score Recording</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Normal</strong></td>
+              <td>Classic roguelike perma-death. When you die, the run ends and your score is recorded.</td>
+              <td>Recorded on scoreboard</td>
+            </tr>
+            <tr>
+              <td><strong>Explore</strong></td>
+              <td>Practice/discovery mode allowing you to decline death and use exploration assists.</td>
+              <td>Not recorded as a standard run</td>
+            </tr>
+            <tr>
+              <td><strong>Wizard</strong></td>
+              <td>Debug/sandbox mode with special wizard commands (wishing, level teleport, etc.).</td>
+              <td>Not recorded</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 3. Main Game Screen Overview -->
+    <section id="section-3" class="manual-item">
+      <h2><span class="manual-item-num">3</span> Main Game Screen Overview</h2>
+      <p class="manual-desc">Once in the dungeon, the main play screen displays all game information and controls. In the default <strong>Pattern 1</strong> layout, elements are stacked top-to-bottom: <strong>Status → Messages → Dungeon Map → D-Pad &amp; Shortcuts → Command Panel</strong>.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/03_main_screen.png" alt="Main Game Screen" loading="lazy">
+          <div class="image-caption">Figure 3-1: Main game screen (Layout Pattern 1 with collapsed command panel)</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Status Area</strong>: Displays your character name &amp; rank, attributes (<code>St/Dx/Co/In/Wi/Ch</code>), alignment, dungeon level (<code>Dlvl</code>), gold (<code>$</code>), HP, power (<code>Pw</code>), armor class (<code>AC</code>), experience level (<code>Xp</code>), and turn counter (<code>T</code>). With <code>hitpointbar</code> enabled, an HP gauge renders behind your name/rank.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Message Area</strong>: Shows action results, combat messages, and discoveries. Tap anywhere in this area to open the full <strong>Message History</strong> sheet.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Dungeon Map Area</strong>: Renders the current level. Drag to pan, pinch to zoom in/out, and tap any tile to open a context-aware action menu.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Floating Menu Button (Left)</strong>: Opens the <strong>DartHack Menu</strong> drawer (Chapter 8). Its position can be customized in settings.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Full Map Button (Right)</strong>: Opens the <strong>Full level map</strong> overview dialog (Chapter 4).</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8-Way Directional Pad &amp; Mode Button</strong>: Eight directional buttons (<code>y k u / h . l / b j n</code>) move or attack in any direction. Tap the center button (initially <strong>Normal</strong>) to switch movement modes (run, <code>g</code>, <code>m</code>, <code>F</code>, etc.).</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 Quick Shortcuts</strong>: Nine one-tap shortcut buttons (default: <code>Inv</code>, <code>WhatIs</code>, <code>Pick</code>, <code>There</code>, <code>Here</code>, <code>Chat</code>, <code>Eat</code>, <code>Again</code>, <code>Esc</code>).</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>Command Panel &amp; Expand Handle</strong>: A compact one-row strip of categorized action buttons. Tap or swipe upward on the handle to expand all command panels.</span></li>
+      </ol>
+      <h3>Expanding All Command Panels</h3>
+      <p class="manual-desc">Swipe up or tap the handle (1) above the command strip to view every registered panel simultaneously.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/03b_cmd_panels_expanded.png" alt="Expanded Command Panels" loading="lazy">
+          <div class="image-caption">Figure 3-2: Expanded bottom command panels</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Expand / Collapse Handle</strong>: Tap or swipe down to collapse the panels back into a single row.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Default Panel</strong>: Starts with <code>[kbd]</code> (switches between the 8-way D-Pad and full soft keyboard) followed by <code>#</code> (extended commands), <code>20Srch</code>, <code>Wait</code>, <code>Here</code>, <code>Glance</code>, <code>Drop</code>, <code>Quaff</code>, and more.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Combat Panel</strong>: Quick access to combat actions (<code>Throw</code>, <code>Fire</code>, <code>Quiver</code>, <code>Read</code>, <code>Zap</code>, <code>Cast</code>, <code>Spells</code>, <code>Kick</code>, etc.).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Items Panel</strong>: Inventory and item actions (<code>Inv</code>, <code>Apply</code>, <code>Pick</code>, <code>Drop</code>, <code>DropT</code>, <code>Loot</code>, <code>Quaff</code>, <code>Read</code>, etc.).</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Info Panel</strong>: Reference commands (<code>Help</code>, <code>WhatDo</code>, <code>WhatIs</code>, <code>Glance</code>, <code>Here</code>, <code>Attrib</code>, <code>Spells</code>, etc.).</span></li>
+      </ol>
+      <div class="manual-note">Tap a panel badge on the left (e.g., <code>Default</code>, <code>Combat</code>) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. Panels can be customized under <strong>Game Settings → Edit Command Panel</strong> (Chapter 13).</div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 4. Movement Modes, Map Tapping &amp; Full Level Map -->
+    <section id="section-4" class="manual-item">
+      <h2><span class="manual-item-num">4</span> Movement Modes, Map Tapping &amp; Full Level Map</h2>
+      <h3>Selecting a Movement Mode</h3>
+      <p class="manual-desc">Tap the center button on the 8-way D-Pad (<code>Normal</code>) to open <strong>Select Movement Modes to Use</strong>.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/04_move_mode.png" alt="Select Movement Modes Dialog" loading="lazy">
+          <div class="image-caption">Figure 4-1: Selecting directional movement modifiers</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Dialog Header</strong>: Title of the movement mode selector.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Normal</strong>: Moves 1 step in the chosen direction (<code>yuhjklbn</code>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Long-Distance Travel (<code>Uppercase</code> / <code>g</code> / <code>G</code> / <code>^(Ctrl)</code>)</strong>: Choose <strong>Uppercase (<code>YUHJKLBN</code>)</strong> to run until hitting a wall/obstacle, <strong><code>g&lt;dir&gt;</code></strong> to travel until something interesting is found (stopping at forks), or <strong><code>G&lt;dir&gt;</code> / <code>^&lt;dir&gt;</code></strong> to ignore forks.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong><code>m</code> Mode (<code>m&lt;dir&gt;</code>)</strong>: Moves onto a tile without picking up items and allows stepping onto dangerous terrain.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong><code>F</code> Mode (<code>F&lt;dir&gt;</code>)</strong>: Attacks in a direction even when no monster is perceived there (toggleable so it stays active when needed).</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>Cancel / OK</strong>: Closes the dialog and applies your selection.</span></li>
+      </ol>
+      <h3>Map Tap Context Menu</h3>
+      <p class="manual-desc">Tapping directly on a map tile opens a context-sensitive action menu tailored to where you tapped (your current square, an adjacent square, or a distant tile).</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/05_tap_context_menu.png" alt="Tap Context Menu" loading="lazy">
+          <div class="image-caption">Figure 4-2: Context-sensitive actions opened by tapping a dungeon tile</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Prompt Header</strong>: Displays the prompt (e.g., <strong>&quot;What do you want to do?&quot;</strong>).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Action List</strong>: Shows context-appropriate commands—current square actions (<em>Go up the stairs</em>, <em>Inventory</em>, <em>Rest one turn</em>, <em>Search</em>, <em>Pray here</em>, etc.), adjacent square <strong>&quot;Move here&quot;</strong> / door / combat actions, or distant inspection/travel options.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Cancel Button</strong>: Dismisses the menu without taking an action.</span></li>
+      </ol>
+      <h3>Full Level Map</h3>
+      <p class="manual-desc">Tap the floating map icon on the right (or press <code>F9</code> / <code>Alt-z</code>) to view the entire explored dungeon level at once.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/06_full_map.png" alt="Full Level Map Dialog" loading="lazy">
+          <div class="image-caption">Figure 4-3: Full level map overview</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Header &amp; Close (<code>×</code>)</strong>: Shows the <strong>Full level map</strong> title and close button.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Level Overview Canvas</strong>: Displays all explored rooms, corridors, doors, stairs, and features on the current floor; drag to pan.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Pinch-to-Zoom Hint</strong>: Reminds you that pinching adjusts zoom level smoothly inside the overview.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 5. Soft Keyboard &amp; Extended Commands -->
+    <section id="section-5" class="manual-item">
+      <h2><span class="manual-item-num">5</span> Soft Keyboard &amp; Extended Commands</h2>
+      <h3>Full Soft Keyboard Mode</h3>
+      <p class="manual-desc">Tap <strong><code>[kbd]</code></strong> on the command panel to replace the D-Pad and 3×3 shortcuts with a full soft keyboard—ideal for typing classic single-letter commands or modifier combinations (<code>Ctrl</code>, <code>Meta</code>).</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/07_full_keyboard.png" alt="Full Soft Keyboard Mode" loading="lazy">
+          <div class="image-caption">Figure 5-1: Full QWERTY soft keyboard with modifier keys and command panels</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>QWERTY Alpha Section</strong>: Keys <code>q</code>–<code>p</code>, <code>a</code>–<code>l</code>, <code>z</code>–<code>m</code>, plus <code>Shift</code> (uppercase) and <code>Del</code>.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Modifiers &amp; Symbol Bar</strong>: Quick access to <code>?123</code> (numbers/symbols), <code>Meta</code>, <code>&lt;</code> / <code>&gt;</code> (stairs up/down), <code>:</code>, <code>,</code>, <code>Ctrl</code>, and <code>Enter</code>.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong><code>[Pad]</code> Toggle Button</strong>: Returns immediately to the 8-way D-Pad and 3×3 quick shortcuts layout.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Command Panels</strong>: All four command rows remain accessible below the keyboard for hybrid input.</span></li>
+      </ol>
+      <h3>Extended Commands (<code>#</code>)</h3>
+      <p class="manual-desc">Tap <strong><code>#</code></strong> on the command panel (or type <code>#</code>) to browse every extended command with descriptions and live search filtering.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/08_ext_commands.png" alt="Extended Commands Dialog" loading="lazy">
+          <div class="image-caption">Figure 5-2: Searchable extended commands list</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Filter Search Box</strong>: Type any part of a command name or description (such as <code>pray</code>, <code>loot</code>, or <code>adjust</code>) to filter the list instantly.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Extended Command Rows</strong>: Lists each command&#x27;s selection letter, <code>#command</code> name, and description; tap any row to execute it.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Cancel Button</strong>: Closes the dialog without running a command.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 6. Item Menus &amp; Text Input Prompts -->
+    <section id="section-6" class="manual-item">
+      <h2><span class="manual-item-num">6</span> Item Menus &amp; Text Input Prompts</h2>
+      <h3>Categorized Item Menu</h3>
+      <p class="manual-desc">When checking inventory (<code>i</code>), wielding weapons (<code>w</code>), wearing armor (<code>W</code>), quaffing (<code>q</code>), or reading (<code>r</code>), DartHack renders items grouped by category with tileset icons.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/09_item_menu.png" alt="Item Menu" loading="lazy">
+          <div class="image-caption">Figure 6-1: Item selection menu with tile icons and BUC color coding</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Category Headers</strong>: Clearly separates <em>Weapons</em>, <em>Armor</em>, <em>Comestibles</em>, and other item classes.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Item Rows</strong>: Each row displays the inventory slot letter (<code>a</code>, <code>b</code>, <code>c</code>...), the item&#x27;s tileset sprite, beatitude/status coloring (blessed/uncursed/cursed), count, and equipped state (<code>weapon in right hand</code>, <code>being worn</code>, etc.).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Cancel Button</strong>: Closes the menu without selecting an item.</span></li>
+      </ol>
+      <h3>Naming &amp; Text Input Prompt</h3>
+      <p class="manual-desc">When naming items (<code>C</code> / <code>#name</code>), making wishes, annotating levels, or entering text, a dedicated prompt dialog appears with context and history support.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/10_what_call_this.png" alt="What do you want to name this long sword?" loading="lazy">
+          <div class="image-caption">Figure 6-2: Text input prompt with recent context preview, byte counter, and history</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Prompt Question Header</strong>: Shows what NetHack is asking for (e.g., <em>&quot;What do you want to name this long sword?&quot;</em>).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Recent Context Card</strong>: Displays the latest log lines right inside the prompt so you never lose track of which item or monster is referenced. Tap <strong>&quot;Tap for full...&quot;</strong> to open full history.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Text Input Field &amp; Byte Counter</strong>: Supports standard system keyboards/IMEs and tracks the remaining byte budget allowed by the NetHack C core (e.g., <code>0 / 62 bytes</code>).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>History Button</strong>: Lets you pick and reuse previously entered text strings.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Cancel / Confirm</strong>: Sends your input to the game engine or cancels the prompt.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 7. Message History &amp; Spoilers Viewer -->
+    <section id="section-7" class="manual-item">
+      <h2><span class="manual-item-num">7</span> Message History &amp; Spoilers Viewer</h2>
+      <h3>Message History Sheet</h3>
+      <p class="manual-desc">Tap the message area at the top of the play screen to slide up the <strong>Message History</strong> sheet.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/11_msg_history.png" alt="Message History" loading="lazy">
+          <div class="image-caption">Figure 7-1: Scrollable Message History bottom sheet</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Sheet Header &amp; Close Hint</strong>: Displays the title and gesture hint (<em>Tap or swipe down to close</em>).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Color-Coded Log List</strong>: Shows recent and older messages in chronological order with highlighted warnings.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Close Button</strong>: Dismisses the sheet (or swipe down anywhere on the header).</span></li>
+      </ol>
+      <h3>Spoilers &amp; Guidebook Viewer</h3>
+      <p class="manual-desc">Accessible from the title screen book icons or <strong>DartHack Menu → Read Spoilers / Read Guidebook</strong>.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/12_spoilers.png" alt="NetHack Spoilers Viewer" loading="lazy">
+          <div class="image-caption">Figure 7-2: Built-in Spoilers viewer with game peek, TOC, and search</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Peek at Game Screen (Eye Icon)</strong>: Tap to hold or long-press to peek through the viewer and inspect the dungeon screen underneath without losing your place.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Open Table of Contents (TOC Icon)</strong>: Jumps directly to any spoiler chapter.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Search Bar</strong>: Filters and finds matching terms across the spoiler document.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Formatted Spoiler Content</strong>: Renders sections, quotes, and inline symbols cleanly for mobile reading.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 8. DartHack Menu (Drawer) -->
+    <section id="section-8" class="manual-item">
+      <h2><span class="manual-item-num">8</span> DartHack Menu (Drawer)</h2>
+      <p class="manual-desc">Tap the floating left menu button (or swipe from the left edge, or press <code>Ctrl+M</code> / <code>F10</code>) to open the <strong>DartHack Menu</strong> drawer.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/13_darthack_menu.png" alt="DartHack Menu" loading="lazy">
+          <div class="image-caption">Figure 8-1: DartHack drawer menu categories</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Menu Header</strong>: Displays the <strong>DartHack Menu</strong> banner.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Save &amp; Exit Controls</strong>: Provides <strong>Save &amp; Exit</strong> (saves your current run cleanly) and <strong>Quit without Saving</strong> (abandons the current run with confirmation).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Records &amp; Documentation</strong>: Quick access to <strong>Scoreboard</strong> (Chapter 9), <strong>Read Guidebook</strong>, and <strong>Read Spoilers</strong>.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Game Commands &amp; Overlays</strong>: Directly opens <strong>Show Help (<code>?</code>)</strong>, <strong>Database Search (<code>/?</code>)</strong>, <strong>Game Options (<code>O</code>)</strong>, and <strong>Show Full Map (<code>M-z</code>)</strong>.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>UI &amp; App Settings</strong>: Toggle <strong>Hide Controls</strong> to temporarily maximize map visibility, or tap <strong>Open Game Settings</strong> for Flutter app preferences (Chapters 10–16).</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 9. Scoreboard, Run Statistics &amp; Tombstone -->
+    <section id="section-9" class="manual-item">
+      <h2><span class="manual-item-num">9</span> Scoreboard, Run Statistics &amp; Tombstone</h2>
+      <h3>Scoreboard</h3>
+      <p class="manual-desc">When a run ends or when opened from the DartHack Menu, the <strong>Scoreboard</strong> presents recorded entries as clean cards.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/14_scoreboard.png" alt="Scoreboard" loading="lazy">
+          <div class="image-caption">Figure 9-1: Scoreboard cards highlighting the current run</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Scoreboard Header</strong>: Title banner of the rankings screen.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Entry Cards</strong>: Shows rank badge, points, character profile (<em>Name / Role / Race / Gender / Alignment</em>), fate, dungeon level, and HP/Max HP. The active/just-ended game is highlighted with a gold border and a <strong>Current Game</strong> badge.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Details Button</strong>: Tap <strong><code>Details &gt;</code></strong> on any entry to inspect detailed play statistics for that run.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>History &amp; OK</strong>: Review the final message log via <strong>History</strong>, or tap <strong>OK</strong> to dismiss.</span></li>
+      </ol>
+      <h3>Detailed Run Statistics (<code>xlogfile</code>)</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/15_score_detail.png" alt="Score Details" loading="lazy">
+          <div class="image-caption">Figure 9-2: Detailed outcome, xlogfile statistics, and achievements</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Selected Entry Header</strong>: Displays the rank, score, and full character summary.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Outcome &amp; Location</strong>: Shows final fate, dungeon branch, depth (and max depth reached), HP / Max HP, gold (<code>Zm</code>), and death count.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Play Statistics (<code>xlogfile</code>)</strong>: Tracks start/end timestamps, real elapsed play time, turn count, wishes (and artifact wishes), bones/reroll counts, and NetHack version.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Achievements</strong>: Lists conducts and special accomplishments earned during the run.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Close Button</strong>: Returns to the Scoreboard list.</span></li>
+      </ol>
+      <h3>Death Tombstone</h3>
+      <p class="manual-desc">When your character dies, a pixel-art tombstone screen commemorates the end of the run before advancing to the scoreboard.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/16_tombstone.png" alt="Death Tombstone" loading="lazy">
+          <div class="image-caption">Figure 9-3: Pixel-art R.I.P. tombstone and farewell summary</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>R.I.P. Tombstone Art</strong>: Renders the pixel-art tombstone engraved with character name, cause of death, and year.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Farewell Summary</strong>: Summarizes your character&#x27;s final belongings and fate.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>History &amp; OK</strong>: Check your final turns with <strong>History</strong> or continue with <strong>OK</strong>.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 10. Display, Status Area &amp; Font Settings -->
+    <section id="section-10" class="manual-item">
+      <h2><span class="manual-item-num">10</span> Display, Status Area &amp; Font Settings</h2>
+      <p class="manual-desc">Access <strong>Game Settings</strong> from the title screen gear icon or <strong>DartHack Menu → Open Game Settings</strong>.</p>
+      <h3>Status Area Settings</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/17_settings_screen_status.png" alt="Game Settings: Status Area" loading="lazy">
+          <div class="image-caption">Figure 10-1: Status Area display mode, line layout, font size, and hitpointbar</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Status Area Settings Header</strong>: Tap to expand or collapse status options.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Status Area Mode</strong>: Controls how text fits horizontally (e.g., <strong>Auto Shrink Fit</strong>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Status lines &amp; layout</strong>: Switches between 1-line, 2-line (Standard), 3-line, or ultra-compact combat layouts.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Font Size Slider</strong>: Adjusts status text size (e.g., <code>13 pt</code>).</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Hitpoint Bar (<code>hitpointbar</code>)</strong>: Draws a color-coded HP percentage gauge behind your character name and role (followed below by <strong>Highlight Status</strong> options).</span></li>
+      </ol>
+      <h3>Screen Display Settings</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/17b_settings_screen_display.png" alt="Game Settings: Screen Display" loading="lazy">
+          <div class="image-caption">Figure 10-2: Screen mode, physical keyboard hints, and camera follow behavior</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Screen Display Settings Header</strong>: Expands screen and camera behavior options.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Screen Mode</strong>: Chooses screen presentation mode (e.g., <strong>Normal</strong>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Enable Physical Keyboard Help</strong>: Displays key hint labels (<code>y:</code>, <code>n:</code>, <code>Esc:</code>, etc.) on UI buttons and enables <code>F1</code> / <code>M-h (Alt-h)</code> help popup.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Camera follow mode</strong>: Switch between <strong>Always center on hero</strong> (re-centers the hero every move) and <strong>Fixed map mode</strong> (desktop-style static viewport that scrolls only near edges).</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Scroll margin &amp; Scroll amount</strong>: Active in <strong>Fixed map mode</strong> to control how many tiles from the edge scrolling triggers and how many tiles it shifts.</span></li>
+      </ol>
+      <h3>Font Settings</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/18b_settings_font.png" alt="Game Settings: Font Settings" loading="lazy">
+          <div class="image-caption">Figure 10-3: Global and per-component font selection including ASCII map font</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Font Settings Header</strong>: Expands typography controls.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Apply Font to All</strong>: Applies a single chosen font across all 5 UI and map categories at once.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Map Font</strong>: Chooses the monospace font for ASCII map rendering when tiles are turned off (defaults to <strong>Terminus TTF (Classic ASCII)</strong> with no Japanese fallback to preserve exact grid alignment).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Individual Component Fonts</strong>: Customize <strong>Message Font</strong>, <strong>Status Font</strong>, <strong>Menu &amp; Text Font</strong>, and <strong>UI &amp; Controller Font</strong> independently.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 11. Selecting &amp; Importing Tilesets -->
+    <section id="section-11" class="manual-item">
+      <h2><span class="manual-item-num">11</span> Selecting &amp; Importing Tilesets</h2>
+      <p class="manual-desc">Open <strong>Tileset &amp; Symbol Settings</strong> in Game Settings to toggle graphical tiles on/off or switch tilesets via <strong>Select Tileset</strong>.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/18_tileset_selection.png" alt="Select Tileset Screen" loading="lazy">
+          <div class="image-caption">Figure 11-1: Built-in tilesets and custom tileset importer</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Add Custom Tileset (<code>.png</code> / <code>.webp</code> / <code>.bmp</code>)</strong>: Import any standard <strong>40-column NetHack tilesheet</strong> (<code>width ÷ 40</code> columns). Non-square tiles (such as <code>15x25</code>) are automatically detected and rendered with accurate aspect ratios.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Tileset Cards</strong>: Displays all bundled and custom tilesets with pixel dimensions and author attribution; the active set displays a <strong>Selected</strong> badge (default: <strong>PixelHack (32x32)</strong>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Copy Source URL</strong>: Tap the copy icon beside a tileset&#x27;s URL to copy its homepage link to your clipboard.</span></li>
+      </ol>
+      <h3>Bundled Tilesets</h3>
+      <div class="table-wrap">
+        <table class="manual-table">
+          <thead><tr>
+            <th>Tileset</th>
+            <th>Resolution</th>
+            <th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Default</strong></td>
+              <td><code>16x16</code></td>
+              <td>Classic standard NetHack 16×16 tiles</td>
+            </tr>
+            <tr>
+              <td><strong>Nevanda</strong></td>
+              <td><code>32x32</code></td>
+              <td>Clean, popular 32×32 pixel tileset</td>
+            </tr>
+            <tr>
+              <td><strong>PixelHack</strong></td>
+              <td><code>32x32</code></td>
+              <td>Default high-contrast 32×32 tileset</td>
+            </tr>
+            <tr>
+              <td><strong>ZeldHack</strong></td>
+              <td><code>32x32</code></td>
+              <td>Colorful action-RPG-inspired 32×32 tileset</td>
+            </tr>
+            <tr>
+              <td><strong>KevinTam tiles</strong></td>
+              <td><code>64x64</code></td>
+              <td>High-resolution transparent tiles with two-layer background terrain rendering</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 12. UI Layout Customization &amp; Tablet Mode -->
+    <section id="section-12" class="manual-item">
+      <h2><span class="manual-item-num">12</span> UI Layout Customization &amp; Tablet Mode</h2>
+      <h3>Layout Patterns &amp; Side Swapping</h3>
+      <p class="manual-desc">Customize where the status bar, messages, D-Pad, and shortcuts appear to match your hand size and preferred grip.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/19_settings_ui_layout.png" alt="Game Settings: UI Layout Customization" loading="lazy">
+          <div class="image-caption">Figure 12-1: Switching between Layout Pattern 1 and Pattern 2</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>UI Layout Customization Header</strong>: Expands layout options.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Layout Pattern</strong>: Switch between <strong>Pattern 1</strong> (Status/Msg top, D-Pad/Shortcuts bottom) and <strong>Pattern 2</strong> (D-Pad/Shortcuts top, Status/Msg bottom); toggles below let you <strong>Swap D-Pad and Shortcut Positions</strong> left/right and reposition the floating menu button.</span></li>
+      </ol>
+      <h3>Landscape &amp; Tablet Layout</h3>
+      <p class="manual-desc">On wide landscape screens and tablets (such as <code>1920×1200</code>), DartHack adapts automatically to maximize dungeon visibility and place wide command panels along the bottom edge.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/20_tablet_layout_compare.png" alt="Tablet Landscape Layout" loading="lazy">
+          <div class="image-caption">Figure 12-2: Widescreen tablet layout in landscape orientation</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Top Status &amp; Message Area</strong>: Full-width header fits status lines cleanly with generous message room.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Expansive Dungeon Map &amp; Side Floating Buttons</strong>: Wide map viewport with unobtrusive floating Menu and Full Map buttons at left and right.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Bottom-Left 8-Way D-Pad</strong>: Positioned comfortably within left-thumb reach.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Bottom-Right 3×3 Shortcuts</strong>: Positioned within right-thumb reach.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Wide Command Panel</strong>: Displays nearly the entire active command strip side-by-side without scrolling.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 13. Customizing Command Panels &amp; Quick Shortcuts -->
+    <section id="section-13" class="manual-item">
+      <h2><span class="manual-item-num">13</span> Customizing Command Panels &amp; Quick Shortcuts</h2>
+      <p class="manual-desc">Tailor the bottom command panels to match your favorite roles and playstyles.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/21_custom_cmd_panel.png" alt="Edit Command Panel" loading="lazy">
+          <div class="image-caption">Figure 13-1: Editing, adding, and resetting swipeable command panels</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Show Panel Names</strong>: Toggles the left-hand name badges (<code>Default</code>, <code>Combat</code>, <code>Items</code>, <code>Info</code>) on each panel row; turning them off frees horizontal width for extra buttons.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Panel List (Edit / Delete)</strong>: Shows each configured panel and its starting keys. Tap the <strong>pencil icon</strong> to edit button labels, commands, and ordering, or the <strong>trash icon</strong> to remove a custom panel.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Add New Command Panel</strong>: Create up to 7 custom panels (e.g., dedicated spellcasting or extended-command strips).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Reset Panels to Default</strong>: Restores the built-in 4-panel configuration (<code>Default</code>, <code>Combat</code>, <code>Items</code>, <code>Info</code>).</span></li>
+      </ol>
+      <div class="manual-note">You can also customize every slot in the 3×3 grid via <strong>Quick Shortcut Settings</strong> in Game Settings.</div>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 14. Physical Keyboard Guide &amp; Hardware Key Mapping -->
+    <section id="section-14" class="manual-item">
+      <h2><span class="manual-item-num">14</span> Physical Keyboard Guide &amp; Hardware Key Mapping</h2>
+      <h3>Physical Keyboard Shortcuts</h3>
+      <p class="manual-desc">When using a physical keyboard (USB, Bluetooth, or Chromebook), press <code>F1</code> or <code>Alt-h</code> (with <em>Enable Physical Keyboard Help</em> on) to bring up the DartHack shortcut reference at any time.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/22_keyboard_help.png" alt="Keyboard Controls Guide" loading="lazy">
+          <div class="image-caption">Figure 14-1: Keyboard Controls Guide overlay</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Guide Header &amp; Close (<code>×</code>)</strong>: Title bar for the controls guide.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Shortcut List</strong>: Quick reference for <strong><code>Ctrl+M</code> / <code>F10</code></strong> (open drawer menu), <strong><code>F9</code> / <code>Alt-z</code></strong> (full level map), <strong><code>Tab</code> / <code>Shift+Tab</code></strong> (focus floating buttons), <strong><code>Enter</code> / <code>Space</code></strong> (execute focused button), <strong><code>?</code></strong> (standard NetHack help), and <strong><code>F1</code> / <code>Alt-h</code></strong> (this guide).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Navigation Footer</strong>: Press <code>Space</code> to scroll (closes automatically at the bottom), or <code>Esc</code> / <code>Enter</code> to close immediately.</span></li>
+      </ol>
+      <h3>Physical Key Assignments (Volume &amp; Back Keys)</h3>
+      <p class="manual-desc">Even without a keyboard, you can bind hardware <strong>Volume Up</strong>, <strong>Volume Down</strong>, and the Android <strong>Back button</strong> to frequent NetHack commands.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/22b_settings_phys_keys.png" alt="Physical Key Assignments" loading="lazy">
+          <div class="image-caption">Figure 14-2: Binding Volume keys and Back gesture in Game Settings</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Physical Key Assignments Header</strong>: Expands hardware button bindings.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Volume Up Key</strong>: Assign a game command (default: <code>None (Normal Volume Change)</code>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Volume Down Key</strong>: Assign a game command (default: <code>None (Normal Volume Change)</code>).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Back Button</strong>: Customize back gesture/button behavior (default: <code>None (Close App Normally)</code>).</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 15. Sound Settings &amp; Challenge / Hard Modes -->
+    <section id="section-15" class="manual-item">
+      <h2><span class="manual-item-num">15</span> Sound Settings &amp; Challenge / Hard Modes</h2>
+      <h3>Sound Settings</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/23a_settings_sound.png" alt="Game Settings: Sound Settings" loading="lazy">
+          <div class="image-caption">Figure 15-1: Master sound, BGM, SE, and ambience settings</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Sound Settings Header</strong>: Expands audio options.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Master Sound &amp; BGM Toggles</strong>: Use <strong>Master Sound</strong> to mute/unmute all audio, or toggle <strong>BGM</strong> independently.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>BGM Volume, Sound Effects (SE) &amp; Ambience</strong>: Adjust BGM volume with the slider (<code>0%</code>–<code>100%</code>) and toggle dungeon/combat SE and room/branch ambience.</span></li>
+      </ol>
+      <h3>Game Rules &amp; Challenge / Hard Modes</h3>
+      <p class="manual-desc">DartHack exposes key <code>defaults.nh</code> rules and built-in challenge conducts directly in Game Settings.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/23b_settings_hard_mode.png" alt="Game Settings: Hard Mode &amp; Challenge Settings" loading="lazy">
+          <div class="image-caption">Figure 15-2: Game Rules &amp; Options and Hard Mode challenge toggles</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Game Rules &amp; Options (<code>defaults.nh</code>)</strong>: Configure core engine behaviors such as autopickup and prompts (<em>Requires starting a new game</em>).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Hard Mode &amp; Challenge Settings (<code>defaults.nh</code>) Header</strong>: Expands advanced challenge toggles (<em>Requires starting a new game</em>).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Challenge Toggles</strong>: Toggle restrictions such as <strong>Blindness Challenge (<code>blind</code>)</strong>, <strong>Nudist Challenge (<code>nudist</code>)</strong>, <strong>Deafness Challenge (<code>deaf</code>)</strong>, and <strong>Pauper Challenge (<code>pauper</code>)</strong> (scroll down for more challenges).</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 16. Advanced Settings (Editing `defaults.nh` &amp; Backup) -->
+    <section id="section-16" class="manual-item">
+      <h2><span class="manual-item-num">16</span> Advanced Settings (Editing `defaults.nh` &amp; Backup)</h2>
+      <p class="manual-desc">At the bottom of Game Settings, advanced users can edit the raw NetHack configuration file or back up/transfer their Flutter UI setup.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/23c_settings_advanced.png" alt="Game Settings: Advanced Settings" loading="lazy">
+          <div class="image-caption">Figure 16-1: Manual defaults.nh editing and JSON settings export/import</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Advanced Settings Header</strong>: Expands power-user tools.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Edit <code>defaults.nh</code> manually</strong>: Opens a direct text editor for <code>defaults.nh</code>, letting you write any classic NetHack options (<code>OPTIONS=...</code>, <code>MENUCOLOR=...</code>, custom status highlights, etc.). <em>Requires starting a new game for changes to take effect.</em></span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Export Settings / Import Settings</strong>: Tap <strong>Export Settings</strong> to copy all UI, font, layout, command panel, and shortcut preferences as a JSON string to your clipboard, or use <strong>Import Settings</strong> below to restore them on another device.</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+      <p class="manual-desc"><em>Happy dungeoneering — may the RNG smile upon you!</em></p>
+    </section>
+  </main>
+
+  <!-- スクリーンショット拡大モーダル -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="index.html">Top</a> |
+      <a href="manual.html">Japanese Manual</a> |
+      <a href="manual_en.html">User Manual (English)</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <p>© 2026 DartHack Project</p>
+  </footer>
+
+  <script>
+    (function () {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCap = document.getElementById('lightbox-caption');
+      const closeBtn = document.getElementById('lightbox-close');
+
+      function closeLightbox() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+
+      document.querySelectorAll('.image-card img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          const cap = img.parentElement.querySelector('.image-caption');
+          lbCap.textContent = cap ? cap.textContent : img.alt;
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      lb.addEventListener('click', function (e) {
+        if (e.target === lb || e.target === closeBtn) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
