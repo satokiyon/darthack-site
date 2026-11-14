@@ -13,7 +13,6 @@
     <nav class="nav-links">
       <a href="index.html" class="btn btn-secondary">トップページへ戻る</a>
       <a href="manual_en.html" class="btn">English Manual</a>
-      <a href="manual.md" class="btn btn-secondary">Markdown版 (manual.md)</a>
       <a href="privacy.html" class="btn btn-secondary">プライバシーポリシー</a>
     </nav>
   </header>
@@ -127,15 +126,16 @@
         </div>
       </div>
       <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス表示エリア</strong>: キャラクター名・称号、能力値（筋力/器用/耐久/知力/賢明/魅力）、属性（秩序/中立/混沌）、現在階層・所持金 <code>$</code>・HP・魔力・防御力(AC)・経験レベル・経過ターン数などを表示します。<code>hitpointbar</code> 有効時は背景にHPゲージも表示されます。</span></li>
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス表示エリア</strong>: キャラクター名・称号、能力値（筋力/器用/耐久/知力/賢明/魅力）、属性（秩序/中立/混沌）、現在階層・所持金 <code>$</code>・HP・魔力・防御力(AC)・経験レベル・経過ターン数などを表示します。<code>hitpointbar</code> 有効時は背景にHPゲージも表示されます。ステータス領域をタップすると能力値や耐性などのステータス詳細（<code>#attributes</code>）が表示され、武器や防具（<code>武器:</code> / <code>防具:</code> など）をタップ（またはステータス領域を長押し）すると装備一覧（<code>#seeall</code>）を確認できます。</span></li>
         <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>メッセージ表示エリア</strong>: ゲーム内の行動結果やモンスターの攻撃・発見メッセージが表示されます。タップすると「メッセージ履歴」シートを開いて過去のログをさかのぼれます。</span></li>
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ダンジョンマップ表示エリア</strong>: 現在探索中のダンジョンを表示します。ドラッグで視点を動かし、ピンチイン／ピンチアウトで自由に拡大・縮小できます。マスをタップすると位置に応じた行動メニューが開きます。</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>半透明メニューボタン（左）</strong>: タップすると「DartHack メニュー」（第8章）を開きます。画面右端や左端など、設定で配置を変更できます。</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>全体マップボタン（右）</strong>: タップすると現在の階層の全体を見渡せる「階層の全体地図」ダイアログ（第4章）を開きます。</span></li>
-        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8方向移動パッド＋移動モード切替</strong>: 周囲の8つの菱形ボタン（<code>y k u / h . l / b j n</code>）で8方向へ移動・攻撃します。中央のボタン（初期状態は「標準」）をタップすると移動モード選択（ダッシュ等）を開きます。</span></li>
-        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 クイックショートカット</strong>: 使用頻度の高い9個のコマンド（初期設定では「持ち物」「調べる」「拾う」「そこ」「ここ」「会話」「食べる」「再実行」「Esc」）を1タップで実行できるグリッドです。</span></li>
-        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>コマンドパネル＆展開ハンドル</strong>: よく使う行動ボタンをカテゴリ別リストにまとめた下部バーです。現在選択中のパネル内容が1行で表示され、上部のハンドルをタップまたは上スワイプすると全パネルを展開できます。</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8方向移動パッド＋移動モード切替</strong>: 周囲の8つの菱形ボタン（<code>y k u / h . l / b j n</code>）で8方向へ移動・攻撃します。中央のボタン（初期状態は「標準」）をタップすると登録済みの移動モードを順番に切り替えられ（方向入力待ち中は <code>.</code> を送信）、<strong>長押し</strong>すると「使用する移動モードの選択」ダイアログ（ダッシュ等）を開きます。</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 クイックショートカット</strong>: 使用頻度の高い9個のコマンド（初期設定では「持ち物」「調べる」「拾う」「そこ」「ここ」「会話」「食べる」「再実行」「Esc」）を1タップで実行できるグリッドです。各ボタンを<strong>長押し</strong>すると、ボタンに割り当てるキー・コマンドと表示ラベルをその場で変更できます。</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>コマンドパネル＆展開ハンドル</strong>: よく使う行動ボタンをカテゴリ別リストにまとめた下部バーです。現在選択中のパネル内容が1行で表示され、上部のハンドルをタップまたは上スワイプすると全パネルを展開できます。また、パネル上の各ボタンを<strong>長押し</strong>すると、ボタンの追加・削除や割り当てキー・ラベルの変更を行えます。</span></li>
       </ol>
+      <div class="manual-note"><strong>気づきにくいタップ・長押しショートカットまとめ</strong><br>- <strong>ステータス領域をタップ</strong>: 主人公のステータス詳細（能力値・耐性など）を表示 / <strong>武器や防具をタップ（または領域を長押し）</strong>: 装備一覧を表示<br>- <strong>8方向移動パッド中央ボタンを長押し</strong>: 使用する移動モードの選択ダイアログを開く（タップでモード切替）<br>- <strong>3×3 クイックショートカットを長押し</strong>: ボタンに割り当てるキー・コマンドと表示ラベルを変更<br>- <strong>コマンドパネルのボタンを長押し</strong>: ボタンの変更・追加・削除・パネル初期化メニューを開く</div>
       <h3>コマンドパネルの全展開表示</h3>
       <p class="manual-desc">コマンドパネルのハンドル（1）を上方向へスワイプまたはタップすると、登録されているすべてのパネルが縦に展開されます。</p>
       <div class="image-group">
@@ -151,7 +151,22 @@
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>道具パネル</strong>: 持ち物、使用、拾う、置く、複数置、あさる、飲む、読む、浸すなどアイテム操作に特化したパネルです。</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>情報パネル</strong>: ヘルプ、コマンド、調べる、遠見、足元、属性、呪文、発見品、実績など情報確認用コマンドをまとめています。</span></li>
       </ol>
-      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル構成は「詳細ゲーム設定 → カスタムコマンドパネル編集」（第13章）から自由に追加・変更できます。</div>
+      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル上の各ボタンを<strong>長押し</strong>するとその場でボタンの追加・削除やキー・ラベルの変更ができ、「詳細ゲーム設定 → カスタムコマンドパネル編集」（第13章）からもパネル構成をまとめて編集できます。</div>
+      <h3>コマンドパネルの長押しカスタマイズ</h3>
+      <p class="manual-desc">コマンドパネル上の編集したいボタン（例：<code>20探索</code> など）を<strong>長押し</strong>すると、「ボタン編集」ダイアログが開き、設定画面を開かなくてもその場でカスタマイズできます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/03c_cmd_button_customize.png" alt="コマンドパネルのボタン長押しカスタマイズ" loading="lazy">
+          <div class="image-caption">図 3-3: コマンドパネルのボタンを長押しして開くボタン編集メニュー</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>編集対象ヘッダー</strong>: 長押ししたボタンの現在割り当てられているコマンド（例：<code>ボタン編集: 20s</code>）を表示します。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>コマンド・ラベル変更</strong>: 「コマンドを変更」で実行するキーやコマンド（例：<code>20s</code>, <code>w</code>, <code>#pray</code>）を書き換え、「表示ラベルを変更」でボタン上の表示名を変更できます（未設定時はコマンド名を表示）。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ボタンの挿入</strong>: 「前にボタンを追加」「後にボタンを追加」で、選択したボタンの前後へ新しいボタンを追加します。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>削除・初期化</strong>: 「ボタンを削除」でそのボタンを取り除き、「パネルをデフォルトに戻す」で選択中のパネルを初期状態へリセットします。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>キャンセル</strong>: 変更を行わずにダイアログを閉じます。</span></li>
+      </ol>
       <p class="manual-desc">---</p>
     </section>
 
@@ -159,7 +174,7 @@
     <section id="section-4" class="manual-item">
       <h2><span class="manual-item-num">4</span> 移動操作・マップタップ・全体マップ</h2>
       <h3>移動モードの切り替え</h3>
-      <p class="manual-desc">8方向移動パッド中央のボタン（「標準」など）をタップすると、「使用する移動モードの選択」ダイアログが開きます。ここで一時的な移動モードや常時オプション（<code>F</code>）を切り替えられます。</p>
+      <p class="manual-desc">8方向移動パッド中央のボタン（「標準」など）を<strong>長押し</strong>すると、「使用する移動モードの選択」ダイアログが開きます。ここで一時的な移動モードや常時オプション（<code>F</code>）を切り替えられます（中央ボタンを短くタップすると、有効化されている移動モードを順番に切り替えられます）。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/04_move_mode.png" alt="移動モード選択ダイアログ" loading="lazy">
@@ -461,7 +476,7 @@
             <tr>
               <td><strong>ZeldHack</strong></td>
               <td><code>32x32</code></td>
-              <td>アクションRPG風の色彩豊かなグラフィックタイル</td>
+              <td>ファミコン風の色彩豊かなグラフィックタイル</td>
             </tr>
             <tr>
               <td><strong>KevinTam tiles</strong></td>
@@ -523,7 +538,7 @@
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>新しいコマンドパネルを追加</strong>: オリジナルのコマンドパネルを作成します（最大 7 個まで登録可能）。魔法使い用の呪文ショートカット集や、よく使う <code>#</code> 拡張コマンドだけを並べたパネルなどを作れます。</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>パネル設定をデフォルトに戻す</strong>: カスタマイズ内容を初期化し、標準・戦闘・道具・情報の初期構成へ戻します。</span></li>
       </ol>
-      <div class="manual-note">3×3 クイックショートカットについても、「詳細ゲーム設定」の <strong>「クイックショートカット設定」</strong> から9マスのボタン内容を個別に編集できます。</div>
+      <div class="manual-note">3×3 クイックショートカットについても、「詳細ゲーム設定」の <strong>「クイックショートカット設定」</strong> から9マスのボタン内容を個別に編集できます。また、メインゲーム画面上でも、コマンドパネルの各ボタンや 3×3 クイックショートカットのボタンを<strong>長押し</strong>することで、その場ですぐにキーやラベルを編集できます（第3章「コマンドパネルの長押しカスタマイズ」参照）。</div>
       <p class="manual-desc">---</p>
     </section>
 
@@ -531,7 +546,7 @@
     <section id="section-14" class="manual-item">
       <h2><span class="manual-item-num">14</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
       <h3>物理キーボード接続時のショートカット操作</h3>
-      <p class="manual-desc">Bluetooth キーボードや Chromebook・PC・USB キーボードを接続している場合、NetHack 標準キーに加えて DartHack UI 専用の便利ショートカットキーを使用できます。<code>F1</code> または <code>Alt-h (M-h)</code> キーを押すといつでも操作ガイドを表示できます。</p>
+      <p class="manual-desc">Bluetooth キーボードや Chromebook・PC・USB キーボードを接続している場合、NetHack 標準キーに加えて DartHack UI 専用の便利ショートカットキーを使用できます。設定画面の <strong>「詳細ゲーム設定 → 画面表示設定 → 物理キーボード用ヘルプを有効化」</strong> をオンにしている場合、<code>F1</code> または <code>Alt-h (M-h)</code> キーを押すといつでも操作ガイドを表示できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/22_keyboard_help.png" alt="キーボード操作ガイドダイアログ" loading="lazy">
@@ -621,9 +636,9 @@
   <footer>
     <div class="footer-nav">
       <a href="index.html">トップページ</a> |
-      <a href="manual.html">操作マニュアル (日本語)</a> |
-      <a href="manual_en.html">English Manual</a> |
-      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="manual.html">操作マニュアル</a> |
+      <a href="privacy.html">プライバシーポリシー</a> |
+      <a href="index_en.html">English</a>
     </div>
     <p>© 2026 DartHack Project</p>
   </footer>

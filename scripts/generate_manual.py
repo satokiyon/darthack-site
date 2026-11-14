@@ -41,14 +41,16 @@ class LangConfig:
     hero_subtitle: str
     toc_title: str
     back_home_label: str
+    home_href: str
     other_lang_label: str
     other_lang_href: str
-    markdown_link_label: str
     privacy_label: str
+    privacy_href: str
     footer_home_label: str
     footer_manual_label: str
-    footer_en_manual_label: str
     footer_privacy_label: str
+    footer_other_lang_label: str
+    footer_other_lang_href: str
     zoom_hint: str
 
 
@@ -61,14 +63,16 @@ LANG_CONFIGS: dict[str, LangConfig] = {
         hero_subtitle="基本操作からカスタマイズ・最新機能まで網羅した公式ユーザーガイド",
         toc_title="目次",
         back_home_label="トップページへ戻る",
+        home_href="index.html",
         other_lang_label="English Manual",
         other_lang_href="manual_en.html",
-        markdown_link_label="Markdown版 (manual.md)",
         privacy_label="プライバシーポリシー",
+        privacy_href="privacy.html",
         footer_home_label="トップページ",
-        footer_manual_label="操作マニュアル (日本語)",
-        footer_en_manual_label="English Manual",
+        footer_manual_label="操作マニュアル",
         footer_privacy_label="プライバシーポリシー",
+        footer_other_lang_label="English",
+        footer_other_lang_href="index_en.html",
         zoom_hint="画像をクリックすると拡大表示できます",
     ),
     "en": LangConfig(
@@ -79,14 +83,16 @@ LANG_CONFIGS: dict[str, LangConfig] = {
         hero_subtitle="Complete guide covering basic controls, customization, and latest features",
         toc_title="Table of Contents",
         back_home_label="Back to Top",
+        home_href="index_en.html",
         other_lang_label="日本語マニュアル",
         other_lang_href="manual.html",
-        markdown_link_label="Markdown (manual_en.md)",
         privacy_label="Privacy Policy",
+        privacy_href="privacy_en.html",
         footer_home_label="Top",
-        footer_manual_label="Japanese Manual",
-        footer_en_manual_label="User Manual (English)",
+        footer_manual_label="User Manual",
         footer_privacy_label="Privacy Policy",
+        footer_other_lang_label="日本語",
+        footer_other_lang_href="index.html?lang=ja",
         zoom_hint="Click any screenshot to zoom in",
     ),
 }
@@ -389,10 +395,9 @@ def build_html(cfg: LangConfig, md_text: str) -> str:
     <h1>{html.escape(page_title)}</h1>
     <p class="subtitle">{html.escape(cfg.hero_subtitle)}</p>
     <nav class="nav-links">
-      <a href="index.html" class="btn btn-secondary">{html.escape(cfg.back_home_label)}</a>
+      <a href="{cfg.home_href}" class="btn btn-secondary">{html.escape(cfg.back_home_label)}</a>
       <a href="{cfg.other_lang_href}" class="btn">{html.escape(cfg.other_lang_label)}</a>
-      <a href="{cfg.md_filename}" class="btn btn-secondary">{html.escape(cfg.markdown_link_label)}</a>
-      <a href="privacy.html" class="btn btn-secondary">{html.escape(cfg.privacy_label)}</a>
+      <a href="{cfg.privacy_href}" class="btn btn-secondary">{html.escape(cfg.privacy_label)}</a>
     </nav>
   </header>
 
@@ -419,10 +424,10 @@ def build_html(cfg: LangConfig, md_text: str) -> str:
 
   <footer>
     <div class="footer-nav">
-      <a href="index.html">{html.escape(cfg.footer_home_label)}</a> |
-      <a href="manual.html">{html.escape(cfg.footer_manual_label)}</a> |
-      <a href="manual_en.html">{html.escape(cfg.footer_en_manual_label)}</a> |
-      <a href="privacy.html">{html.escape(cfg.footer_privacy_label)}</a>
+      <a href="{cfg.home_href}">{html.escape(cfg.footer_home_label)}</a> |
+      <a href="{cfg.html_filename}">{html.escape(cfg.footer_manual_label)}</a> |
+      <a href="{cfg.privacy_href}">{html.escape(cfg.footer_privacy_label)}</a> |
+      <a href="{cfg.footer_other_lang_href}">{html.escape(cfg.footer_other_lang_label)}</a>
     </div>
     <p>© 2026 DartHack Project</p>
   </footer>
@@ -472,7 +477,16 @@ def build_html(cfg: LangConfig, md_text: str) -> str:
 def verify_links_and_images(repo_root: Path) -> list[str]:
     """Markdown と生成 HTML 内のローカル画像・ページリンクを検証する。"""
     errors: list[str] = []
-    targets = ["manual.md", "manual_en.md", "manual.html", "manual_en.html", "index.html"]
+    targets = [
+        "manual.md",
+        "manual_en.md",
+        "manual.html",
+        "manual_en.html",
+        "index.html",
+        "index_en.html",
+        "privacy.html",
+        "privacy_en.html",
+    ]
     for rel in targets:
         path = repo_root / rel
         if not path.exists():

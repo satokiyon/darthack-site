@@ -57,14 +57,21 @@ Once in the dungeon, the main play screen displays all game information and cont
 ![Main Game Screen](images/manual/en/03_main_screen.png)
 *Figure 3-1: Main game screen (Layout Pattern 1 with collapsed command panel)*
 
-1. **Status Area**: Displays your character name & rank, attributes (`St/Dx/Co/In/Wi/Ch`), alignment, dungeon level (`Dlvl`), gold (`$`), HP, power (`Pw`), armor class (`AC`), experience level (`Xp`), and turn counter (`T`). With `hitpointbar` enabled, an HP gauge renders behind your name/rank.
+1. **Status Area**: Displays your character name & rank, attributes (`St/Dx/Co/In/Wi/Ch`), alignment, dungeon level (`Dlvl`), gold (`$`), HP, power (`Pw`), armor class (`AC`), experience level (`Xp`), and turn counter (`T`). With `hitpointbar` enabled, an HP gauge renders behind your name/rank. Tap the status area to view detailed character stats (`#attributes`), and tap weapon/armor fields (or long-press the status area) to open your equipment list (`#seeall`).
 2. **Message Area**: Shows action results, combat messages, and discoveries. Tap anywhere in this area to open the full **Message History** sheet.
 3. **Dungeon Map Area**: Renders the current level. Drag to pan, pinch to zoom in/out, and tap any tile to open a context-aware action menu.
 4. **Floating Menu Button (Left)**: Opens the **DartHack Menu** drawer (Chapter 8). Its position can be customized in settings.
 5. **Full Map Button (Right)**: Opens the **Full level map** overview dialog (Chapter 4).
-6. **8-Way Directional Pad & Mode Button**: Eight directional buttons (`y k u / h . l / b j n`) move or attack in any direction. Tap the center button (initially **Normal**) to switch movement modes (run, `g`, `m`, `F`, etc.).
-7. **3×3 Quick Shortcuts**: Nine one-tap shortcut buttons (default: `Inv`, `WhatIs`, `Pick`, `There`, `Here`, `Chat`, `Eat`, `Again`, `Esc`).
-8. **Command Panel & Expand Handle**: A compact one-row strip of categorized action buttons. Tap or swipe upward on the handle to expand all command panels.
+6. **8-Way Directional Pad & Mode Button**: Eight directional buttons (`y k u / h . l / b j n`) move or attack in any direction. Tap the center button (initially **Normal**) to cycle through enabled movement modes (or send `.` during direction prompts), and **long-press** it to open **Select Movement Modes to Use** (run, `g`, `m`, `F`, etc.).
+7. **3×3 Quick Shortcuts**: Nine one-tap shortcut buttons (default: `Inv`, `WhatIs`, `Pick`, `There`, `Here`, `Chat`, `Eat`, `Again`, `Esc`). **Long-press** any shortcut button to edit its assigned key/command and display label directly.
+8. **Command Panel & Expand Handle**: A compact one-row strip of categorized action buttons. Tap or swipe upward on the handle to expand all command panels. **Long-press** any button on the panel to add, delete, or edit its command and label.
+
+> [!TIP]
+> **Handy Tap & Long-Press Shortcuts**
+> - **Tap the Status Area**: View character attributes & resistances / **Tap weapon or armor (or long-press the Status Area)**: View your equipment list
+> - **Long-press the 8-way D-Pad center button**: Open **Select Movement Modes to Use** (tap to cycle active modes)
+> - **Long-press any 3×3 Quick Shortcut button**: Edit its assigned key/command and display label
+> - **Long-press any Command Panel button**: Open the button customize menu (change command/label, add, delete, or reset panel)
 
 ### Expanding All Command Panels
 
@@ -80,7 +87,20 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 5. **Info Panel**: Reference commands (`Help`, `WhatDo`, `WhatIs`, `Glance`, `Here`, `Attrib`, `Spells`, etc.).
 
 > [!TIP]
-> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. Panels can be customized under **Game Settings → Edit Command Panel** (Chapter 13).
+> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can **long-press** any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under **Game Settings → Edit Command Panel** (Chapter 13).
+
+### Long-Press Customization for Command Panels
+
+**Long-press** any button on a command panel (such as `20Srch`) to open the **Edit Button** dialog and customize it on the spot without opening Game Settings.
+
+![Command Panel Button Long-Press Customization](images/manual/en/03c_cmd_button_customize.png)
+*Figure 3-3: Button customization menu opened by long-pressing a command panel button*
+
+1. **Target Button Header**: Shows the current command assigned to the long-pressed button (e.g., `Edit Button: 20s`).
+2. **Change Command & Display Label**: Tap **Change Command** to assign a new key/command (e.g., `20s`, `w`, `#pray`), or **Change Display Label** to set a custom button label (shows the command name when unset).
+3. **Insert New Button**: Use **Add Button Before** or **Add Button After** to insert a new button next to the selected one.
+4. **Delete / Reset**: Tap **Delete Button** to remove this button, or **Reset Panel to Default** to restore the active panel's built-in layout.
+5. **Cancel**: Closes the dialog without applying changes.
 
 ---
 
@@ -88,7 +108,7 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 
 ### Selecting a Movement Mode
 
-Tap the center button on the 8-way D-Pad (`Normal`) to open **Select Movement Modes to Use**.
+**Long-press** the center button on the 8-way D-Pad (`Normal`) to open **Select Movement Modes to Use**. Here you can pick temporary movement modes or toggle persistent options such as `F` (tap the center button briefly to cycle through enabled movement modes).
 
 ![Select Movement Modes Dialog](images/manual/en/04_move_mode.png)
 *Figure 4-1: Selecting directional movement modifiers*
@@ -315,7 +335,7 @@ Open **Tileset & Symbol Settings** in Game Settings to toggle graphical tiles on
 | **Default** | `16x16` | Classic standard NetHack 16×16 tiles |
 | **Nevanda** | `32x32` | Clean, popular 32×32 pixel tileset |
 | **PixelHack** | `32x32` | Default high-contrast 32×32 tileset |
-| **ZeldHack** | `32x32` | Colorful action-RPG-inspired 32×32 tileset |
+| **ZeldHack** | `32x32` | Colorful Famicom/NES-style 32×32 tileset |
 | **KevinTam tiles** | `64x64` | High-resolution transparent tiles with two-layer background terrain rendering |
 
 ---
@@ -360,7 +380,7 @@ Tailor the bottom command panels to match your favorite roles and playstyles.
 4. **Reset Panels to Default**: Restores the built-in 4-panel configuration (`Default`, `Combat`, `Items`, `Info`).
 
 > [!TIP]
-> You can also customize every slot in the 3×3 grid via **Quick Shortcut Settings** in Game Settings.
+> You can also customize every slot in the 3×3 grid via **Quick Shortcut Settings** in Game Settings. On the main game screen, you can also **long-press** any Command Panel button or 3×3 Quick Shortcut button to edit its key and label directly (see Chapter 3, "Long-Press Customization for Command Panels").
 
 ---
 
@@ -368,7 +388,7 @@ Tailor the bottom command panels to match your favorite roles and playstyles.
 
 ### Physical Keyboard Shortcuts
 
-When using a physical keyboard (USB, Bluetooth, or Chromebook), press `F1` or `Alt-h` (with *Enable Physical Keyboard Help* on) to bring up the DartHack shortcut reference at any time.
+When using a physical keyboard (USB, Bluetooth, or Chromebook), enable **Game Settings → Screen Display Settings → Enable Physical Keyboard Help** to bring up the DartHack shortcut reference at any time by pressing `F1` or `Alt-h (M-h)`.
 
 ![Keyboard Controls Guide](images/manual/en/22_keyboard_help.png)
 *Figure 14-1: Keyboard Controls Guide overlay*

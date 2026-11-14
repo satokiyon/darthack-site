@@ -11,10 +11,9 @@
     <h1>DartHack User Manual</h1>
     <p class="subtitle">Complete guide covering basic controls, customization, and latest features</p>
     <nav class="nav-links">
-      <a href="index.html" class="btn btn-secondary">Back to Top</a>
+      <a href="index_en.html" class="btn btn-secondary">Back to Top</a>
       <a href="manual.html" class="btn">日本語マニュアル</a>
-      <a href="manual_en.md" class="btn btn-secondary">Markdown (manual_en.md)</a>
-      <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+      <a href="privacy_en.html" class="btn btn-secondary">Privacy Policy</a>
     </nav>
   </header>
 
@@ -127,15 +126,16 @@
         </div>
       </div>
       <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Status Area</strong>: Displays your character name &amp; rank, attributes (<code>St/Dx/Co/In/Wi/Ch</code>), alignment, dungeon level (<code>Dlvl</code>), gold (<code>$</code>), HP, power (<code>Pw</code>), armor class (<code>AC</code>), experience level (<code>Xp</code>), and turn counter (<code>T</code>). With <code>hitpointbar</code> enabled, an HP gauge renders behind your name/rank.</span></li>
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Status Area</strong>: Displays your character name &amp; rank, attributes (<code>St/Dx/Co/In/Wi/Ch</code>), alignment, dungeon level (<code>Dlvl</code>), gold (<code>$</code>), HP, power (<code>Pw</code>), armor class (<code>AC</code>), experience level (<code>Xp</code>), and turn counter (<code>T</code>). With <code>hitpointbar</code> enabled, an HP gauge renders behind your name/rank. Tap the status area to view detailed character stats (<code>#attributes</code>), and tap weapon/armor fields (or long-press the status area) to open your equipment list (<code>#seeall</code>).</span></li>
         <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Message Area</strong>: Shows action results, combat messages, and discoveries. Tap anywhere in this area to open the full <strong>Message History</strong> sheet.</span></li>
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Dungeon Map Area</strong>: Renders the current level. Drag to pan, pinch to zoom in/out, and tap any tile to open a context-aware action menu.</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Floating Menu Button (Left)</strong>: Opens the <strong>DartHack Menu</strong> drawer (Chapter 8). Its position can be customized in settings.</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Full Map Button (Right)</strong>: Opens the <strong>Full level map</strong> overview dialog (Chapter 4).</span></li>
-        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8-Way Directional Pad &amp; Mode Button</strong>: Eight directional buttons (<code>y k u / h . l / b j n</code>) move or attack in any direction. Tap the center button (initially <strong>Normal</strong>) to switch movement modes (run, <code>g</code>, <code>m</code>, <code>F</code>, etc.).</span></li>
-        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 Quick Shortcuts</strong>: Nine one-tap shortcut buttons (default: <code>Inv</code>, <code>WhatIs</code>, <code>Pick</code>, <code>There</code>, <code>Here</code>, <code>Chat</code>, <code>Eat</code>, <code>Again</code>, <code>Esc</code>).</span></li>
-        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>Command Panel &amp; Expand Handle</strong>: A compact one-row strip of categorized action buttons. Tap or swipe upward on the handle to expand all command panels.</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>8-Way Directional Pad &amp; Mode Button</strong>: Eight directional buttons (<code>y k u / h . l / b j n</code>) move or attack in any direction. Tap the center button (initially <strong>Normal</strong>) to cycle through enabled movement modes (or send <code>.</code> during direction prompts), and <strong>long-press</strong> it to open <strong>Select Movement Modes to Use</strong> (run, <code>g</code>, <code>m</code>, <code>F</code>, etc.).</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>3×3 Quick Shortcuts</strong>: Nine one-tap shortcut buttons (default: <code>Inv</code>, <code>WhatIs</code>, <code>Pick</code>, <code>There</code>, <code>Here</code>, <code>Chat</code>, <code>Eat</code>, <code>Again</code>, <code>Esc</code>). <strong>Long-press</strong> any shortcut button to edit its assigned key/command and display label directly.</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>Command Panel &amp; Expand Handle</strong>: A compact one-row strip of categorized action buttons. Tap or swipe upward on the handle to expand all command panels. <strong>Long-press</strong> any button on the panel to add, delete, or edit its command and label.</span></li>
       </ol>
+      <div class="manual-note"><strong>Handy Tap &amp; Long-Press Shortcuts</strong><br>- <strong>Tap the Status Area</strong>: View character attributes &amp; resistances / <strong>Tap weapon or armor (or long-press the Status Area)</strong>: View your equipment list<br>- <strong>Long-press the 8-way D-Pad center button</strong>: Open <strong>Select Movement Modes to Use</strong> (tap to cycle active modes)<br>- <strong>Long-press any 3×3 Quick Shortcut button</strong>: Edit its assigned key/command and display label<br>- <strong>Long-press any Command Panel button</strong>: Open the button customize menu (change command/label, add, delete, or reset panel)</div>
       <h3>Expanding All Command Panels</h3>
       <p class="manual-desc">Swipe up or tap the handle (1) above the command strip to view every registered panel simultaneously.</p>
       <div class="image-group">
@@ -151,7 +151,22 @@
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Items Panel</strong>: Inventory and item actions (<code>Inv</code>, <code>Apply</code>, <code>Pick</code>, <code>Drop</code>, <code>DropT</code>, <code>Loot</code>, <code>Quaff</code>, <code>Read</code>, etc.).</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Info Panel</strong>: Reference commands (<code>Help</code>, <code>WhatDo</code>, <code>WhatIs</code>, <code>Glance</code>, <code>Here</code>, <code>Attrib</code>, <code>Spells</code>, etc.).</span></li>
       </ol>
-      <div class="manual-note">Tap a panel badge on the left (e.g., <code>Default</code>, <code>Combat</code>) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. Panels can be customized under <strong>Game Settings → Edit Command Panel</strong> (Chapter 13).</div>
+      <div class="manual-note">Tap a panel badge on the left (e.g., <code>Default</code>, <code>Combat</code>) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can <strong>long-press</strong> any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under <strong>Game Settings → Edit Command Panel</strong> (Chapter 13).</div>
+      <h3>Long-Press Customization for Command Panels</h3>
+      <p class="manual-desc"><strong>Long-press</strong> any button on a command panel (such as <code>20Srch</code>) to open the <strong>Edit Button</strong> dialog and customize it on the spot without opening Game Settings.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/03c_cmd_button_customize.png" alt="Command Panel Button Long-Press Customization" loading="lazy">
+          <div class="image-caption">Figure 3-3: Button customization menu opened by long-pressing a command panel button</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Target Button Header</strong>: Shows the current command assigned to the long-pressed button (e.g., <code>Edit Button: 20s</code>).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Change Command &amp; Display Label</strong>: Tap <strong>Change Command</strong> to assign a new key/command (e.g., <code>20s</code>, <code>w</code>, <code>#pray</code>), or <strong>Change Display Label</strong> to set a custom button label (shows the command name when unset).</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Insert New Button</strong>: Use <strong>Add Button Before</strong> or <strong>Add Button After</strong> to insert a new button next to the selected one.</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Delete / Reset</strong>: Tap <strong>Delete Button</strong> to remove this button, or <strong>Reset Panel to Default</strong> to restore the active panel&#x27;s built-in layout.</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Cancel</strong>: Closes the dialog without applying changes.</span></li>
+      </ol>
       <p class="manual-desc">---</p>
     </section>
 
@@ -159,7 +174,7 @@
     <section id="section-4" class="manual-item">
       <h2><span class="manual-item-num">4</span> Movement Modes, Map Tapping &amp; Full Level Map</h2>
       <h3>Selecting a Movement Mode</h3>
-      <p class="manual-desc">Tap the center button on the 8-way D-Pad (<code>Normal</code>) to open <strong>Select Movement Modes to Use</strong>.</p>
+      <p class="manual-desc"><strong>Long-press</strong> the center button on the 8-way D-Pad (<code>Normal</code>) to open <strong>Select Movement Modes to Use</strong>. Here you can pick temporary movement modes or toggle persistent options such as <code>F</code> (tap the center button briefly to cycle through enabled movement modes).</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/04_move_mode.png" alt="Select Movement Modes Dialog" loading="lazy">
@@ -460,7 +475,7 @@
             <tr>
               <td><strong>ZeldHack</strong></td>
               <td><code>32x32</code></td>
-              <td>Colorful action-RPG-inspired 32×32 tileset</td>
+              <td>Colorful Famicom/NES-style 32×32 tileset</td>
             </tr>
             <tr>
               <td><strong>KevinTam tiles</strong></td>
@@ -522,7 +537,7 @@
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Add New Command Panel</strong>: Create up to 7 custom panels (e.g., dedicated spellcasting or extended-command strips).</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Reset Panels to Default</strong>: Restores the built-in 4-panel configuration (<code>Default</code>, <code>Combat</code>, <code>Items</code>, <code>Info</code>).</span></li>
       </ol>
-      <div class="manual-note">You can also customize every slot in the 3×3 grid via <strong>Quick Shortcut Settings</strong> in Game Settings.</div>
+      <div class="manual-note">You can also customize every slot in the 3×3 grid via <strong>Quick Shortcut Settings</strong> in Game Settings. On the main game screen, you can also <strong>long-press</strong> any Command Panel button or 3×3 Quick Shortcut button to edit its key and label directly (see Chapter 3, &quot;Long-Press Customization for Command Panels&quot;).</div>
       <p class="manual-desc">---</p>
     </section>
 
@@ -530,7 +545,7 @@
     <section id="section-14" class="manual-item">
       <h2><span class="manual-item-num">14</span> Physical Keyboard Guide &amp; Hardware Key Mapping</h2>
       <h3>Physical Keyboard Shortcuts</h3>
-      <p class="manual-desc">When using a physical keyboard (USB, Bluetooth, or Chromebook), press <code>F1</code> or <code>Alt-h</code> (with <em>Enable Physical Keyboard Help</em> on) to bring up the DartHack shortcut reference at any time.</p>
+      <p class="manual-desc">When using a physical keyboard (USB, Bluetooth, or Chromebook), enable <strong>Game Settings → Screen Display Settings → Enable Physical Keyboard Help</strong> to bring up the DartHack shortcut reference at any time by pressing <code>F1</code> or <code>Alt-h (M-h)</code>.</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/22_keyboard_help.png" alt="Keyboard Controls Guide" loading="lazy">
@@ -619,10 +634,10 @@
 
   <footer>
     <div class="footer-nav">
-      <a href="index.html">Top</a> |
-      <a href="manual.html">Japanese Manual</a> |
-      <a href="manual_en.html">User Manual (English)</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="index_en.html">Top</a> |
+      <a href="manual_en.html">User Manual</a> |
+      <a href="privacy_en.html">Privacy Policy</a> |
+      <a href="index.html?lang=ja">日本語</a>
     </div>
     <p>© 2026 DartHack Project</p>
   </footer>

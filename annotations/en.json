@@ -38,6 +38,15 @@
       { "id": 5, "box": [0, 2270, 1080, 2375], "badge_pos": "center-right" }
     ]
   },
+  "03c_cmd_button_customize.png": {
+    "annotations": [
+      { "id": 1, "box": [155, 555, 925, 670], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [155, 685, 925, 1090], "badge_pos": "top-right" },
+      { "id": 3, "box": [155, 1100, 925, 1385], "badge_pos": "top-right" },
+      { "id": 4, "box": [155, 1395, 925, 1755], "badge_pos": "top-right" },
+      { "id": 5, "box": [700, 1800, 925, 1940], "badge_pos": "outside-bottom-right" }
+    ]
+  },
   "04_move_mode.png": {
     "annotations": [
       { "id": 1, "box": [70, 340, 995, 560], "badge_pos": "corner-bottom-right" },
