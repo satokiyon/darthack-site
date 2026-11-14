@@ -159,14 +159,25 @@ def parse_markdown_document(md_text: str) -> tuple[str, list[str], list[Section]
         if h2_match:
             raw_heading = h2_match.group(1).strip()
             num_match = SECTION_NUM_PATTERN.match(raw_heading)
+            appendix_match = re.match(
+                r"^(付録|Appendix)\s*([A-Za-z0-9]+)\.\s+(.*)$",
+                raw_heading,
+                re.I,
+            )
             if num_match:
                 sec_num = num_match.group(1)
                 sec_title = num_match.group(2).strip()
+                anchor = f"section-{sec_num}"
+            elif appendix_match:
+                prefix = appendix_match.group(1)
+                sec_num = appendix_match.group(2).upper()
+                sec_title = f"{prefix}: {appendix_match.group(3).strip()}"
+                anchor = f"section-appendix-{sec_num.lower()}"
             else:
                 auto_num += 1
                 sec_num = str(auto_num)
                 sec_title = raw_heading
-            anchor = f"section-{sec_num}"
+                anchor = f"section-extra-{auto_num}"
             current_section = Section(number=sec_num, title=sec_title, anchor=anchor)
             sections.append(current_section)
             continue
