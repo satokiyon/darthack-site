@@ -40,10 +40,11 @@
         <li><a href="#section-10">10. Display, Status Area &amp; Font Settings</a></li>
         <li><a href="#section-11">11. Selecting &amp; Importing Tilesets</a></li>
         <li><a href="#section-12">12. UI Layout Customization &amp; Tablet Mode</a></li>
-        <li><a href="#section-13">13. Customizing Command Panels &amp; Quick Shortcuts</a></li>
-        <li><a href="#section-14">14. Physical Keyboard Guide &amp; Hardware Key Mapping</a></li>
-        <li><a href="#section-15">15. Sound Settings &amp; Challenge / Hard Modes</a></li>
-        <li><a href="#section-16">16. Advanced Settings (Editing `defaults.nh` &amp; Backup)</a></li>
+        <li><a href="#section-13">13. Controller Settings</a></li>
+        <li><a href="#section-14">14. Customizing Command Panels &amp; Quick Shortcuts</a></li>
+        <li><a href="#section-15">15. Physical Keyboard Guide &amp; Hardware Key Mapping</a></li>
+        <li><a href="#section-16">16. Sound Settings &amp; Challenge / Hard Modes</a></li>
+        <li><a href="#section-17">17. Advanced Settings (Editing `defaults.nh` &amp; Backup)</a></li>
       </ul>
     </nav>
 
@@ -152,7 +153,7 @@
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Items Panel</strong>: Inventory and item actions (<code>Inv</code>, <code>Apply</code>, <code>Pick</code>, <code>Drop</code>, <code>DropT</code>, <code>Loot</code>, <code>Quaff</code>, <code>Read</code>, etc.).</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Info Panel</strong>: Reference commands (<code>Help</code>, <code>WhatDo</code>, <code>WhatIs</code>, <code>Glance</code>, <code>Here</code>, <code>Attrib</code>, <code>Spells</code>, etc.).</span></li>
       </ol>
-      <div class="manual-note">Tap a panel badge on the left (e.g., <code>Default</code>, <code>Combat</code>) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can <strong>long-press</strong> any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under <strong>Game Settings → Edit Command Panel</strong> (Chapter 13).</div>
+      <div class="manual-note">Tap a panel badge on the left (e.g., <code>Default</code>, <code>Combat</code>) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can <strong>long-press</strong> any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under <strong>Game Settings → Edit Command Panel</strong> (Chapter 14).</div>
       <h3>Long-Press Customization for Command Panels</h3>
       <p class="manual-desc"><strong>Long-press</strong> any button on a command panel (such as <code>20Srch</code>) to open the <strong>Edit Button</strong> dialog and customize it on the spot without opening Game Settings.</p>
       <div class="image-group">
@@ -167,6 +168,19 @@
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>Insert New Button</strong>: Use <strong>Add Button Before</strong> or <strong>Add Button After</strong> to insert a new button next to the selected one.</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>Delete / Reset</strong>: Tap <strong>Delete Button</strong> to remove this button, or <strong>Reset Panel to Default</strong> to restore the active panel&#x27;s built-in layout.</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Cancel</strong>: Closes the dialog without applying changes.</span></li>
+      </ol>
+      <h3>Switching Button Display Mode (Show Commands)</h3>
+      <p class="manual-desc">If you set <strong>Game Settings → Controller Settings → Button Display Mode</strong> (Chapter 13) to <strong>Show Commands</strong>, buttons display the raw input commands (<code>i</code>, <code>;</code>, <code>20s</code>, etc.) instead of descriptive label names (<code>Inv</code>, <code>Glance</code>, <code>20Srch</code>, etc.).</p>
+      <p class="manual-desc">For players already familiar with classic NetHack keybindings, this setting makes it immediately obvious which key command each button sends.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/03d_cmd_display_mode.png" alt="Show Commands Display Mode" loading="lazy">
+          <div class="image-caption">Figure 3-4: 3×3 Quick Shortcuts and Command Panels in &quot;Show Commands&quot; mode</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>3×3 Quick Shortcuts (Command View)</strong>: Buttons show raw keys and commands (<code>i</code>, <code>/</code>, <code>,</code>, <code>#ther...</code>, <code>#chat</code>, <code>e</code>, <code>^a</code>, etc.) instead of labels.</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Command Panels (Command View)</strong>: Buttons along the bottom command panels likewise switch to raw keybindings such as <code>20s</code>, <code>.</code>, <code>:</code>, <code>;</code>, <code>d</code>, and <code>q</code>.</span></li>
       </ol>
       <p class="manual-desc">---</p>
     </section>
@@ -522,14 +536,41 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 13. Customizing Command Panels &amp; Quick Shortcuts -->
+    <!-- 13. Controller Settings -->
     <section id="section-13" class="manual-item">
-      <h2><span class="manual-item-num">13</span> Customizing Command Panels &amp; Quick Shortcuts</h2>
+      <h2><span class="manual-item-num">13</span> Controller Settings</h2>
+      <p class="manual-desc">Under <strong>Game Settings → Controller Settings</strong>, you can configure button display mode, pad opacity, scale multipliers, long-press / far-tap travel behavior, and the drawer menu swipe edge.</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/en/20b_settings_controller.png" alt="Game Settings: Controller Settings (Upper)" loading="lazy">
+          <div class="image-caption">Figure 13-1: Controller Settings (Button Display Mode, Opacity, D-Pad &amp; Auto-Travel)</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/en/20c_settings_controller_2.png" alt="Game Settings: Controller Settings (Lower)" loading="lazy">
+          <div class="image-caption">Figure 13-2: Controller Settings (Shortcut/Panel Scales &amp; Drawer Position)</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>Button Display Mode</strong>: Choose <strong>Show Labels</strong> (default) or <strong>Show Commands</strong> (displays raw keys such as <code>i</code>, <code>;</code>, <code>20s</code> on command panels and 3×3 shortcuts—recommended for experienced NetHack players).</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>Button Opacity</strong>: Adjusts transparency (<code>0.1</code>–<code>1.0</code>) for the 8-way D-Pad, 3×3 shortcuts, and floating controls.</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>D-Pad Scale Multiplier</strong>: Scales the 8-way D-Pad between <code>0.6×</code> and <code>1.5×</code> (shows the clamped effective scale for your screen width below the slider).</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>D-Pad Long Press Move Mode</strong>: Chooses the directional travel mode triggered when long-pressing a D-Pad direction (Normal, Uppercase, <code>g</code>, <code>G</code>, <code>^</code>, <code>m</code>, or <code>F</code>).</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>Action on Far Tap (Auto-Travel)</strong>: Configures what happens when tapping a distant map tile (<code>Show Menu</code>, <code>Immediate Travel (Always)</code>, <code>After Scroll Only</code>, or <code>Disabled</code>).</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>Shortcut Pad Scale Multiplier</strong>: Scales the 3×3 Quick Shortcut grid (<code>0.6×</code>–<code>1.5×</code>).</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>Command Panel Scale Multiplier</strong>: Scales the bottom Command Panel buttons (<code>0.6×</code>–<code>1.5×</code>).</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>Menu (Drawer) Position</strong>: Selects which screen edge opens the DartHack Menu (<strong>Left Side (Swipeable)</strong>, <strong>Right Side</strong>, <strong>Top</strong>, or <strong>Bottom</strong>).</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 14. Customizing Command Panels &amp; Quick Shortcuts -->
+    <section id="section-14" class="manual-item">
+      <h2><span class="manual-item-num">14</span> Customizing Command Panels &amp; Quick Shortcuts</h2>
       <p class="manual-desc">Tailor the bottom command panels to match your favorite roles and playstyles.</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/21_custom_cmd_panel.png" alt="Edit Command Panel" loading="lazy">
-          <div class="image-caption">Figure 13-1: Editing, adding, and resetting swipeable command panels</div>
+          <div class="image-caption">Figure 14-1: Editing, adding, and resetting swipeable command panels</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -542,15 +583,15 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 14. Physical Keyboard Guide &amp; Hardware Key Mapping -->
-    <section id="section-14" class="manual-item">
-      <h2><span class="manual-item-num">14</span> Physical Keyboard Guide &amp; Hardware Key Mapping</h2>
+    <!-- 15. Physical Keyboard Guide &amp; Hardware Key Mapping -->
+    <section id="section-15" class="manual-item">
+      <h2><span class="manual-item-num">15</span> Physical Keyboard Guide &amp; Hardware Key Mapping</h2>
       <h3>Physical Keyboard Shortcuts</h3>
       <p class="manual-desc">When using a physical keyboard (USB, Bluetooth, or Chromebook), enable <strong>Game Settings → Screen Display Settings → Enable Physical Keyboard Help</strong> to bring up the DartHack shortcut reference at any time by pressing <code>F1</code> or <code>Alt-h (M-h)</code>.</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/22_keyboard_help.png" alt="Keyboard Controls Guide" loading="lazy">
-          <div class="image-caption">Figure 14-1: Keyboard Controls Guide overlay</div>
+          <div class="image-caption">Figure 15-1: Keyboard Controls Guide overlay</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -563,7 +604,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/22b_settings_phys_keys.png" alt="Physical Key Assignments" loading="lazy">
-          <div class="image-caption">Figure 14-2: Binding Volume keys and Back gesture in Game Settings</div>
+          <div class="image-caption">Figure 15-2: Binding Volume keys and Back gesture in Game Settings</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -575,14 +616,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 15. Sound Settings &amp; Challenge / Hard Modes -->
-    <section id="section-15" class="manual-item">
-      <h2><span class="manual-item-num">15</span> Sound Settings &amp; Challenge / Hard Modes</h2>
+    <!-- 16. Sound Settings &amp; Challenge / Hard Modes -->
+    <section id="section-16" class="manual-item">
+      <h2><span class="manual-item-num">16</span> Sound Settings &amp; Challenge / Hard Modes</h2>
       <h3>Sound Settings</h3>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/23a_settings_sound.png" alt="Game Settings: Sound Settings" loading="lazy">
-          <div class="image-caption">Figure 15-1: Master sound, BGM, SE, and ambience settings</div>
+          <div class="image-caption">Figure 16-1: Master sound, BGM, SE, and ambience settings</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -595,7 +636,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/23b_settings_hard_mode.png" alt="Game Settings: Hard Mode &amp; Challenge Settings" loading="lazy">
-          <div class="image-caption">Figure 15-2: Game Rules &amp; Options and Hard Mode challenge toggles</div>
+          <div class="image-caption">Figure 16-2: Game Rules &amp; Options and Hard Mode challenge toggles</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -606,14 +647,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 16. Advanced Settings (Editing `defaults.nh` &amp; Backup) -->
-    <section id="section-16" class="manual-item">
-      <h2><span class="manual-item-num">16</span> Advanced Settings (Editing `defaults.nh` &amp; Backup)</h2>
+    <!-- 17. Advanced Settings (Editing `defaults.nh` &amp; Backup) -->
+    <section id="section-17" class="manual-item">
+      <h2><span class="manual-item-num">17</span> Advanced Settings (Editing `defaults.nh` &amp; Backup)</h2>
       <p class="manual-desc">At the bottom of Game Settings, advanced users can edit the raw NetHack configuration file or back up/transfer their Flutter UI setup.</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/en/23c_settings_advanced.png" alt="Game Settings: Advanced Settings" loading="lazy">
-          <div class="image-caption">Figure 16-1: Manual defaults.nh editing and JSON settings export/import</div>
+          <div class="image-caption">Figure 17-1: Manual defaults.nh editing and JSON settings export/import</div>
         </div>
       </div>
       <ol class="annotated-list">

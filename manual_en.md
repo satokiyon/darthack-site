@@ -88,7 +88,7 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 5. **Info Panel**: Reference commands (`Help`, `WhatDo`, `WhatIs`, `Glance`, `Here`, `Attrib`, `Spells`, etc.).
 
 > [!TIP]
-> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can **long-press** any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under **Game Settings → Edit Command Panel** (Chapter 13).
+> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can **long-press** any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under **Game Settings → Edit Command Panel** (Chapter 14).
 
 ### Long-Press Customization for Command Panels
 
@@ -102,6 +102,18 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 3. **Insert New Button**: Use **Add Button Before** or **Add Button After** to insert a new button next to the selected one.
 4. **Delete / Reset**: Tap **Delete Button** to remove this button, or **Reset Panel to Default** to restore the active panel's built-in layout.
 5. **Cancel**: Closes the dialog without applying changes.
+
+### Switching Button Display Mode (Show Commands)
+
+If you set **Game Settings → Controller Settings → Button Display Mode** (Chapter 13) to **Show Commands**, buttons display the raw input commands (`i`, `;`, `20s`, etc.) instead of descriptive label names (`Inv`, `Glance`, `20Srch`, etc.).
+
+For players already familiar with classic NetHack keybindings, this setting makes it immediately obvious which key command each button sends.
+
+![Show Commands Display Mode](images/manual/en/03d_cmd_display_mode.png)
+*Figure 3-4: 3×3 Quick Shortcuts and Command Panels in "Show Commands" mode*
+
+1. **3×3 Quick Shortcuts (Command View)**: Buttons show raw keys and commands (`i`, `/`, `,`, `#ther...`, `#chat`, `e`, `^a`, etc.) instead of labels.
+2. **Command Panels (Command View)**: Buttons along the bottom command panels likewise switch to raw keybindings such as `20s`, `.`, `:`, `;`, `d`, and `q`.
 
 ---
 
@@ -368,12 +380,33 @@ On wide landscape screens and tablets (such as `1920×1200`), DartHack adapts au
 
 ---
 
-## 13. Customizing Command Panels & Quick Shortcuts
+## 13. Controller Settings
+
+Under **Game Settings → Controller Settings**, you can configure button display mode, pad opacity, scale multipliers, long-press / far-tap travel behavior, and the drawer menu swipe edge.
+
+![Game Settings: Controller Settings (Upper)](images/manual/en/20b_settings_controller.png)
+*Figure 13-1: Controller Settings (Button Display Mode, Opacity, D-Pad & Auto-Travel)*
+
+![Game Settings: Controller Settings (Lower)](images/manual/en/20c_settings_controller_2.png)
+*Figure 13-2: Controller Settings (Shortcut/Panel Scales & Drawer Position)*
+
+1. **Button Display Mode**: Choose **Show Labels** (default) or **Show Commands** (displays raw keys such as `i`, `;`, `20s` on command panels and 3×3 shortcuts—recommended for experienced NetHack players).
+2. **Button Opacity**: Adjusts transparency (`0.1`–`1.0`) for the 8-way D-Pad, 3×3 shortcuts, and floating controls.
+3. **D-Pad Scale Multiplier**: Scales the 8-way D-Pad between `0.6×` and `1.5×` (shows the clamped effective scale for your screen width below the slider).
+4. **D-Pad Long Press Move Mode**: Chooses the directional travel mode triggered when long-pressing a D-Pad direction (Normal, Uppercase, `g`, `G`, `^`, `m`, or `F`).
+5. **Action on Far Tap (Auto-Travel)**: Configures what happens when tapping a distant map tile (`Show Menu`, `Immediate Travel (Always)`, `After Scroll Only`, or `Disabled`).
+6. **Shortcut Pad Scale Multiplier**: Scales the 3×3 Quick Shortcut grid (`0.6×`–`1.5×`).
+7. **Command Panel Scale Multiplier**: Scales the bottom Command Panel buttons (`0.6×`–`1.5×`).
+8. **Menu (Drawer) Position**: Selects which screen edge opens the DartHack Menu (**Left Side (Swipeable)**, **Right Side**, **Top**, or **Bottom**).
+
+---
+
+## 14. Customizing Command Panels & Quick Shortcuts
 
 Tailor the bottom command panels to match your favorite roles and playstyles.
 
 ![Edit Command Panel](images/manual/en/21_custom_cmd_panel.png)
-*Figure 13-1: Editing, adding, and resetting swipeable command panels*
+*Figure 14-1: Editing, adding, and resetting swipeable command panels*
 
 1. **Show Panel Names**: Toggles the left-hand name badges (`Default`, `Combat`, `Items`, `Info`) on each panel row; turning them off frees horizontal width for extra buttons.
 2. **Panel List (Edit / Delete)**: Shows each configured panel and its starting keys. Tap the **pencil icon** to edit button labels, commands, and ordering, or the **trash icon** to remove a custom panel.
@@ -385,14 +418,14 @@ Tailor the bottom command panels to match your favorite roles and playstyles.
 
 ---
 
-## 14. Physical Keyboard Guide & Hardware Key Mapping
+## 15. Physical Keyboard Guide & Hardware Key Mapping
 
 ### Physical Keyboard Shortcuts
 
 When using a physical keyboard (USB, Bluetooth, or Chromebook), enable **Game Settings → Screen Display Settings → Enable Physical Keyboard Help** to bring up the DartHack shortcut reference at any time by pressing `F1` or `Alt-h (M-h)`.
 
 ![Keyboard Controls Guide](images/manual/en/22_keyboard_help.png)
-*Figure 14-1: Keyboard Controls Guide overlay*
+*Figure 15-1: Keyboard Controls Guide overlay*
 
 1. **Guide Header & Close (`×`)**: Title bar for the controls guide.
 2. **Shortcut List**: Quick reference for **`Ctrl+M` / `F10`** (open drawer menu), **`F9` / `Alt-z`** (full level map), **`Tab` / `Shift+Tab`** (focus floating buttons), **`Enter` / `Space`** (execute focused button), **`?`** (standard NetHack help), and **`F1` / `Alt-h`** (this guide).
@@ -403,7 +436,7 @@ When using a physical keyboard (USB, Bluetooth, or Chromebook), enable **Game Se
 Even without a keyboard, you can bind hardware **Volume Up**, **Volume Down**, and the Android **Back button** to frequent NetHack commands.
 
 ![Physical Key Assignments](images/manual/en/22b_settings_phys_keys.png)
-*Figure 14-2: Binding Volume keys and Back gesture in Game Settings*
+*Figure 15-2: Binding Volume keys and Back gesture in Game Settings*
 
 1. **Physical Key Assignments Header**: Expands hardware button bindings.
 2. **Volume Up Key**: Assign a game command (default: `None (Normal Volume Change)`).
@@ -412,12 +445,12 @@ Even without a keyboard, you can bind hardware **Volume Up**, **Volume Down**, a
 
 ---
 
-## 15. Sound Settings & Challenge / Hard Modes
+## 16. Sound Settings & Challenge / Hard Modes
 
 ### Sound Settings
 
 ![Game Settings: Sound Settings](images/manual/en/23a_settings_sound.png)
-*Figure 15-1: Master sound, BGM, SE, and ambience settings*
+*Figure 16-1: Master sound, BGM, SE, and ambience settings*
 
 1. **Sound Settings Header**: Expands audio options.
 2. **Master Sound & BGM Toggles**: Use **Master Sound** to mute/unmute all audio, or toggle **BGM** independently.
@@ -428,7 +461,7 @@ Even without a keyboard, you can bind hardware **Volume Up**, **Volume Down**, a
 DartHack exposes key `defaults.nh` rules and built-in challenge conducts directly in Game Settings.
 
 ![Game Settings: Hard Mode & Challenge Settings](images/manual/en/23b_settings_hard_mode.png)
-*Figure 15-2: Game Rules & Options and Hard Mode challenge toggles*
+*Figure 16-2: Game Rules & Options and Hard Mode challenge toggles*
 
 1. **Game Rules & Options (`defaults.nh`)**: Configure core engine behaviors such as autopickup and prompts (*Requires starting a new game*).
 2. **Hard Mode & Challenge Settings (`defaults.nh`) Header**: Expands advanced challenge toggles (*Requires starting a new game*).
@@ -436,12 +469,12 @@ DartHack exposes key `defaults.nh` rules and built-in challenge conducts directl
 
 ---
 
-## 16. Advanced Settings (Editing `defaults.nh` & Backup)
+## 17. Advanced Settings (Editing `defaults.nh` & Backup)
 
 At the bottom of Game Settings, advanced users can edit the raw NetHack configuration file or back up/transfer their Flutter UI setup.
 
 ![Game Settings: Advanced Settings](images/manual/en/23c_settings_advanced.png)
-*Figure 16-1: Manual defaults.nh editing and JSON settings export/import*
+*Figure 17-1: Manual defaults.nh editing and JSON settings export/import*
 
 1. **Advanced Settings Header**: Expands power-user tools.
 2. **Edit `defaults.nh` manually**: Opens a direct text editor for `defaults.nh`, letting you write any classic NetHack options (`OPTIONS=...`, `MENUCOLOR=...`, custom status highlights, etc.). *Requires starting a new game for changes to take effect.*

@@ -48,6 +48,12 @@
       { "id": 5, "box": [645, 1785, 920, 1925], "badge_pos": "outside-bottom-right" }
     ]
   },
+  "03d_cmd_display_mode.png": {
+    "annotations": [
+      { "id": 1, "box": [665, 1490, 1055, 1855], "badge_pos": "outside-top-left" },
+      { "id": 2, "box": [0, 1925, 1080, 2375], "badge_pos": "corner-top-left" }
+    ]
+  },
   "04_move_mode.png": {
     "annotations": [
       { "id": 1, "box": [70, 390, 995, 580], "badge_pos": "corner-bottom-right" },
@@ -197,6 +203,22 @@
       { "id": 3, "box": [5, 725, 315, 995], "badge_pos": "outside-top-right" },
       { "id": 4, "box": [1600, 720, 1910, 995], "badge_pos": "outside-top-left" },
       { "id": 5, "box": [0, 1015, 1920, 1145], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "20b_settings_controller.png": {
+    "annotations": [
+      { "id": 1, "box": [45, 760, 1035, 1080], "badge_pos": "corner-top-right" },
+      { "id": 2, "box": [45, 1090, 1035, 1300], "badge_pos": "corner-top-right" },
+      { "id": 3, "box": [45, 1310, 1035, 1580], "badge_pos": "corner-top-right" },
+      { "id": 4, "box": [45, 1590, 1035, 1885], "badge_pos": "corner-top-right" },
+      { "id": 5, "box": [45, 1895, 1035, 2185], "badge_pos": "corner-top-right" }
+    ]
+  },
+  "20c_settings_controller_2.png": {
+    "annotations": [
+      { "id": 6, "box": [45, 1315, 1035, 1585], "badge_pos": "corner-top-right" },
+      { "id": 7, "box": [45, 1595, 1035, 1875], "badge_pos": "corner-top-right" },
+      { "id": 8, "box": [45, 1885, 1035, 2175], "badge_pos": "corner-top-right" }
     ]
   },
   "21_custom_cmd_panel.png": {

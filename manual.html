@@ -40,10 +40,11 @@
         <li><a href="#section-10">10. 画面表示・ステータス・フォント設定</a></li>
         <li><a href="#section-11">11. タイルセットの選択とカスタムタイルセット</a></li>
         <li><a href="#section-12">12. UI配置カスタマイズとタブレット対応</a></li>
-        <li><a href="#section-13">13. コマンドパネル・クイックボタンの編集</a></li>
-        <li><a href="#section-14">14. 物理キーボード操作ガイドと物理キー割り当て</a></li>
-        <li><a href="#section-15">15. サウンド設定とハードモード・縛りプレイ</a></li>
-        <li><a href="#section-16">16. 高度な設定（defaults.nh 編集と設定のバックアップ）</a></li>
+        <li><a href="#section-13">13. 操作コントローラ設定</a></li>
+        <li><a href="#section-14">14. コマンドパネル・クイックボタンの編集</a></li>
+        <li><a href="#section-15">15. 物理キーボード操作ガイドと物理キー割り当て</a></li>
+        <li><a href="#section-16">16. サウンド設定とハードモード・縛りプレイ</a></li>
+        <li><a href="#section-17">17. 高度な設定（defaults.nh 編集と設定のバックアップ）</a></li>
         <li><a href="#section-appendix-a">A. 付録: 日英両対応入力ガイド（通常プレイ）</a></li>
         <li><a href="#section-appendix-b">B. 付録: 日英両対応入力ガイド（ウィザードモード）</a></li>
       </ul>
@@ -154,7 +155,7 @@
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>道具パネル</strong>: 持ち物、使用、拾う、置く、複数置、あさる、飲む、読む、浸すなどアイテム操作に特化したパネルです。</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>情報パネル</strong>: ヘルプ、コマンド、調べる、遠見、足元、属性、呪文、発見品、実績など情報確認用コマンドをまとめています。</span></li>
       </ol>
-      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル上の各ボタンを<strong>長押し</strong>するとその場でボタンの追加・削除やキー・ラベルの変更ができ、「詳細ゲーム設定 → カスタムコマンドパネル編集」（第13章）からもパネル構成をまとめて編集できます。</div>
+      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル上の各ボタンを<strong>長押し</strong>するとその場でボタンの追加・削除やキー・ラベルの変更ができ、「詳細ゲーム設定 → カスタムコマンドパネル編集」（第14章）からもパネル構成をまとめて編集できます。</div>
       <h3>コマンドパネルの長押しカスタマイズ</h3>
       <p class="manual-desc">コマンドパネル上の編集したいボタン（例：<code>20探索</code> など）を<strong>長押し</strong>すると、「ボタン編集」ダイアログが開き、設定画面を開かなくてもその場でカスタマイズできます。</p>
       <div class="image-group">
@@ -169,6 +170,19 @@
         <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ボタンの挿入</strong>: 「前にボタンを追加」「後にボタンを追加」で、選択したボタンの前後へ新しいボタンを追加します。</span></li>
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>削除・初期化</strong>: 「ボタンを削除」でそのボタンを取り除き、「パネルをデフォルトに戻す」で選択中のパネルを初期状態へリセットします。</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>キャンセル</strong>: 変更を行わずにダイアログを閉じます。</span></li>
+      </ol>
+      <h3>ボタン表示形式の切り替え（コマンドそのまま表示）</h3>
+      <p class="manual-desc">「詳細ゲーム設定 → 操作コントローラ設定 → ボタン表示形式」（第13章）を <strong>「コマンドをそのまま表示」</strong> に設定すると、ボタン上のラベル名（「持ち物」「調べる」「20探索」など）ではなく、実際に送信される入力コマンド（<code>i</code>, <code>;</code>, <code>20s</code> など）がそのままボタンに表示されます。</p>
+      <p class="manual-desc">NetHack のキー操作にすでに慣れている方にとっては、どのキーコマンドが送信されるか一目で分かるため、この設定の方が分かりやすく快適に操作できます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/03d_cmd_display_mode.png" alt="コマンドそのまま表示モードのメイン画面" loading="lazy">
+          <div class="image-caption">図 3-4: 「コマンドをそのまま表示」に設定したときの 3×3 クイックショートカットとコマンドパネル</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>3×3 クイックショートカット（コマンド表記）</strong>: 「持ち物」「調べる」「会話」などのラベルが、実際のキーコマンド（<code>i</code>, <code>/</code>, <code>,</code>, <code>#ther...</code>, <code>#chat</code>, <code>e</code>, <code>^a</code> 等）で表示されます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>コマンドパネル（コマンド表記）</strong>: 下部の各コマンドパネル上のボタンも、<code>20s</code>, <code>.</code>, <code>:</code>, <code>;</code>, <code>d</code>, <code>q</code> のようなコマンドそのままの表記に切り替わります。</span></li>
       </ol>
       <p class="manual-desc">---</p>
     </section>
@@ -525,14 +539,41 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 13. コマンドパネル・クイックボタンの編集 -->
+    <!-- 13. 操作コントローラ設定 -->
     <section id="section-13" class="manual-item">
-      <h2><span class="manual-item-num">13</span> コマンドパネル・クイックボタンの編集</h2>
+      <h2><span class="manual-item-num">13</span> 操作コントローラ設定</h2>
+      <p class="manual-desc">詳細ゲーム設定の <strong>「操作コントローラ設定」</strong> では、ボタンの表示形式・透明度・サイズ倍率・長押しやマップタップ時の移動動作・ドロワーメニューの引き出し位置などを細かく調整できます。</p>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/20b_settings_controller.png" alt="詳細ゲーム設定：操作コントローラ設定（上段）" loading="lazy">
+          <div class="image-caption">図 13-1: 操作コントローラ設定（表示形式・透明度・移動パッド・自動移動）</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/ja/20c_settings_controller_2.png" alt="詳細ゲーム設定：操作コントローラ設定（下段）" loading="lazy">
+          <div class="image-caption">図 13-2: 操作コントローラ設定（ショートカット・コマンドパネル倍率・ドロワー位置）</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ボタン表示形式</strong>: コマンドパネルおよび 3×3 クイックショートカットの文字を <strong>「ラベルを表示」</strong>（標準）または <strong>「コマンドをそのまま表示」</strong>（<code>i</code>, <code>;</code>, <code>20s</code> 等のキー表記。NetHack のキー操作に慣れた方向け）から選択します。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ボタン不透明度</strong>: 8方向移動パッド・3×3 クイックショートカット・各種ボタンの透明度をスライダーで調整します（<code>0.1</code>〜<code>1.0</code>）。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>移動ボタンサイズ倍率</strong>: 8方向移動パッドの大きさを <code>0.6</code>〜<code>1.5</code> 倍の範囲で調整します（画面幅に応じた自動上限の適用倍率も下に表示されます）。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>移動パッド長押し時の移動モード</strong>: 8方向移動パッドの方向キーを長押ししたときに使用する移動モード（通常移動・大文字走行・<code>g</code>・<code>G</code>・<code>^</code>・<code>m</code>・<code>F</code>）を指定します。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>離れたマスのタップ時動作（自動移動）</strong>: マップ上の離れたマスをタップした際の移動挙動（メニュー表示／即時移動（常に有効）／画面スクロール後のみ有効／無効）を設定します。</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>ショートカットボタンサイズ倍率</strong>: 3×3 クイックショートカットの大きさを <code>0.6</code>〜<code>1.5</code> 倍の範囲で調整します。</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>コマンドパネルサイズ倍率</strong>: 画面下部のコマンドパネルのボタンサイズを <code>0.6</code>〜<code>1.5</code> 倍の範囲で調整します。</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>メニュー（ドロワー）の引き出し位置</strong>: DartHack メニューを開く方向・スワイプ端を <strong>左側（スワイプ可）</strong>／<strong>右側</strong>／<strong>上側</strong>／<strong>下側</strong> から選択します。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 14. コマンドパネル・クイックボタンの編集 -->
+    <section id="section-14" class="manual-item">
+      <h2><span class="manual-item-num">14</span> コマンドパネル・クイックボタンの編集</h2>
       <p class="manual-desc">ゲーム画面最下部のコマンドパネル群は、プレイヤー自身のプレイスタイルに合わせて自由に追加・編集・並べ替えを行えます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/21_custom_cmd_panel.png" alt="カスタムコマンドパネル編集画面" loading="lazy">
-          <div class="image-caption">図 13-1: コマンドパネルの一覧管理・編集・新規追加・リセット画面</div>
+          <div class="image-caption">図 14-1: コマンドパネルの一覧管理・編集・新規追加・リセット画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -545,15 +586,15 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 14. 物理キーボード操作ガイドと物理キー割り当て -->
-    <section id="section-14" class="manual-item">
-      <h2><span class="manual-item-num">14</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
+    <!-- 15. 物理キーボード操作ガイドと物理キー割り当て -->
+    <section id="section-15" class="manual-item">
+      <h2><span class="manual-item-num">15</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
       <h3>物理キーボード接続時のショートカット操作</h3>
       <p class="manual-desc">Bluetooth キーボードや Chromebook・PC・USB キーボードを接続している場合、NetHack 標準キーに加えて DartHack UI 専用の便利ショートカットキーを使用できます。設定画面の <strong>「詳細ゲーム設定 → 画面表示設定 → 物理キーボード用ヘルプを有効化」</strong> をオンにしている場合、<code>F1</code> または <code>Alt-h (M-h)</code> キーを押すといつでも操作ガイドを表示できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/22_keyboard_help.png" alt="キーボード操作ガイドダイアログ" loading="lazy">
-          <div class="image-caption">図 14-1: 物理キーボード用ショートカット操作ガイド</div>
+          <div class="image-caption">図 15-1: 物理キーボード用ショートカット操作ガイド</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -566,7 +607,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/22b_settings_phys_keys.png" alt="詳細ゲーム設定：物理キー割り当て" loading="lazy">
-          <div class="image-caption">図 14-2: 音量アップ／ダウンキー・戻るボタンのコマンド割り当て設定</div>
+          <div class="image-caption">図 15-2: 音量アップ／ダウンキー・戻るボタンのコマンド割り当て設定</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -578,14 +619,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 15. サウンド設定とハードモード・縛りプレイ -->
-    <section id="section-15" class="manual-item">
-      <h2><span class="manual-item-num">15</span> サウンド設定とハードモード・縛りプレイ</h2>
+    <!-- 16. サウンド設定とハードモード・縛りプレイ -->
+    <section id="section-16" class="manual-item">
+      <h2><span class="manual-item-num">16</span> サウンド設定とハードモード・縛りプレイ</h2>
       <h3>サウンド設定（BGM・効果音・環境音）</h3>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/23a_settings_sound.png" alt="詳細ゲーム設定：サウンド設定" loading="lazy">
-          <div class="image-caption">図 15-1: サウンド全体・BGM・効果音(SE)・環境音の設定画面</div>
+          <div class="image-caption">図 16-1: サウンド全体・BGM・効果音(SE)・環境音の設定画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -598,7 +639,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/23b_settings_hard_mode.png" alt="詳細ゲーム設定：ハードモード・縛りプレイ設定" loading="lazy">
-          <div class="image-caption">図 15-2: ゲームルール設定とハードモード・縛りプレイトグル一覧</div>
+          <div class="image-caption">図 16-2: ゲームルール設定とハードモード・縛りプレイトグル一覧</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -609,14 +650,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 16. 高度な設定（defaults.nh 編集と設定のバックアップ） -->
-    <section id="section-16" class="manual-item">
-      <h2><span class="manual-item-num">16</span> 高度な設定（defaults.nh 編集と設定のバックアップ）</h2>
+    <!-- 17. 高度な設定（defaults.nh 編集と設定のバックアップ） -->
+    <section id="section-17" class="manual-item">
+      <h2><span class="manual-item-num">17</span> 高度な設定（defaults.nh 編集と設定のバックアップ）</h2>
       <p class="manual-desc">設定画面の最下部には、NetHack 上級者向けのオプションファイル直接編集と、端末間でカスタマイズを引き継ぐエクスポート／インポート機能があります。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/23c_settings_advanced.png" alt="詳細ゲーム設定：高度な設定" loading="lazy">
-          <div class="image-caption">図 16-1: defaults.nh 直接編集および設定エクスポート／インポート</div>
+          <div class="image-caption">図 17-1: defaults.nh 直接編集および設定エクスポート／インポート</div>
         </div>
       </div>
       <ol class="annotated-list">
