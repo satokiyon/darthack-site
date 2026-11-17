@@ -37,14 +37,15 @@
         <li><a href="#section-7">7. メッセージ履歴とスポイラー（攻略情報）</a></li>
         <li><a href="#section-8">8. DartHack メニュー（ドロワーメニュー）</a></li>
         <li><a href="#section-9">9. スコアボード・記録詳細・墓石表示</a></li>
-        <li><a href="#section-10">10. 画面表示・ステータス・フォント設定</a></li>
-        <li><a href="#section-11">11. タイルセットの選択とカスタムタイルセット</a></li>
-        <li><a href="#section-12">12. UI配置カスタマイズとタブレット対応</a></li>
-        <li><a href="#section-13">13. 操作コントローラ設定</a></li>
-        <li><a href="#section-14">14. コマンドパネル・クイックボタンの編集</a></li>
-        <li><a href="#section-15">15. 物理キーボード操作ガイドと物理キー割り当て</a></li>
-        <li><a href="#section-16">16. サウンド設定とハードモード・縛りプレイ</a></li>
-        <li><a href="#section-17">17. 高度な設定（defaults.nh 編集と設定のバックアップ）</a></li>
+        <li><a href="#section-10">10. タイルセットの選択とカスタムタイルセット</a></li>
+        <li><a href="#section-11">11. フォント・画面表示・ステータス・メッセージ領域設定</a></li>
+        <li><a href="#section-12">12. サウンド設定</a></li>
+        <li><a href="#section-13">13. UI配置カスタマイズとタブレット対応</a></li>
+        <li><a href="#section-14">14. 操作コントローラ設定</a></li>
+        <li><a href="#section-15">15. コマンドパネル・クイックボタンの編集</a></li>
+        <li><a href="#section-16">16. 物理キーボード操作ガイドと物理キー割り当て</a></li>
+        <li><a href="#section-17">17. ゲームルールとハードモード・縛りプレイ</a></li>
+        <li><a href="#section-18">18. 高度な設定（defaults.nh 編集と設定のバックアップ）</a></li>
         <li><a href="#section-appendix-a">A. 付録: 日英両対応入力ガイド（通常プレイ）</a></li>
         <li><a href="#section-appendix-b">B. 付録: 日英両対応入力ガイド（ウィザードモード）</a></li>
       </ul>
@@ -155,7 +156,7 @@
         <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>道具パネル</strong>: 持ち物、使用、拾う、置く、複数置、あさる、飲む、読む、浸すなどアイテム操作に特化したパネルです。</span></li>
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>情報パネル</strong>: ヘルプ、コマンド、調べる、遠見、足元、属性、呪文、発見品、実績など情報確認用コマンドをまとめています。</span></li>
       </ol>
-      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル上の各ボタンを<strong>長押し</strong>するとその場でボタンの追加・削除やキー・ラベルの変更ができ、「詳細ゲーム設定 → カスタムコマンドパネル編集」（第14章）からもパネル構成をまとめて編集できます。</div>
+      <div class="manual-note">左端のパネル名ボタン（例：「標準」「戦闘」など）をタップしてパネルを直接切り替えたり、横スクロールで隠れている右側のボタンを使ったりできます。パネル上の各ボタンを<strong>長押し</strong>するとその場でボタンの追加・削除やキー・ラベルの変更ができ、「詳細ゲーム設定 → カスタムコマンドパネル編集」（第15章）からもパネル構成をまとめて編集できます。</div>
       <h3>コマンドパネルの長押しカスタマイズ</h3>
       <p class="manual-desc">コマンドパネル上の編集したいボタン（例：<code>20探索</code> など）を<strong>長押し</strong>すると、「ボタン編集」ダイアログが開き、設定画面を開かなくてもその場でカスタマイズできます。</p>
       <div class="image-group">
@@ -172,7 +173,7 @@
         <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>キャンセル</strong>: 変更を行わずにダイアログを閉じます。</span></li>
       </ol>
       <h3>ボタン表示形式の切り替え（コマンドそのまま表示）</h3>
-      <p class="manual-desc">「詳細ゲーム設定 → 操作コントローラ設定 → ボタン表示形式」（第13章）を <strong>「コマンドをそのまま表示」</strong> に設定すると、ボタン上のラベル名（「持ち物」「調べる」「20探索」など）ではなく、実際に送信される入力コマンド（<code>i</code>, <code>;</code>, <code>20s</code> など）がそのままボタンに表示されます。</p>
+      <p class="manual-desc">「詳細ゲーム設定 → 操作コントローラ設定 → ボタン表示形式」（第14章）を <strong>「コマンドをそのまま表示」</strong> に設定すると、ボタン上のラベル名（「持ち物」「調べる」「20探索」など）ではなく、実際に送信される入力コマンド（<code>i</code>, <code>;</code>, <code>20s</code> など）がそのままボタンに表示されます。</p>
       <p class="manual-desc">NetHack のキー操作にすでに慣れている方にとっては、どのキーコマンドが送信されるか一目で分かるため、この設定の方が分かりやすく快適に操作できます。</p>
       <div class="image-group">
         <div class="image-card">
@@ -403,88 +404,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 10. 画面表示・ステータス・フォント設定 -->
+    <!-- 10. タイルセットの選択とカスタムタイルセット -->
     <section id="section-10" class="manual-item">
-      <h2><span class="manual-item-num">10</span> 画面表示・ステータス・フォント設定</h2>
-      <p class="manual-desc">タイトル画面の歯車アイコン、または「DartHack メニュー → ゲーム設定を開く」から <strong>「詳細ゲーム設定」</strong> 画面を開けます。ここでは表示・操作のあらゆる項目を好みに合わせて細かく調整できます。</p>
-      <h3>ステータス領域設定</h3>
-      <div class="image-group">
-        <div class="image-card">
-          <img src="images/manual/ja/17_settings_screen_status.png" alt="詳細ゲーム設定：ステータス領域設定" loading="lazy">
-          <div class="image-caption">図 10-1: ステータス表示エリアの表示モード・行数・HPバー・状態強調設定</div>
-        </div>
-      </div>
-      <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス領域設定ヘッダー</strong>: タップでセクションを展開／折りたたみできます。</span></li>
-        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ステータス領域表示モード</strong>: 画面幅に合わせて文字を自動縮小する「自動縮小フィット」などの表示方法を選択します。</span></li>
-        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ステータス行数・構成</strong>: 1行〜3行（超コンパクトは最小項目のみ）など、画面の縦スペースに応じてステータス行の構成を切り替えます。</span></li>
-        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>HPバー表示 (<code>hitpointbar</code>)</strong>: ON にするとキャラクター名と職業の背景に現在のHP残量ゲージを重ねて表示します。</span></li>
-        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>ステータス強調・経過ターン・経験値表示等</strong>: HP や状態異常の色分け強調（<code>hilite_status</code>）、経過ターン（<code>time</code>）、経験値（<code>showexp</code>）、装備中の武器・防具表示などを切り替えられます（※文字サイズの変更は「フォント設定」に集約されました）。</span></li>
-      </ol>
-      <h3>メッセージ領域設定</h3>
-      <div class="image-group">
-        <div class="image-card">
-          <img src="images/manual/ja/17c_settings_screen_message.png" alt="詳細ゲーム設定：メッセージ領域設定" loading="lazy">
-          <div class="image-caption">図 10-2: メッセージ領域の表示行数・背景透過度・プレビュー</div>
-        </div>
-      </div>
-      <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>メッセージ領域設定ヘッダー</strong>: タップでメッセージ領域設定を展開／折りたたみできます。</span></li>
-        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>表示行数</strong>: マップ上部に表示する最新メッセージの行数（1〜15行）をスライダーで調整します。</span></li>
-        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>背景透過度</strong>: メッセージ領域背景の不透明度（<code>0%</code>＝完全透明〜<code>100%</code>＝不透明）を調整し、背後のマップの見やすさと文字の視認性のバランスをとれます。</span></li>
-        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>リアルタイムプレビュー</strong>: 上記の行数・透過度および「フォント設定」で指定したメッセージフォント・文字サイズの見た目をその場で確認できます。</span></li>
-      </ol>
-      <h3>画面表示設定（画面モード・物理キーヘルプ・カメラ追従）</h3>
-      <div class="image-group">
-        <div class="image-card">
-          <img src="images/manual/ja/17b_settings_screen_display.png" alt="詳細ゲーム設定：画面表示設定" loading="lazy">
-          <div class="image-caption">図 10-3: 画面モード・物理キーボード用ヘルプ・カメラ追従モード設定</div>
-        </div>
-      </div>
-      <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>画面表示設定ヘッダー</strong>: 画面モードとカメラ追従方法を設定するセクションです。</span></li>
-        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>画面モード選択</strong>: 通常表示や全画面表示などの画面モードを選びます。</span></li>
-        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>物理キーボード用ヘルプを有効化</strong>: ON にするとボタン上にショートカット文字（<code>y:</code>, <code>n:</code>, <code>Esc:</code> 等）が表示され、<code>F1</code> または <code>M-h (Alt-h)</code> で操作ヘルプダイアログを開けるようになります。</span></li>
-        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>カメラ追従モード</strong>: 移動ごとに主人公を画面見やすい位置に保つ <strong>常時センタリング（主人公追従）</strong> と、PC 版のように画面端へ近づいたときだけスクロールする <strong>マップ固定モード（端スクロール）</strong> を切り替えます。</span></li>
-        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>スクロールマージン＆スクロール量</strong>: 「マップ固定モード」を選択している場合に有効になり、端から何マス手前でスクロールを開始するか（スクロールマージン）と、1回のスクロールで何マス移動させるか（スクロール量）を調整できます。</span></li>
-      </ol>
-      <h3>フォント設定</h3>
-      <div class="image-group">
-        <div class="image-card">
-          <img src="images/manual/ja/18b_settings_font.png" alt="詳細ゲーム設定：フォント設定（上段）" loading="lazy">
-          <div class="image-caption">図 10-4: フォント設定（一括変更・サイズプリセット・マップフォント＆倍率）</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/ja/18c_settings_font_2.png" alt="詳細ゲーム設定：フォント設定（中段）" loading="lazy">
-          <div class="image-caption">図 10-5: フォント設定（メッセージ＆ステータスフォント・文字サイズ）</div>
-        </div>
-        <div class="image-card">
-          <img src="images/manual/ja/18d_settings_font_3.png" alt="詳細ゲーム設定：フォント設定（下段）" loading="lazy">
-          <div class="image-caption">図 10-6: フォント設定（メニュー＆テキスト・UI全体倍率・外部フォント追加）</div>
-        </div>
-      </div>
-      <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>フォント設定ヘッダー</strong>: 画面各部およびアスキーマップのフォント・文字サイズをまとめて設定するセクションです。</span></li>
-        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>一括フォント変更</strong>: マップ・メッセージ・ステータス・メニュー・UIの全5系統に同じフォントを一度に適用します。</span></li>
-        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>サイズ一括プリセット</strong>: <strong>標準</strong>／<strong>大きめ</strong>／<strong>特大</strong> のボタンで、画面サイズや好みに合わせて全系統のフォントサイズ・倍率を一括調整できます。</span></li>
-        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>マップフォント＆アスキーマップ表示倍率</strong>: タイル表示を OFF にした「ASCII マップ」描画時に使う専用フォント（デフォルト：<code>Terminus TTF (アスキー定番)</code>）と、ASCII マップの表示倍率（<code>1.0x</code> 等）を調整します。</span></li>
-        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>メッセージフォント＆メッセージフォントサイズ</strong>: メッセージ領域のフォントと文字サイズ（pt）を設定します。</span></li>
-        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>ステータスフォント＆ステータスフォントサイズ</strong>: ステータス領域のフォントと文字サイズ（pt）を設定します。</span></li>
-        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>メニュー＆テキストフォント＆サイズ</strong>: インベントリ、メニュー、ヘルプ、データベース、ガイドブック、終了時ハイライト等に適用されるフォントと文字サイズ（pt）を設定します。</span></li>
-        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>UI＆コントローラフォント＆UI全体拡大倍率</strong>: 設定画面、メニュー外のUI・確認ダイアログ等のフォントおよび文字倍率（仮想コントローラ除く）を調整します。</span></li>
-        <li><span class="badge-num badge-num-1">9</span><span class="annotated-text"><strong>外部フォントを追加・管理</strong>: 端末内の <code>.ttf</code> / <code>.otf</code> / <code>.ttc</code> / <code>.woff</code> ファイルを読み込んでカスタムフォントとして追加・管理できます。</span></li>
-      </ol>
-      <p class="manual-desc">---</p>
-    </section>
-
-    <!-- 11. タイルセットの選択とカスタムタイルセット -->
-    <section id="section-11" class="manual-item">
-      <h2><span class="manual-item-num">11</span> タイルセットの選択とカスタムタイルセット</h2>
-      <p class="manual-desc">詳細ゲーム設定の先頭にある「タイル／シンボル設定」からタイル表示の ON/OFF と「タイルセットの選択」画面を開けます（ASCII 文字での古典的なプレイに切り替えたい場合はタイル表示を OFF にします）。</p>
+      <h2><span class="manual-item-num">10</span> タイルセットの選択とカスタムタイルセット</h2>
+      <p class="manual-desc">タイトル画面の歯車アイコン、または「DartHack メニュー → ゲーム設定を開く」から <strong>「詳細ゲーム設定」</strong> 画面を開けます。先頭にある「タイル／シンボル設定」からタイル表示の ON/OFF と「タイルセットの選択」画面を開けます（ASCII 文字での古典的なプレイに切り替えたい場合はタイル表示を OFF にします）。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/18_tileset_selection.png" alt="タイルセットの選択画面" loading="lazy">
-          <div class="image-caption">図 11-1: 標準同梱タイルセットおよび外部カスタムタイルセットの管理画面</div>
+          <div class="image-caption">図 10-1: 標準同梱タイルセットおよび外部カスタムタイルセットの管理画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -532,15 +459,105 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 12. UI配置カスタマイズとタブレット対応 -->
+    <!-- 11. フォント・画面表示・ステータス・メッセージ領域設定 -->
+    <section id="section-11" class="manual-item">
+      <h2><span class="manual-item-num">11</span> フォント・画面表示・ステータス・メッセージ領域設定</h2>
+      <h3>フォント設定</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/18b_settings_font.png" alt="詳細ゲーム設定：フォント設定（上段）" loading="lazy">
+          <div class="image-caption">図 11-1: フォント設定（一括変更・サイズプリセット・マップフォント＆倍率）</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/ja/18c_settings_font_2.png" alt="詳細ゲーム設定：フォント設定（中段）" loading="lazy">
+          <div class="image-caption">図 11-2: フォント設定（メッセージ＆ステータスフォント・文字サイズ）</div>
+        </div>
+        <div class="image-card">
+          <img src="images/manual/ja/18d_settings_font_3.png" alt="詳細ゲーム設定：フォント設定（下段）" loading="lazy">
+          <div class="image-caption">図 11-3: フォント設定（メニュー＆テキスト・UI全体倍率・外部フォント追加）</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>フォント設定ヘッダー</strong>: 画面各部およびアスキーマップのフォント・文字サイズをまとめて設定するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>一括フォント変更</strong>: マップ・メッセージ・ステータス・メニュー・UIの全5系統に同じフォントを一度に適用します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>サイズ一括プリセット</strong>: <strong>標準</strong>／<strong>大きめ</strong>／<strong>特大</strong> のボタンで、画面サイズや好みに合わせて全系統のフォントサイズ・倍率を一括調整できます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>マップフォント＆アスキーマップ表示倍率</strong>: タイル表示を OFF にした「ASCII マップ」描画時に使う専用フォント（デフォルト：<code>Terminus TTF (アスキー定番)</code>）と、ASCII マップの表示倍率（<code>1.0x</code> 等）を調整します。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>メッセージフォント＆メッセージフォントサイズ</strong>: メッセージ領域のフォントと文字サイズ（pt）を設定します。</span></li>
+        <li><span class="badge-num badge-num-6">6</span><span class="annotated-text"><strong>ステータスフォント＆ステータスフォントサイズ</strong>: ステータス領域のフォントと文字サイズ（pt）を設定します。</span></li>
+        <li><span class="badge-num badge-num-7">7</span><span class="annotated-text"><strong>メニュー＆テキストフォント＆サイズ</strong>: インベントリ、メニュー、ヘルプ、データベース、ガイドブック、終了時ハイライト等に適用されるフォントと文字サイズ（pt）を設定します。</span></li>
+        <li><span class="badge-num badge-num-8">8</span><span class="annotated-text"><strong>UI＆コントローラフォント＆UI全体拡大倍率</strong>: 設定画面、メニュー外のUI・確認ダイアログ等のフォントおよび文字倍率（仮想コントローラ除く）を調整します。</span></li>
+        <li><span class="badge-num badge-num-1">9</span><span class="annotated-text"><strong>外部フォントを追加・管理</strong>: 端末内の <code>.ttf</code> / <code>.otf</code> / <code>.ttc</code> / <code>.woff</code> ファイルを読み込んでカスタムフォントとして追加・管理できます。</span></li>
+      </ol>
+      <h3>画面表示設定（画面モード・物理キーヘルプ・カメラ追従）</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/17b_settings_screen_display.png" alt="詳細ゲーム設定：画面表示設定" loading="lazy">
+          <div class="image-caption">図 11-4: 画面モード・物理キーボード用ヘルプ・カメラ追従モード設定</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>画面表示設定ヘッダー</strong>: 画面モードとカメラ追従方法を設定するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>画面モード選択</strong>: 通常表示や全画面表示などの画面モードを選びます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>物理キーボード用ヘルプを有効化</strong>: ON にするとボタン上にショートカット文字（<code>y:</code>, <code>n:</code>, <code>Esc:</code> 等）が表示され、<code>F1</code> または <code>M-h (Alt-h)</code> で操作ヘルプダイアログを開けるようになります。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>カメラ追従モード</strong>: 移動ごとに主人公を画面見やすい位置に保つ <strong>常時センタリング（主人公追従）</strong> と、PC 版のように画面端へ近づいたときだけスクロールする <strong>マップ固定モード（端スクロール）</strong> を切り替えます。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>スクロールマージン＆スクロール量</strong>: 「マップ固定モード」を選択している場合に有効になり、端から何マス手前でスクロールを開始するか（スクロールマージン）と、1回のスクロールで何マス移動させるか（スクロール量）を調整できます。</span></li>
+      </ol>
+      <h3>ステータス領域設定</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/17_settings_screen_status.png" alt="詳細ゲーム設定：ステータス領域設定" loading="lazy">
+          <div class="image-caption">図 11-5: ステータス表示エリアの表示モード・行数・HPバー・状態強調設定</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>ステータス領域設定ヘッダー</strong>: タップでセクションを展開／折りたたみできます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>ステータス領域表示モード</strong>: 画面幅に合わせて文字を自動縮小する「自動縮小フィット」などの表示方法を選択します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>ステータス行数・構成</strong>: 1行〜3行（超コンパクトは最小項目のみ）など、画面の縦スペースに応じてステータス行の構成を切り替えます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>HPバー表示 (<code>hitpointbar</code>)</strong>: ON にするとキャラクター名と職業の背景に現在のHP残量ゲージを重ねて表示します。</span></li>
+        <li><span class="badge-num badge-num-5">5</span><span class="annotated-text"><strong>ステータス強調・経過ターン・経験値表示等</strong>: HP や状態異常の色分け強調（<code>hilite_status</code>）、経過ターン（<code>time</code>）、経験値（<code>showexp</code>）、装備中の武器・防具表示などを切り替えられます（※文字サイズの変更は「フォント設定」に集約されました）。</span></li>
+      </ol>
+      <h3>メッセージ領域設定</h3>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/17c_settings_screen_message.png" alt="詳細ゲーム設定：メッセージ領域設定" loading="lazy">
+          <div class="image-caption">図 11-6: メッセージ領域の表示行数・背景透過度・プレビュー</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>メッセージ領域設定ヘッダー</strong>: タップでメッセージ領域設定を展開／折りたたみできます。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>表示行数</strong>: マップ上部に表示する最新メッセージの行数（1〜15行）をスライダーで調整します。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>背景透過度</strong>: メッセージ領域背景の不透明度（<code>0%</code>＝完全透明〜<code>100%</code>＝不透明）を調整し、背後のマップの見やすさと文字の視認性のバランスをとれます。</span></li>
+        <li><span class="badge-num badge-num-4">4</span><span class="annotated-text"><strong>リアルタイムプレビュー</strong>: 上記の行数・透過度および「フォント設定」で指定したメッセージフォント・文字サイズの見た目をその場で確認できます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 12. サウンド設定 -->
     <section id="section-12" class="manual-item">
-      <h2><span class="manual-item-num">12</span> UI配置カスタマイズとタブレット対応</h2>
+      <h2><span class="manual-item-num">12</span> サウンド設定</h2>
+      <div class="image-group">
+        <div class="image-card">
+          <img src="images/manual/ja/23a_settings_sound.png" alt="詳細ゲーム設定：サウンド設定" loading="lazy">
+          <div class="image-caption">図 12-1: サウンド全体・BGM・効果音(SE)・環境音の設定画面</div>
+        </div>
+      </div>
+      <ol class="annotated-list">
+        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>サウンド設定ヘッダー</strong>: BGM・効果音・環境音の ON/OFF や音量を調整するセクションです。</span></li>
+        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>サウンド全体・BGM スイッチ</strong>: 「サウンド全体」ですべての音声出力を一括ミュート／有効化できます。その下にある「BGM」スイッチでダンジョン層・特殊部屋に応じたBGM再生を個別に切り替えられます。</span></li>
+        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>BGM音量・効果音（SE）・環境音</strong>: スライダーで BGM や各種音声バランスを細かく調整し、戦闘・扉開閉・環境音（祭壇・お店・水辺など）を好みに合わせて切り替えられます。</span></li>
+      </ol>
+      <p class="manual-desc">---</p>
+    </section>
+
+    <!-- 13. UI配置カスタマイズとタブレット対応 -->
+    <section id="section-13" class="manual-item">
+      <h2><span class="manual-item-num">13</span> UI配置カスタマイズとタブレット対応</h2>
       <h3>レイアウトパターンと左右入替設定</h3>
       <p class="manual-desc">手の大きさや持ち方、端末の向きに合わせて、操作 UI の上下関係や左右配置を変更できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/19_settings_ui_layout.png" alt="詳細ゲーム設定：UI配置カスタマイズ" loading="lazy">
-          <div class="image-caption">図 12-1: 画面レイアウトパターン1／2 の切替画面</div>
+          <div class="image-caption">図 13-1: 画面レイアウトパターン1／2 の切替画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -552,7 +569,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/20_tablet_layout_compare.png" alt="タブレット横画面レイアウト" loading="lazy">
-          <div class="image-caption">図 12-2: 大画面タブレット横向き（1920x1200 等）でのプレイ画面</div>
+          <div class="image-caption">図 13-2: 大画面タブレット横向き（1920x1200 等）でのプレイ画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -565,22 +582,22 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 13. 操作コントローラ設定 -->
-    <section id="section-13" class="manual-item">
-      <h2><span class="manual-item-num">13</span> 操作コントローラ設定</h2>
+    <!-- 14. 操作コントローラ設定 -->
+    <section id="section-14" class="manual-item">
+      <h2><span class="manual-item-num">14</span> 操作コントローラ設定</h2>
       <p class="manual-desc">詳細ゲーム設定の <strong>「操作コントローラ設定」</strong> では、ボタンの表示形式・透明度・サイズ倍率・長押しやマップタップ時の移動動作・PC／外部マウス接続時の操作割り当て・ドロワーメニューの引き出し位置などを細かく調整できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/20b_settings_controller.png" alt="詳細ゲーム設定：操作コントローラ設定（上段）" loading="lazy">
-          <div class="image-caption">図 13-1: 操作コントローラ設定（表示形式・透明度・移動パッド・自動移動）</div>
+          <div class="image-caption">図 14-1: 操作コントローラ設定（表示形式・透明度・移動パッド・自動移動）</div>
         </div>
         <div class="image-card">
           <img src="images/manual/ja/20c_settings_controller_2.png" alt="詳細ゲーム設定：操作コントローラ設定（中段）" loading="lazy">
-          <div class="image-caption">図 13-2: 操作コントローラ設定（マウス操作設定：右クリック・ホイール・中ボタン）</div>
+          <div class="image-caption">図 14-2: 操作コントローラ設定（マウス操作設定：右クリック・ホイール・中ボタン）</div>
         </div>
         <div class="image-card">
           <img src="images/manual/ja/20d_settings_controller_3.png" alt="詳細ゲーム設定：操作コントローラ設定（下段）" loading="lazy">
-          <div class="image-caption">図 13-3: 操作コントローラ設定（ショートカット・コマンドパネル倍率・ドロワー位置）</div>
+          <div class="image-caption">図 14-3: 操作コントローラ設定（ショートカット・コマンドパネル倍率・ドロワー位置）</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -599,14 +616,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 14. コマンドパネル・クイックボタンの編集 -->
-    <section id="section-14" class="manual-item">
-      <h2><span class="manual-item-num">14</span> コマンドパネル・クイックボタンの編集</h2>
+    <!-- 15. コマンドパネル・クイックボタンの編集 -->
+    <section id="section-15" class="manual-item">
+      <h2><span class="manual-item-num">15</span> コマンドパネル・クイックボタンの編集</h2>
       <p class="manual-desc">ゲーム画面最下部のコマンドパネル群は、プレイヤー自身のプレイスタイルに合わせて自由に追加・編集・並べ替えを行えます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/21_custom_cmd_panel.png" alt="カスタムコマンドパネル編集画面" loading="lazy">
-          <div class="image-caption">図 14-1: コマンドパネルの一覧管理・編集・新規追加・リセット画面</div>
+          <div class="image-caption">図 15-1: コマンドパネルの一覧管理・編集・新規追加・リセット画面</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -619,15 +636,15 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 15. 物理キーボード操作ガイドと物理キー割り当て -->
-    <section id="section-15" class="manual-item">
-      <h2><span class="manual-item-num">15</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
+    <!-- 16. 物理キーボード操作ガイドと物理キー割り当て -->
+    <section id="section-16" class="manual-item">
+      <h2><span class="manual-item-num">16</span> 物理キーボード操作ガイドと物理キー割り当て</h2>
       <h3>物理キーボード接続時のショートカット操作</h3>
       <p class="manual-desc">Bluetooth キーボードや Chromebook・PC・USB キーボードを接続している場合、NetHack 標準キーに加えて DartHack UI 専用の便利ショートカットキーを使用できます。設定画面の <strong>「詳細ゲーム設定 → 画面表示設定 → 物理キーボード用ヘルプを有効化」</strong> をオンにしている場合、<code>F1</code> または <code>Alt-h (M-h)</code> キーを押すといつでも操作ガイドを表示できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/22_keyboard_help.png" alt="キーボード操作ガイドダイアログ" loading="lazy">
-          <div class="image-caption">図 15-1: 物理キーボード用ショートカット操作ガイド</div>
+          <div class="image-caption">図 16-1: 物理キーボード用ショートカット操作ガイド</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -640,7 +657,7 @@
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/22b_settings_phys_keys.png" alt="詳細ゲーム設定：物理キー割り当て" loading="lazy">
-          <div class="image-caption">図 15-2: 音量アップ／ダウンキー・戻るボタンのコマンド割り当て設定</div>
+          <div class="image-caption">図 16-2: 音量アップ／ダウンキー・戻るボタンのコマンド割り当て設定</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -652,27 +669,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 16. サウンド設定とハードモード・縛りプレイ -->
-    <section id="section-16" class="manual-item">
-      <h2><span class="manual-item-num">16</span> サウンド設定とハードモード・縛りプレイ</h2>
-      <h3>サウンド設定（BGM・効果音・環境音）</h3>
-      <div class="image-group">
-        <div class="image-card">
-          <img src="images/manual/ja/23a_settings_sound.png" alt="詳細ゲーム設定：サウンド設定" loading="lazy">
-          <div class="image-caption">図 16-1: サウンド全体・BGM・効果音(SE)・環境音の設定画面</div>
-        </div>
-      </div>
-      <ol class="annotated-list">
-        <li><span class="badge-num badge-num-1">1</span><span class="annotated-text"><strong>サウンド設定ヘッダー</strong>: BGM・効果音・環境音の ON/OFF や音量を調整するセクションです。</span></li>
-        <li><span class="badge-num badge-num-2">2</span><span class="annotated-text"><strong>サウンド全体・BGM スイッチ</strong>: 「サウンド全体」ですべての音声出力を一括ミュート／有効化できます。その下にある「BGM」スイッチでダンジョン層・特殊部屋に応じたBGM再生を個別に切り替えられます。</span></li>
-        <li><span class="badge-num badge-num-3">3</span><span class="annotated-text"><strong>BGM音量・効果音（SE）・環境音</strong>: スライダーで BGM や各種音声バランスを細かく調整し、戦闘・扉開閉・環境音（祭壇・お店・水辺など）を好みに合わせて切り替えられます。</span></li>
-      </ol>
-      <h3>ゲームルール・プレイ設定とハードモード・縛りプレイ</h3>
+    <!-- 17. ゲームルールとハードモード・縛りプレイ -->
+    <section id="section-17" class="manual-item">
+      <h2><span class="manual-item-num">17</span> ゲームルールとハードモード・縛りプレイ</h2>
       <p class="manual-desc"><code>defaults.nh</code> に連動するゲーム本体の各種プレイ設定や、熟練者向けの制限プレイ（縛りプレイ / Challenges）をトグル操作だけで簡単に設定できます。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/23b_settings_hard_mode.png" alt="詳細ゲーム設定：ハードモード・縛りプレイ設定" loading="lazy">
-          <div class="image-caption">図 16-2: ゲームルール設定とハードモード・縛りプレイトグル一覧</div>
+          <div class="image-caption">図 17-1: ゲームルール設定とハードモード・縛りプレイトグル一覧</div>
         </div>
       </div>
       <ol class="annotated-list">
@@ -683,14 +687,14 @@
       <p class="manual-desc">---</p>
     </section>
 
-    <!-- 17. 高度な設定（defaults.nh 編集と設定のバックアップ） -->
-    <section id="section-17" class="manual-item">
-      <h2><span class="manual-item-num">17</span> 高度な設定（defaults.nh 編集と設定のバックアップ）</h2>
+    <!-- 18. 高度な設定（defaults.nh 編集と設定のバックアップ） -->
+    <section id="section-18" class="manual-item">
+      <h2><span class="manual-item-num">18</span> 高度な設定（defaults.nh 編集と設定のバックアップ）</h2>
       <p class="manual-desc">設定画面の最下部には、NetHack 上級者向けのオプションファイル直接編集と、端末間でカスタマイズを引き継ぐエクスポート／インポート機能があります。</p>
       <div class="image-group">
         <div class="image-card">
           <img src="images/manual/ja/23c_settings_advanced.png" alt="詳細ゲーム設定：高度な設定" loading="lazy">
-          <div class="image-caption">図 17-1: defaults.nh 直接編集および設定エクスポート／インポート</div>
+          <div class="image-caption">図 18-1: defaults.nh 直接編集および設定エクスポート／インポート</div>
         </div>
       </div>
       <ol class="annotated-list">

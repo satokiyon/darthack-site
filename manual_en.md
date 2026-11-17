@@ -88,7 +88,7 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 5. **Info Panel**: Reference commands (`Help`, `WhatDo`, `WhatIs`, `Glance`, `Here`, `Attrib`, `Spells`, etc.).
 
 > [!TIP]
-> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can **long-press** any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under **Game Settings → Edit Command Panel** (Chapter 14).
+> Tap a panel badge on the left (e.g., `Default`, `Combat`) to make that panel active when collapsed, and swipe horizontally inside any row to reveal extra buttons. You can **long-press** any button directly on a panel to add, delete, or customize its key and label, or manage full panel layouts under **Game Settings → Edit Command Panel** (Chapter 15).
 
 ### Long-Press Customization for Command Panels
 
@@ -105,7 +105,7 @@ Swipe up or tap the handle (1) above the command strip to view every registered 
 
 ### Switching Button Display Mode (Show Commands)
 
-If you set **Game Settings → Controller Settings → Button Display Mode** (Chapter 13) to **Show Commands**, buttons display the raw input commands (`i`, `;`, `20s`, etc.) instead of descriptive label names (`Inv`, `Glance`, `20Srch`, etc.).
+If you set **Game Settings → Controller Settings → Button Display Mode** (Chapter 14) to **Show Commands**, buttons display the raw input commands (`i`, `;`, `20s`, etc.) instead of descriptive label names (`Inv`, `Glance`, `20Srch`, etc.).
 
 For players already familiar with classic NetHack keybindings, this setting makes it immediately obvious which key command each button sends.
 
@@ -292,71 +292,12 @@ When your character dies, a pixel-art tombstone screen commemorates the end of t
 
 ---
 
-## 10. Display, Status Area & Font Settings
+## 10. Selecting & Importing Tilesets
 
-Access **Game Settings** from the title screen gear icon or **DartHack Menu → Open Game Settings**.
-
-### Status Area Settings
-
-![Game Settings: Status Area](images/manual/en/17_settings_screen_status.png)
-*Figure 10-1: Status Area display mode, line layout, hitpointbar, and status highlights*
-
-1. **Status Area Settings Header**: Tap to expand or collapse status options.
-2. **Status Area Mode**: Controls how text fits horizontally (e.g., **Auto Shrink Fit**).
-3. **Status lines & layout**: Switches between 1-line, 2-line (Standard), 3-line, or ultra-compact combat layouts.
-4. **Hitpoint Bar (`hitpointbar`)**: Draws a color-coded HP percentage gauge behind your character name and role.
-5. **Highlight Status, Turns & Exp**: Toggle **Highlight Status (`hilite_status`)**, **Show Elapsed Turns (`time`)**, **Show Exp Points (`showexp`)**, and equipped weapon/armor summaries (font size controls have moved to **Font Settings**).
-
-### Message Area Settings
-
-![Game Settings: Message Area](images/manual/en/17c_settings_screen_message.png)
-*Figure 10-2: Message Area line count, background opacity, and live preview*
-
-1. **Message Area Settings Header**: Tap to expand or collapse message window options.
-2. **Display Line Count**: Adjusts how many recent message lines (`1`–`15`) appear at the top of the screen.
-3. **Background Opacity**: Controls the message box backdrop opacity (`0%` transparent to `100%` opaque) for balancing map visibility and text readability.
-4. **Live Preview**: Previews the configured line count, opacity, and the font/size chosen in **Font Settings**.
-
-### Screen Display Settings
-
-![Game Settings: Screen Display](images/manual/en/17b_settings_screen_display.png)
-*Figure 10-3: Screen mode, physical keyboard hints, and camera follow behavior*
-
-1. **Screen Display Settings Header**: Expands screen and camera behavior options.
-2. **Screen Mode**: Chooses screen presentation mode (e.g., **Normal**).
-3. **Enable Physical Keyboard Help**: Displays key hint labels (`y:`, `n:`, `Esc:`, etc.) on UI buttons and enables `F1` / `M-h (Alt-h)` help popup.
-4. **Camera follow mode**: Switch between **Always center on hero** (re-centers the hero every move) and **Fixed map mode** (desktop-style static viewport that scrolls only near edges).
-5. **Scroll margin & Scroll amount**: Active in **Fixed map mode** to control how many tiles from the edge scrolling triggers and how many tiles it shifts.
-
-### Font Settings
-
-![Game Settings: Font Settings (Upper)](images/manual/en/18b_settings_font.png)
-*Figure 10-4: Font Settings (Apply to All, Size Presets, Map Font & ASCII Scale)*
-
-![Game Settings: Font Settings (Middle)](images/manual/en/18c_settings_font_2.png)
-*Figure 10-5: Font Settings (Message & Status Fonts and Font Sizes)*
-
-![Game Settings: Font Settings (Lower)](images/manual/en/18d_settings_font_3.png)
-*Figure 10-6: Font Settings (Menu & Text, UI Overall Scale, and Custom Fonts)*
-
-1. **Font Settings Header**: Expands unified typography and text-size controls.
-2. **Apply Font to All**: Applies a single chosen font across all 5 UI and map categories at once.
-3. **Size Preset (All)**: One-tap **Standard**, **Large**, and **Extra Large** presets to adjust all font sizes and scales together.
-4. **Map Font & ASCII Map Scale**: Chooses the monospace font for ASCII map rendering when tiles are OFF (default: **Terminus TTF (Classic ASCII)**) and scales the ASCII map (`1.0x`, etc.).
-5. **Message Font & Message Font Size**: Sets the font and size (`pt`) for the game message area.
-6. **Status Font & Status Font Size**: Sets the font and size (`pt`) for the status bar.
-7. **Menu & Text Font & Font Size**: Sets the font and size (`pt`) used across inventory, menus, help, database, guidebook, and exit highlights.
-8. **UI & Controller Font & UI Overall Scale**: Adjusts the font and overall scale for settings, drawers, and dialogs (excluding virtual controllers).
-9. **Add / Manage Custom Fonts**: Import `.ttf`, `.otf`, `.ttc`, or `.woff` files from device storage as custom fonts.
-
----
-
-## 11. Selecting & Importing Tilesets
-
-Open **Tileset & Symbol Settings** in Game Settings to toggle graphical tiles on/off or switch tilesets via **Select Tileset**.
+Access **Game Settings** from the title screen gear icon or **DartHack Menu → Open Game Settings**. Open **Tileset & Symbol Settings** at the top to toggle graphical tiles on/off or switch tilesets via **Select Tileset**.
 
 ![Select Tileset Screen](images/manual/en/18_tileset_selection.png)
-*Figure 11-1: Built-in tilesets and custom tileset importer*
+*Figure 10-1: Built-in tilesets and custom tileset importer*
 
 1. **Add Custom Tileset (`.png` / `.webp` / `.bmp`)**: Import any standard **40-column NetHack tilesheet** (`width ÷ 40` columns). Non-square tiles (such as `15x25`) are automatically detected and rendered with accurate aspect ratios.
 2. **Tileset Cards**: Displays all bundled and custom tilesets with pixel dimensions and author attribution; the active set displays a **Selected** badge (default: **PixelHack (32x32)**).
@@ -374,14 +315,82 @@ Open **Tileset & Symbol Settings** in Game Settings to toggle graphical tiles on
 
 ---
 
-## 12. UI Layout Customization & Tablet Mode
+## 11. Font, Display, Status & Message Area Settings
+
+### Font Settings
+
+![Game Settings: Font Settings (Upper)](images/manual/en/18b_settings_font.png)
+*Figure 11-1: Font Settings (Apply to All, Size Presets, Map Font & ASCII Scale)*
+
+![Game Settings: Font Settings (Middle)](images/manual/en/18c_settings_font_2.png)
+*Figure 11-2: Font Settings (Message & Status Fonts and Font Sizes)*
+
+![Game Settings: Font Settings (Lower)](images/manual/en/18d_settings_font_3.png)
+*Figure 11-3: Font Settings (Menu & Text, UI Overall Scale, and Custom Fonts)*
+
+1. **Font Settings Header**: Expands unified typography and text-size controls.
+2. **Apply Font to All**: Applies a single chosen font across all 5 UI and map categories at once.
+3. **Size Preset (All)**: One-tap **Standard**, **Large**, and **Extra Large** presets to adjust all font sizes and scales together.
+4. **Map Font & ASCII Map Scale**: Chooses the monospace font for ASCII map rendering when tiles are OFF (default: **Terminus TTF (Classic ASCII)**) and scales the ASCII map (`1.0x`, etc.).
+5. **Message Font & Message Font Size**: Sets the font and size (`pt`) for the game message area.
+6. **Status Font & Status Font Size**: Sets the font and size (`pt`) for the status bar.
+7. **Menu & Text Font & Font Size**: Sets the font and size (`pt`) used across inventory, menus, help, database, guidebook, and exit highlights.
+8. **UI & Controller Font & UI Overall Scale**: Adjusts the font and overall scale for settings, drawers, and dialogs (excluding virtual controllers).
+9. **Add / Manage Custom Fonts**: Import `.ttf`, `.otf`, `.ttc`, or `.woff` files from device storage as custom fonts.
+
+### Screen Display Settings
+
+![Game Settings: Screen Display](images/manual/en/17b_settings_screen_display.png)
+*Figure 11-4: Screen mode, physical keyboard hints, and camera follow behavior*
+
+1. **Screen Display Settings Header**: Expands screen and camera behavior options.
+2. **Screen Mode**: Chooses screen presentation mode (e.g., **Normal**).
+3. **Enable Physical Keyboard Help**: Displays key hint labels (`y:`, `n:`, `Esc:`, etc.) on UI buttons and enables `F1` / `M-h (Alt-h)` help popup.
+4. **Camera follow mode**: Switch between **Always center on hero** (re-centers the hero every move) and **Fixed map mode** (desktop-style static viewport that scrolls only near edges).
+5. **Scroll margin & Scroll amount**: Active in **Fixed map mode** to control how many tiles from the edge scrolling triggers and how many tiles it shifts.
+
+### Status Area Settings
+
+![Game Settings: Status Area](images/manual/en/17_settings_screen_status.png)
+*Figure 11-5: Status Area display mode, line layout, hitpointbar, and status highlights*
+
+1. **Status Area Settings Header**: Tap to expand or collapse status options.
+2. **Status Area Mode**: Controls how text fits horizontally (e.g., **Auto Shrink Fit**).
+3. **Status lines & layout**: Switches between 1-line, 2-line (Standard), 3-line, or ultra-compact combat layouts.
+4. **Hitpoint Bar (`hitpointbar`)**: Draws a color-coded HP percentage gauge behind your character name and role.
+5. **Highlight Status, Turns & Exp**: Toggle **Highlight Status (`hilite_status`)**, **Show Elapsed Turns (`time`)**, **Show Exp Points (`showexp`)**, and equipped weapon/armor summaries (font size controls have moved to **Font Settings**).
+
+### Message Area Settings
+
+![Game Settings: Message Area](images/manual/en/17c_settings_screen_message.png)
+*Figure 11-6: Message Area line count, background opacity, and live preview*
+
+1. **Message Area Settings Header**: Tap to expand or collapse message window options.
+2. **Display Line Count**: Adjusts how many recent message lines (`1`–`15`) appear at the top of the screen.
+3. **Background Opacity**: Controls the message box backdrop opacity (`0%` transparent to `100%` opaque) for balancing map visibility and text readability.
+4. **Live Preview**: Previews the configured line count, opacity, and the font/size chosen in **Font Settings**.
+
+---
+
+## 12. Sound Settings
+
+![Game Settings: Sound Settings](images/manual/en/23a_settings_sound.png)
+*Figure 12-1: Master sound, BGM, SE, and ambience settings*
+
+1. **Sound Settings Header**: Expands audio options.
+2. **Master Sound & BGM Toggles**: Use **Master Sound** to mute/unmute all audio, or toggle **BGM** independently.
+3. **BGM Volume, Sound Effects (SE) & Ambience**: Adjust BGM volume with the slider (`0%`–`100%`) and toggle dungeon/combat SE and room/branch ambience.
+
+---
+
+## 13. UI Layout Customization & Tablet Mode
 
 ### Layout Patterns & Side Swapping
 
 Customize where the status bar, messages, D-Pad, and shortcuts appear to match your hand size and preferred grip.
 
 ![Game Settings: UI Layout Customization](images/manual/en/19_settings_ui_layout.png)
-*Figure 12-1: Switching between Layout Pattern 1 and Pattern 2*
+*Figure 13-1: Switching between Layout Pattern 1 and Pattern 2*
 
 1. **UI Layout Customization Header**: Expands layout options.
 2. **Layout Pattern**: Switch between **Pattern 1** (Status/Msg top, D-Pad/Shortcuts bottom) and **Pattern 2** (D-Pad/Shortcuts top, Status/Msg bottom); toggles below let you **Swap D-Pad and Shortcut Positions** left/right and reposition the floating menu button.
@@ -391,7 +400,7 @@ Customize where the status bar, messages, D-Pad, and shortcuts appear to match y
 On wide landscape screens and tablets (such as `1920×1200`), DartHack adapts automatically to maximize dungeon visibility and place wide command panels along the bottom edge.
 
 ![Tablet Landscape Layout](images/manual/en/20_tablet_layout_compare.png)
-*Figure 12-2: Widescreen tablet layout in landscape orientation*
+*Figure 13-2: Widescreen tablet layout in landscape orientation*
 
 1. **Top Status & Message Area**: Full-width header fits status lines cleanly with generous message room.
 2. **Expansive Dungeon Map & Side Floating Buttons**: Wide map viewport with unobtrusive floating Menu and Full Map buttons at left and right.
@@ -401,18 +410,18 @@ On wide landscape screens and tablets (such as `1920×1200`), DartHack adapts au
 
 ---
 
-## 13. Controller Settings
+## 14. Controller Settings
 
 Under **Game Settings → Controller Settings**, you can configure button display mode, pad opacity, scale multipliers, long-press / far-tap travel behavior, PC/external mouse bindings, and the drawer menu swipe edge.
 
 ![Game Settings: Controller Settings (Upper)](images/manual/en/20b_settings_controller.png)
-*Figure 13-1: Controller Settings (Button Display Mode, Opacity, D-Pad & Auto-Travel)*
+*Figure 14-1: Controller Settings (Button Display Mode, Opacity, D-Pad & Auto-Travel)*
 
 ![Game Settings: Controller Settings (Middle)](images/manual/en/20c_settings_controller_2.png)
-*Figure 13-2: Controller Settings (Mouse Controls: Right-Click, Wheel & Middle-Click)*
+*Figure 14-2: Controller Settings (Mouse Controls: Right-Click, Wheel & Middle-Click)*
 
 ![Game Settings: Controller Settings (Lower)](images/manual/en/20d_settings_controller_3.png)
-*Figure 13-3: Controller Settings (Shortcut/Panel Scales & Drawer Position)*
+*Figure 14-3: Controller Settings (Shortcut/Panel Scales & Drawer Position)*
 
 1. **Button Display Mode**: Choose **Show Labels** (default) or **Show Commands** (displays raw keys such as `i`, `;`, `20s` on command panels and 3×3 shortcuts—recommended for experienced NetHack players).
 2. **Button Opacity**: Adjusts transparency (`0.1`–`1.0`) for the 8-way D-Pad, 3×3 shortcuts, and floating controls.
@@ -428,12 +437,12 @@ Under **Game Settings → Controller Settings**, you can configure button displa
 
 ---
 
-## 14. Customizing Command Panels & Quick Shortcuts
+## 15. Customizing Command Panels & Quick Shortcuts
 
 Tailor the bottom command panels to match your favorite roles and playstyles.
 
 ![Edit Command Panel](images/manual/en/21_custom_cmd_panel.png)
-*Figure 14-1: Editing, adding, and resetting swipeable command panels*
+*Figure 15-1: Editing, adding, and resetting swipeable command panels*
 
 1. **Show Panel Names**: Toggles the left-hand name badges (`Default`, `Combat`, `Items`, `Info`) on each panel row; turning them off frees horizontal width for extra buttons.
 2. **Panel List (Edit / Delete)**: Shows each configured panel and its starting keys. Tap the **pencil icon** to edit button labels, commands, and ordering, or the **trash icon** to remove a custom panel.
@@ -445,14 +454,14 @@ Tailor the bottom command panels to match your favorite roles and playstyles.
 
 ---
 
-## 15. Physical Keyboard Guide & Hardware Key Mapping
+## 16. Physical Keyboard Guide & Hardware Key Mapping
 
 ### Physical Keyboard Shortcuts
 
 When using a physical keyboard (USB, Bluetooth, or Chromebook), enable **Game Settings → Screen Display Settings → Enable Physical Keyboard Help** to bring up the DartHack shortcut reference at any time by pressing `F1` or `Alt-h (M-h)`.
 
 ![Keyboard Controls Guide](images/manual/en/22_keyboard_help.png)
-*Figure 15-1: Keyboard Controls Guide overlay*
+*Figure 16-1: Keyboard Controls Guide overlay*
 
 1. **Guide Header & Close (`×`)**: Title bar for the controls guide.
 2. **Shortcut List**: Quick reference for **`Ctrl+M` / `F10`** (open drawer menu), **`F9` / `Alt-z`** (full level map), **`Tab` / `Shift+Tab`** (focus floating buttons), **`Enter` / `Space`** (execute focused button), **`?`** (standard NetHack help), and **`F1` / `Alt-h`** (this guide).
@@ -463,7 +472,7 @@ When using a physical keyboard (USB, Bluetooth, or Chromebook), enable **Game Se
 Even without a keyboard, you can bind hardware **Volume Up**, **Volume Down**, and the Android **Back button** to frequent NetHack commands.
 
 ![Physical Key Assignments](images/manual/en/22b_settings_phys_keys.png)
-*Figure 15-2: Binding Volume keys and Back gesture in Game Settings*
+*Figure 16-2: Binding Volume keys and Back gesture in Game Settings*
 
 1. **Physical Key Assignments Header**: Expands hardware button bindings.
 2. **Volume Up Key**: Assign a game command (default: `None (Normal Volume Change)`).
@@ -472,23 +481,12 @@ Even without a keyboard, you can bind hardware **Volume Up**, **Volume Down**, a
 
 ---
 
-## 16. Sound Settings & Challenge / Hard Modes
-
-### Sound Settings
-
-![Game Settings: Sound Settings](images/manual/en/23a_settings_sound.png)
-*Figure 16-1: Master sound, BGM, SE, and ambience settings*
-
-1. **Sound Settings Header**: Expands audio options.
-2. **Master Sound & BGM Toggles**: Use **Master Sound** to mute/unmute all audio, or toggle **BGM** independently.
-3. **BGM Volume, Sound Effects (SE) & Ambience**: Adjust BGM volume with the slider (`0%`–`100%`) and toggle dungeon/combat SE and room/branch ambience.
-
-### Game Rules & Challenge / Hard Modes
+## 17. Game Rules & Challenge / Hard Modes
 
 DartHack exposes key `defaults.nh` rules and built-in challenge conducts directly in Game Settings.
 
 ![Game Settings: Hard Mode & Challenge Settings](images/manual/en/23b_settings_hard_mode.png)
-*Figure 16-2: Game Rules & Options and Hard Mode challenge toggles*
+*Figure 17-1: Game Rules & Options and Hard Mode challenge toggles*
 
 1. **Game Rules & Options (`defaults.nh`)**: Configure core engine behaviors such as autopickup and prompts (*Requires starting a new game*).
 2. **Hard Mode & Challenge Settings (`defaults.nh`) Header**: Expands advanced challenge toggles (*Requires starting a new game*).
@@ -496,12 +494,12 @@ DartHack exposes key `defaults.nh` rules and built-in challenge conducts directl
 
 ---
 
-## 17. Advanced Settings (Editing `defaults.nh` & Backup)
+## 18. Advanced Settings (Editing `defaults.nh` & Backup)
 
 At the bottom of Game Settings, advanced users can edit the raw NetHack configuration file or back up/transfer their Flutter UI setup.
 
 ![Game Settings: Advanced Settings](images/manual/en/23c_settings_advanced.png)
-*Figure 17-1: Manual defaults.nh editing and JSON settings export/import*
+*Figure 18-1: Manual defaults.nh editing and JSON settings export/import*
 
 1. **Advanced Settings Header**: Expands power-user tools.
 2. **Edit `defaults.nh` manually**: Opens a direct text editor for `defaults.nh`, letting you write any classic NetHack options (`OPTIONS=...`, `MENUCOLOR=...`, custom status highlights, etc.). *Requires starting a new game for changes to take effect.*
