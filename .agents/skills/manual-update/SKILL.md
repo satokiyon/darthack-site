@@ -39,6 +39,7 @@ Always use the standard AVDs so screenshot resolutions match `annotations/{ja,en
 - Stop the emulator when finished: `adb -s emulator-5554 emu kill`.
 
 ## 5. Annotate, Regenerate HTML, and Verify
+- **Settings Order Check**: When adding or reordering settings sections, verify the order in `c:\Users\satok\DartHack\sys\flutter\lib\settings_page.dart` (`ListView` children) so chapters (10–18) and subsections match the actual Game Settings screen order.
 1. Update `annotations/ja.json` and `annotations/en.json`.
 2. Run:
    ```powershell
