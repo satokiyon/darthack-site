@@ -299,18 +299,28 @@ Access **Game Settings** from the title screen gear icon or **DartHack Menu → 
 ### Status Area Settings
 
 ![Game Settings: Status Area](images/manual/en/17_settings_screen_status.png)
-*Figure 10-1: Status Area display mode, line layout, font size, and hitpointbar*
+*Figure 10-1: Status Area display mode, line layout, hitpointbar, and status highlights*
 
 1. **Status Area Settings Header**: Tap to expand or collapse status options.
 2. **Status Area Mode**: Controls how text fits horizontally (e.g., **Auto Shrink Fit**).
 3. **Status lines & layout**: Switches between 1-line, 2-line (Standard), 3-line, or ultra-compact combat layouts.
-4. **Font Size Slider**: Adjusts status text size (e.g., `13 pt`).
-5. **Hitpoint Bar (`hitpointbar`)**: Draws a color-coded HP percentage gauge behind your character name and role (followed below by **Highlight Status** options).
+4. **Hitpoint Bar (`hitpointbar`)**: Draws a color-coded HP percentage gauge behind your character name and role.
+5. **Highlight Status, Turns & Exp**: Toggle **Highlight Status (`hilite_status`)**, **Show Elapsed Turns (`time`)**, **Show Exp Points (`showexp`)**, and equipped weapon/armor summaries (font size controls have moved to **Font Settings**).
+
+### Message Area Settings
+
+![Game Settings: Message Area](images/manual/en/17c_settings_screen_message.png)
+*Figure 10-2: Message Area line count, background opacity, and live preview*
+
+1. **Message Area Settings Header**: Tap to expand or collapse message window options.
+2. **Display Line Count**: Adjusts how many recent message lines (`1`–`15`) appear at the top of the screen.
+3. **Background Opacity**: Controls the message box backdrop opacity (`0%` transparent to `100%` opaque) for balancing map visibility and text readability.
+4. **Live Preview**: Previews the configured line count, opacity, and the font/size chosen in **Font Settings**.
 
 ### Screen Display Settings
 
 ![Game Settings: Screen Display](images/manual/en/17b_settings_screen_display.png)
-*Figure 10-2: Screen mode, physical keyboard hints, and camera follow behavior*
+*Figure 10-3: Screen mode, physical keyboard hints, and camera follow behavior*
 
 1. **Screen Display Settings Header**: Expands screen and camera behavior options.
 2. **Screen Mode**: Chooses screen presentation mode (e.g., **Normal**).
@@ -320,13 +330,24 @@ Access **Game Settings** from the title screen gear icon or **DartHack Menu → 
 
 ### Font Settings
 
-![Game Settings: Font Settings](images/manual/en/18b_settings_font.png)
-*Figure 10-3: Global and per-component font selection including ASCII map font*
+![Game Settings: Font Settings (Upper)](images/manual/en/18b_settings_font.png)
+*Figure 10-4: Font Settings (Apply to All, Size Presets, Map Font & ASCII Scale)*
 
-1. **Font Settings Header**: Expands typography controls.
+![Game Settings: Font Settings (Middle)](images/manual/en/18c_settings_font_2.png)
+*Figure 10-5: Font Settings (Message & Status Fonts and Font Sizes)*
+
+![Game Settings: Font Settings (Lower)](images/manual/en/18d_settings_font_3.png)
+*Figure 10-6: Font Settings (Menu & Text, UI Overall Scale, and Custom Fonts)*
+
+1. **Font Settings Header**: Expands unified typography and text-size controls.
 2. **Apply Font to All**: Applies a single chosen font across all 5 UI and map categories at once.
-3. **Map Font**: Chooses the monospace font for ASCII map rendering when tiles are turned off (defaults to **Terminus TTF (Classic ASCII)** with no Japanese fallback to preserve exact grid alignment).
-4. **Individual Component Fonts**: Customize **Message Font**, **Status Font**, **Menu & Text Font**, and **UI & Controller Font** independently.
+3. **Size Preset (All)**: One-tap **Standard**, **Large**, and **Extra Large** presets to adjust all font sizes and scales together.
+4. **Map Font & ASCII Map Scale**: Chooses the monospace font for ASCII map rendering when tiles are OFF (default: **Terminus TTF (Classic ASCII)**) and scales the ASCII map (`1.0x`, etc.).
+5. **Message Font & Message Font Size**: Sets the font and size (`pt`) for the game message area.
+6. **Status Font & Status Font Size**: Sets the font and size (`pt`) for the status bar.
+7. **Menu & Text Font & Font Size**: Sets the font and size (`pt`) used across inventory, menus, help, database, guidebook, and exit highlights.
+8. **UI & Controller Font & UI Overall Scale**: Adjusts the font and overall scale for settings, drawers, and dialogs (excluding virtual controllers).
+9. **Add / Manage Custom Fonts**: Import `.ttf`, `.otf`, `.ttc`, or `.woff` files from device storage as custom fonts.
 
 ---
 
@@ -382,22 +403,28 @@ On wide landscape screens and tablets (such as `1920×1200`), DartHack adapts au
 
 ## 13. Controller Settings
 
-Under **Game Settings → Controller Settings**, you can configure button display mode, pad opacity, scale multipliers, long-press / far-tap travel behavior, and the drawer menu swipe edge.
+Under **Game Settings → Controller Settings**, you can configure button display mode, pad opacity, scale multipliers, long-press / far-tap travel behavior, PC/external mouse bindings, and the drawer menu swipe edge.
 
 ![Game Settings: Controller Settings (Upper)](images/manual/en/20b_settings_controller.png)
 *Figure 13-1: Controller Settings (Button Display Mode, Opacity, D-Pad & Auto-Travel)*
 
-![Game Settings: Controller Settings (Lower)](images/manual/en/20c_settings_controller_2.png)
-*Figure 13-2: Controller Settings (Shortcut/Panel Scales & Drawer Position)*
+![Game Settings: Controller Settings (Middle)](images/manual/en/20c_settings_controller_2.png)
+*Figure 13-2: Controller Settings (Mouse Controls: Right-Click, Wheel & Middle-Click)*
+
+![Game Settings: Controller Settings (Lower)](images/manual/en/20d_settings_controller_3.png)
+*Figure 13-3: Controller Settings (Shortcut/Panel Scales & Drawer Position)*
 
 1. **Button Display Mode**: Choose **Show Labels** (default) or **Show Commands** (displays raw keys such as `i`, `;`, `20s` on command panels and 3×3 shortcuts—recommended for experienced NetHack players).
 2. **Button Opacity**: Adjusts transparency (`0.1`–`1.0`) for the 8-way D-Pad, 3×3 shortcuts, and floating controls.
 3. **D-Pad Scale Multiplier**: Scales the 8-way D-Pad between `0.6×` and `1.5×` (shows the clamped effective scale for your screen width below the slider).
 4. **D-Pad Long Press Move Mode**: Chooses the directional travel mode triggered when long-pressing a D-Pad direction (Normal, Uppercase, `g`, `G`, `^`, `m`, or `F`).
-5. **Action on Far Tap (Auto-Travel)**: Configures what happens when tapping a distant map tile (`Show Menu`, `Immediate Travel (Always)`, `After Scroll Only`, or `Disabled`).
-6. **Shortcut Pad Scale Multiplier**: Scales the 3×3 Quick Shortcut grid (`0.6×`–`1.5×`).
-7. **Command Panel Scale Multiplier**: Scales the bottom Command Panel buttons (`0.6×`–`1.5×`).
-8. **Menu (Drawer) Position**: Selects which screen edge opens the DartHack Menu (**Left Side (Swipeable)**, **Right Side**, **Top**, or **Bottom**).
+5. **Action on Far Tap (Auto-Travel)**: Configures what happens when tapping a distant map tile (`Show Menu`, `Immediate Travel (Always)`, `After Scroll Only`, or `Disabled`). Left-click also follows this tap setting.
+6. **Right-Click Action**: Sets what happens when right-clicking with a mouse (**Show Menu (All Tiles)**, **Smart Move**, **Direct Action**, or **Disabled**).
+7. **Mouse Wheel Action**: Configures mouse wheel scrolling to **Zoom Map**, **Scroll Map**, or **Disabled**.
+8. **Middle-Click Action**: Assigns middle-button (wheel click) to **Disabled**, **Show Menu (All Tiles)**, **Smart Move**, or **Direct Action**.
+9. **Shortcut Pad Scale Multiplier**: Scales the 3×3 Quick Shortcut grid (`0.6×`–`1.5×`).
+10. **Command Panel Scale Multiplier**: Scales the bottom Command Panel buttons (`0.6×`–`1.5×`).
+11. **Menu (Drawer) Position**: Selects which screen edge opens the DartHack Menu (**Left Side (Swipeable)**, **Right Side**, **Top**, or **Bottom**).
 
 ---
 
